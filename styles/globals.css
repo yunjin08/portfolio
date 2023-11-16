@@ -30,7 +30,16 @@ html {
 }
 
 body {
-  background: var(--bg-color);
+  background: radial-gradient(
+    circle,
+    #081b29 0%,
+    #081b29 70%,
+    #173e56 140%,
+    #173e56 150%
+  );
+
+  background: linear-gradient(to bottom, #081b29, #102e44, #173e56);
+
   color: var(--text-color);
 }
 
@@ -96,14 +105,14 @@ section {
 }
 
 .home-content .text-animate h3 {
-  font-size: 3.2rem;
+  font-size: 3.9rem;
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 0.7px var(--main-color);
 }
 
 .home-content p {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin: 2rem 0 4rem;
 }
 
@@ -206,4 +215,16 @@ section {
 
 .home-sci a:hover::before {
   width: 100%;
+}
+
+.gradient-conic {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    #081b29 0%,
+    #081b29 12%,
+    #173e56 50%,
+    #081b29 75%,
+    #081b29 100%
+  );
+  background: linear-gradient(to bottom, transparent, #173e56);
 }

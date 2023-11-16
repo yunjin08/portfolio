@@ -7,22 +7,22 @@ function Home() {
     <section className="home flex flex-1 flex-col-reverse xl:flex-row">
       <div className="flex flex-1 flex-col w-full">
         <div className="home-content text-center xl:text-left w-full">
-          <h1 className="w-full xl:w-auto text-center">
+          <h1 className="w-full xl:w-auto text-center xl:text-left">
             Hi, I&#39;m <span> Jed Edison Donaire</span>
           </h1>
           <div className="text-animate">
             <h3>Fullstack Developer</h3>
-            <p>
+            <p className="text-justify pr-10">
               Specializing in server and client-side rendering for optimal web
-              performance. With expertise in crafting RESTful APIs, to bring
-              seamless communication between front-end and back-end components.
-              A fast learner of new technologies, dedicated to delivering
-              cutting-edge solutions and ensuring an exceptional user
-              experience.
+              performance and responsive website. With expertise in crafting
+              RESTful APIs, to bring seamless communication between front-end
+              and back-end components. A fast learner of new technologies,
+              dedicated to delivering cutting-edge solutions and ensuring an
+              exceptional user experience.
             </p>
           </div>
 
-          <div className="btn-box flex items-center justify-center gap-10 mb-44 xl:mb-0">
+          <div className="btn-box flex items-center justify-center xl:justify-start gap-10 mb-44 xl:mb-0">
             <Link href="/" className="btn rounded-lg">
               Hire Me
             </Link>
@@ -32,13 +32,13 @@ function Home() {
             </Link>
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center xl:justify-start">
           <div className="home-sci">
-            <Link href="fb.com">
-              <i className="bx bxl-facebook-circle"></i>
+            <Link href="github.com">
+              <i class="bx bxl-github"></i>
             </Link>
-            <Link href="ig.com">
-              <i className="bx bxl-instagram-alt"></i>
+            <Link href="gmail.com">
+              <i class="bx bxl-gmail"></i>
             </Link>
             <Link href="linked.com">
               <i className="bx bxl-linkedin-square"></i>
@@ -46,14 +46,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-center border-red-500 border-10 my-20 xl:my-0">
-        <div className="max-w-[400px] xl:max-w-[680px] max-h-[400px] xl:max-h-[680px] min-w-[300px] min-h-[300px]">
+      <div className="flex flex-1 items-center justify-center my-20 xl:my-0 xl:ml-32">
+        <div className="w-[300px] sm:w-[400px] xl:w-[580px] 2xl:w-[650px]  h-[300px] sm:h-[400px] xl:h-[580px] 2xl:h-[650px]">
           <Image
             src="/jed2.png"
             alt="jed"
             width={1280}
             height={1280}
-            className=" object-cover bg-gradient-to-r from-[#081b29] via-[#173e56] to-[#112e42] rounded-full"
+            className="gradient-conic object-cover  rounded-full"
           />
         </div>
       </div>
