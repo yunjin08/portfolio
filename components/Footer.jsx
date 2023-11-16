@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 function Footer() {
   const pathname = usePathname();
   return (
-    <div className="flex items-center flex-col  justify-center w-full h-20 border-5 border-red-400">
+    <div className="flex items-center flex-col  justify-center w-full h-32 foter bg-[#112e42] ">
       <nav className="flex flex-1 max-w-[550px] items-center justify-evenly navbar">
         <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
           Home
@@ -35,7 +35,9 @@ function Footer() {
           Contact
         </Link>
       </nav>
-      <h3 className="text-xl text-center">&#169; 2023 Jed </h3>
+      <h3 className="text-xl text-center">
+        &#169; 2023 Jed @jed.donaire08@gmail.com{" "}
+      </h3>
     </div>
   );
 }
