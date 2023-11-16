@@ -251,3 +251,11 @@ span {
   border-left: 0.2rem solid var(--main-color);
   border-right: 0.2rem solid var(--main-color);
 }
+
+.ed {
+  border-left: 0.2rem solid var(--main-color);
+}
+
+.ed div {
+  border: 0.2rem solid var(--main-color);
+}
