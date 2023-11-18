@@ -12,7 +12,7 @@ function Home() {
           </h1>
           <div className="text-animate">
             <h3>Full Stack Developer</h3>
-            <p className="text-justify pr-10">
+            <p className="text-justify ">
               Specializing in server and client-side rendering for optimal web
               performance and responsive website. With expertise in crafting
               RESTful APIs, to bring seamless communication between front-end
@@ -48,14 +48,17 @@ function Home() {
       </div>
       <div className="flex flex-1 items-center justify-center my-20 xl:my-0 ">
         <div className="homeimg"></div>
-        <div className=" w-[300px] sm:w-[400px] xl:w-[580px] 2xl:w-[600px]  h-[300px] sm:h-[400px] xl:h-[580px] 2xl:h-[600px] hover:scale-[1.02] transition-all">
-          <Image
-            src="/jed2.png"
-            alt="jed"
-            width={1280}
-            height={1280}
-            className="gradient-conic  object-cover  rounded-full"
-          />
+        <div className="relative w-[250px] sm:w-[400px] xl:w-[580px] 2xl:w-[600px]  h-[250px] sm:h-[400px] xl:h-[580px] 2xl:h-[600px] hover:scale-[1.02] ">
+          <div className="">
+            <Image
+              src="/jed2.png"
+              alt="jed"
+              width={1280}
+              height={1280}
+              className="gradient-conic about-img object-cover  rounded-full"
+            />
+            <span className="circle-spin"></span>
+          </div>
         </div>
       </div>
     </section>
