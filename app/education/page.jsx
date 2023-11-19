@@ -67,7 +67,8 @@ function page() {
                 <div className="content  rounded-xl space-y-2  p-10 relative ">
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
                   <p className="font-semibold text-[1.9rem]">
-                    Career Series 2022: Industry Talks: Technology.
+                    Career Series 2022: Industry Talks: Telecommunications and
+                    E-commerce.
                   </p>
                 </div>
               </div>

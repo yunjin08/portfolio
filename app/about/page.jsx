@@ -5,12 +5,12 @@ function page() {
   return (
     <section>
       <div className="flex flex-col items-center justify-center ">
-        <h1 className="text-7xl font-bold mb-16">
+        <h1 className="abme text-8xl font-bold mb-20">
           About <span>Me</span>{" "}
         </h1>
         <div className="icons flex w-full items-center justify-center gap-[15rem] mt-16">
           <div className="flex flex-col items-center">
-            <div className="bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
               <i class="gg bx bx-stopwatch"></i>
             </div>
             <h1>Fast</h1>
@@ -20,7 +20,7 @@ function page() {
             </p>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
               <i className="gg bx bx-devices"></i>
             </div>
             <h1>Responsive</h1>
@@ -29,7 +29,7 @@ function page() {
             </p>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
               <i class="gg bx bx-sun"></i>
             </div>
             <h1>Intuitive</h1>
@@ -38,7 +38,7 @@ function page() {
             </p>
           </div>
           <div className="flex flex-col items-center justify-center ">
-            <div className="bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
               <i class="gg bx bx-unite"></i>
             </div>
             <h1>Dynamic</h1>
@@ -71,7 +71,8 @@ function page() {
               I'm an aspiring Full Stack Developer studying at University of the
               Philippines Cebu. I have serious passion for creating seamless and
               innovative web applications , and creating intuitive, dynamic user
-              experiences.
+              experiences using mainly the MERN stack, or using a framework like
+              NEXT.js for both the backend and frontend.
             </p>
           </div>
           <div className="flex items-center justify-center font-medium flex-col">
@@ -164,6 +165,13 @@ function page() {
                 width={105}
                 height={105}
                 className=" object-cover  "
+              />
+              <Image
+                src="/typescript.svg"
+                alt="jed"
+                width={105}
+                height={105}
+                className=" object-cover "
               />
             </div>
           </div>

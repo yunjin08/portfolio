@@ -48,8 +48,8 @@ function Home() {
       </div>
       <div className="flex flex-1 items-center justify-center my-20 xl:my-0 ">
         <div className="homeimg"></div>
-        <div className="relative w-[250px] sm:w-[400px] xl:w-[580px] 2xl:w-[600px]  h-[250px] sm:h-[400px] xl:h-[580px] 2xl:h-[600px] hover:scale-[1.02] ">
-          <div className="">
+        <div className="relative w-[250px] sm:w-[400px] xl:w-[580px] 2xl:w-[600px]  h-[250px] sm:h-[400px] xl:h-[580px] 2xl:h-[600px] duration-700 hover:scale-[1.02] ">
+          <div className="relative">
             <Image
               src="/jed2.png"
               alt="jed"
