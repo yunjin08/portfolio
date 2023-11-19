@@ -53,7 +53,7 @@ function Navbar() {
         </Link>
       </nav>
       {toggle && (
-        <nav className="flex absolute top-[8rem] right-10 md:hidden flex-col items-center justify-center  rounded-xl bg-gradient-to-r from-[#38596f] via-[#1f4e6d] to-[#0d2b3e]  z-50 ">
+        <nav className="flex absolute top-[8rem] right-10 md:hidden flex-col items-center justify-center  rounded-2xl bg-gradient-to-r from-[#0d2b3e] via-[#1f4e6d] to-[#0d2b3e]  z-50 overflow-hidden ">
           <div className="flex toggle flex-col items-center justify-center text-3xl font-semibold py-10 px-16 space-y-8">
             <Link
               className={`link ${pathname === "/" ? "active" : ""}`}

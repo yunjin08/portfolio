@@ -5,7 +5,7 @@ function page() {
   return (
     <section>
       <div className="flex items-center justify-center flex-col">
-        <div className="font-bold text-8xl">
+        <div className="font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>
         </div>
         <div className="flex w-full  lg:flex-row flex-col text-3xl  mt-44 justify-center items-start">
@@ -58,7 +58,7 @@ function page() {
           </div>
           {/*Seminars Attended*/}
           <div className=" flex-1 w-full flex flex-col lg:items-start items-center justify-center lg:pl-12">
-            <h1 className="text-[3rem] flex flex-col font-semibold pb-10">
+            <h1 className="text-[3rem] flex flex-col leading-[3rem] font-semibold text-center md:text-auto pb-10 pt-10 md:pt-0">
               Seminars Attended{" "}
             </h1>
 

@@ -4,13 +4,13 @@ import Image from "next/image";
 function page() {
   return (
     <section>
-      <div className="flex flex-col items-center justify-center ">
-        <h1 className="abme text-8xl font-bold mb-20">
+      <div className="flex flex-col items-center justify-center -mt-10 md:mt-auto">
+        <h1 className="abme text-6xl md:text-8xl font-bold mb-10 md:mb-20">
           About <span>Me</span>{" "}
         </h1>
-        <div className="icons flex w-full items-center justify-center gap-[15rem] mt-16">
+        <div className="icons grid grid-cols-2 blg:grid-cols-4 w-full items-center gap-[2rem] md:gap-[7rem] mt-16">
           <div className="flex flex-col items-center">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
               <i class="gg bx bx-stopwatch"></i>
             </div>
             <h1>Fast</h1>
@@ -19,8 +19,8 @@ function page() {
               to me.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+          <div className="h-full flex flex-col items-center justify-start">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
               <i className="gg bx bx-devices"></i>
             </div>
             <h1>Responsive</h1>
@@ -28,8 +28,8 @@ function page() {
               My layouts will work on any device, big or small.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+          <div className="flex h-full flex-col items-center justify-start">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
               <i class="gg bx bx-sun"></i>
             </div>
             <h1>Intuitive</h1>
@@ -37,8 +37,8 @@ function page() {
               Great preference for user-friendly, intuitive UX/UI.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center ">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[15rem] h-[15rem]">
+          <div className="flex flex-col items-center h-full  justify-start ">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
               <i class="gg bx bx-unite"></i>
             </div>
             <h1>Dynamic</h1>
@@ -48,11 +48,11 @@ function page() {
             </p>
           </div>
         </div>
-        <div className="flex flex-row w-full mt-44 mb-[10rem]">
+        <div className="flex flex-col md:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
           <div className="flex flex-col items-center justify-center ">
             <div className="flexrelative items-center justify-center">
-              <div className=" w-[300px] relative sm:w-[400px] xl:w-[580px] 2xl:w-[350px]  h-[300px] sm:h-[400px] xl:h-[580px] 2xl:h-[350px] ">
-                <div className="w-[300px] sm:w-[400px] xl:w-[580px] 2xl:w-[350px]  h-[300px] sm:h-[400px] xl:h-[580px] 2xl:h-[350px] ">
+              <div className=" w-[210px] relative sm:w-[400px] xl:w-[580px] 2xl:w-[350px]  h-[210px] sm:h-[400px] xl:h-[580px] 2xl:h-[350px] ">
+                <div className="w-[210px] sm:w-[400px] xl:w-[580px] 2xl:w-[350px]  h-[210px] sm:h-[400px] xl:h-[580px] 2xl:h-[350px] ">
                   <Image
                     src="/jed2.png"
                     alt="jed"
@@ -64,22 +64,23 @@ function page() {
                 <span className="circle-spin"></span>
               </div>
             </div>
-            <h1 className="text-[3.3rem] font-medium mt-8">
+            <h1 className="text-[2.8rem] md:text-[3.3rem] font-medium mt-8">
               Who's this <span>guy?</span>
             </h1>
-            <p className="text-[1.8rem] max-w-[550px] text-center mt-4">
-              I'm an aspiring Full Stack Developer studying at University of the
-              Philippines Cebu. I have serious passion for creating seamless and
-              innovative web applications , and creating intuitive, dynamic user
-              experiences using mainly the MERN stack, or using a framework like
-              NEXT.js for both the backend and frontend.
+            <p className="text-[1.4rem] md:text-[1.8rem] max-w-[550px] md:text-center text-justify mt-4">
+              <k className="pl-10 md:pl-0">I'm</k> an aspiring Full Stack
+              Developer studying at University of the Philippines Cebu. I have
+              serious passion for creating seamless and innovative web
+              applications , and creating intuitive, dynamic user experiences
+              using mainly the MERN stack, or using a framework like NEXT.js for
+              both the backend and frontend.
             </p>
           </div>
           <div className="flex items-center justify-center font-medium flex-col">
-            <h1 className="text-[4rem] font-bold mb-[3rem]">
+            <h1 className="text-[3.7rem] md:text-[4rem] font-bold mt-10 md:mt-0 mb-[3rem] text-center">
               Technology <span>Stack</span>
             </h1>
-            <div className="ml-[7rem] grid grid-cols-4 gap-[8rem] items-center  justify-center">
+            <div className="md:ml-[7rem] grid grid-cols-3 md:grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
               <Image
                 src="/html.svg"
                 alt="jed"

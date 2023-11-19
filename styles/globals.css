@@ -182,8 +182,8 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: transparent;
   border: 0.2rem solid var(--main-color);
   border-radius: 50%;
@@ -342,9 +342,9 @@ span {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  font-size: 60px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
   color: var(white);
   z-index: 1;
   overflow: hidden;
@@ -376,15 +376,37 @@ span {
 }
 
 .icons h1 {
-  font-size: 2.7rem;
+  font-size: 1.9rem;
   font-weight: 600;
   margin-top: 1.2rem;
 }
 
 .icons p {
   margin-top: 0.7rem;
-  font-size: 1.75rem;
+  font-size: 1.1rem;
   text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .icons h1 {
+    font-size: 2.7rem; /* Adjust the font size for smaller screens */
+  }
+  .icons p {
+    font-size: 1.75rem;
+  }
+  .gg {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 60px;
+    color: var(white);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+  }
 }
 .abme {
   transform: rotate(0) scale(1); /* Initial state */

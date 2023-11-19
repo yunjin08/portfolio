@@ -35,13 +35,13 @@ function Home() {
         <div className="flex items-center justify-center xl:justify-start">
           <div className="home-sci">
             <Link href="https://github.com/yunjin08">
-              <i class="bx bxl-github"></i>
+              <i class="text-[3rem] bx bxl-github"></i>
             </Link>
             <Link href="https://www.facebook.com/donairejededison/">
-              <i class="bx bxl-facebook"></i>
+              <i class="text-[3rem] bx bxl-facebook"></i>
             </Link>
-            <Link href="linked.com">
-              <i className="bx bxl-linkedin-square"></i>
+            <Link href="https://www.linkedin.com/in/donaire-jed-edison-291a76282/">
+              <i className="text-[3rem] bx bxl-linkedin-square"></i>
             </Link>
           </div>
         </div>
