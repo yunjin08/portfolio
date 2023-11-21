@@ -23,10 +23,10 @@ function Footer() {
           Education
         </Link>
         <Link
-          className={`link ${pathname === "/skills" ? "active" : ""}`}
-          href="/skills"
+          className={`link ${pathname === "/portfolio" ? "active" : ""}`}
+          href="/portfolio"
         >
-          Skills
+          Portfolio
         </Link>
         <Link
           className={`link ${pathname === "/contact" ? "active" : ""}`}
