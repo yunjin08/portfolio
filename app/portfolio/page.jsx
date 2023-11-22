@@ -13,7 +13,6 @@ function Portfolio() {
           <h1 className="text-8xl font-bold">Projects</h1>
           <div className="mt-10 w-[8rem] border-t-4" />
         </div>
-
         <div>
           <div className="w-full flex mt-[5rem] text-5xl font-medium items-center justify-center gap-5">
             <div
@@ -53,6 +52,11 @@ function Portfolio() {
               Full Stack
             </div>
           </div>
+        </div>
+        <div className="grid grid-cols-3 w-[100rem]">
+          <div className="bg-blue-400">s</div>
+          <div className="bg-red-400">s</div>
+          <div className="bg-green-400">s</div>
         </div>
       </div>
     </section>
