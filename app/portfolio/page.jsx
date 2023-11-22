@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import Image from "next/image";
 
 function Portfolio() {
   const [all, setAll] = useState(true);
@@ -53,10 +54,28 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 w-[100rem]">
-          <div className="bg-blue-400">s</div>
-          <div className="bg-red-400">s</div>
-          <div className="bg-green-400">s</div>
+        <div className="grid grid-cols-3 w-[120rem] mt-20">
+          <Image
+            src="/proj1.png"
+            alt="proj1"
+            width={1920}
+            height={1080}
+            className="object-cover w-full"
+          />
+          <Image
+            src="/proj2.png"
+            alt="proj2"
+            width={1920}
+            height={1080}
+            className="object-cover w-full"
+          />
+          <Image
+            src="/proj3.png"
+            alt="proj3"
+            width={1920}
+            height={1080}
+            className="object-cover w-full"
+          />
         </div>
       </div>
     </section>
