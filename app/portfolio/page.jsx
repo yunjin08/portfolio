@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { projects } from "/files";
 
@@ -8,6 +8,15 @@ function Portfolio() {
   const [all, setAll] = useState(true);
   const [frontend, setFrontend] = useState(false);
   const [fullstack, setFullstack] = useState(false);
+
+  const [fade, setFade] = useState(false);
+
+  useEffect(() => {
+    setFade(true);
+    // Set fade back to false after the transition duration (adjust as needed)
+    const timeout = setTimeout(() => setFade(false), 300);
+    return () => clearTimeout(timeout);
+  }, [all, frontend, fullstack]);
 
   return (
     <section>
@@ -57,7 +66,11 @@ function Portfolio() {
           </div>
         </div>
         {all && (
-          <div className="grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 fade-in">
+          <div
+            className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
+              fade ? "fade-in" : ""
+            }`}
+          >
             {projects.map((projects) => (
               <Image
                 src={projects.folder}
@@ -65,13 +78,18 @@ function Portfolio() {
                 key={projects.name}
                 width={1920}
                 height={1080}
-                className="object-cover w-full"
+                className="object-cover h-full w-full border-transparent border-4 hover:border-[#00abf0]"
               />
             ))}
           </div>
         )}
+
         {frontend && (
-          <div className="grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 fade-in">
+          <div
+            className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
+              fade ? "fade-in" : ""
+            }`}
+          >
             {projects.map(
               (projects) =>
                 projects.type === "frontend" && (
@@ -81,14 +99,18 @@ function Portfolio() {
                     key={projects.name}
                     width={1920}
                     height={1080}
-                    className="object-cover w-full"
+                    className="object-cover w-full h-full border-transparent border-2 hover:border-[#00abf0]"
                   />
                 )
             )}
           </div>
         )}
         {fullstack && (
-          <div className="grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 fade-in">
+          <div
+            className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
+              fade ? "fade-in" : ""
+            }`}
+          >
             {projects.map(
               (projects) =>
                 projects.type === "fullstack" && (
@@ -98,7 +120,7 @@ function Portfolio() {
                     key={projects.name}
                     width={1920}
                     height={1080}
-                    className="object-cover w-full"
+                    className="object-cover w-full border-transparent  border-2 hover:border-[#00abf0] hover:opacity-[0.2]"
                   />
                 )
             )}
