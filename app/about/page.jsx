@@ -69,11 +69,12 @@ function page() {
             </h1>
             <p className="text-[1.4rem] md:text-[1.8rem] max-w-[550px] md:text-center text-justify mt-4">
               <k className="pl-10 md:pl-0">I'm</k> an aspiring Full Stack
-              Developer studying at University of the Philippines Cebu. I have
-              serious passion for creating seamless and innovative web
-              applications , and creating intuitive, dynamic user experiences
-              using mainly the MERN stack, or using a framework like NEXT.js for
-              both the backend and frontend.
+              Developer studying at University of the Philippines Cebu.
+              Proficient in leveraging the MERN stack, I am adept at utilizing
+              frameworks like NEXT.js to streamline both backend and frontend
+              development processes. My commitment to excellence drives me to
+              stay abreast of industry best practices and continuously seek ways
+              to enhance my skills in creating cutting-edge digital solutions.
             </p>
           </div>
           <div className="flex items-center justify-center font-medium flex-col">

@@ -2,11 +2,13 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import { projects } from "/files";
 
 function Portfolio() {
   const [all, setAll] = useState(true);
   const [frontend, setFrontend] = useState(false);
   const [fullstack, setFullstack] = useState(false);
+
   return (
     <section>
       <div className="relative flex w-full flex-col items-center justify-center">
@@ -54,29 +56,54 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 w-[120rem] mt-20">
-          <Image
-            src="/proj1.png"
-            alt="proj1"
-            width={1920}
-            height={1080}
-            className="object-cover w-full"
-          />
-          <Image
-            src="/proj2.png"
-            alt="proj2"
-            width={1920}
-            height={1080}
-            className="object-cover w-full"
-          />
-          <Image
-            src="/proj3.png"
-            alt="proj3"
-            width={1920}
-            height={1080}
-            className="object-cover w-full"
-          />
-        </div>
+        {all && (
+          <div className="grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 fade-in">
+            {projects.map((projects) => (
+              <Image
+                src={projects.folder}
+                alt={projects.name}
+                key={projects.name}
+                width={1920}
+                height={1080}
+                className="object-cover w-full"
+              />
+            ))}
+          </div>
+        )}
+        {frontend && (
+          <div className="grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 fade-in">
+            {projects.map(
+              (projects) =>
+                projects.type === "frontend" && (
+                  <Image
+                    src={projects.folder}
+                    alt={projects.name}
+                    key={projects.name}
+                    width={1920}
+                    height={1080}
+                    className="object-cover w-full"
+                  />
+                )
+            )}
+          </div>
+        )}
+        {fullstack && (
+          <div className="grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 fade-in">
+            {projects.map(
+              (projects) =>
+                projects.type === "fullstack" && (
+                  <Image
+                    src={projects.folder}
+                    alt={projects.name}
+                    key={projects.name}
+                    width={1920}
+                    height={1080}
+                    className="object-cover w-full"
+                  />
+                )
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
