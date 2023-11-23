@@ -72,14 +72,15 @@ function Portfolio() {
             }`}
           >
             {projects.map((projects) => (
-              <Image
-                src={projects.folder}
-                alt={projects.name}
-                key={projects.name}
-                width={1920}
-                height={1080}
-                className="object-cover h-full w-full  border-4 border-[#00abf0] hover:opacity-[0.3]"
-              />
+              <div className="imagedet" key={projects.name}>
+                <Image
+                  src={projects.folder}
+                  alt={projects.name}
+                  width={1920}
+                  height={1080}
+                  className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.2]"
+                />
+              </div>
             ))}
           </div>
         )}
@@ -93,35 +94,37 @@ function Portfolio() {
             {projects.map(
               (projects) =>
                 projects.type === "frontend" && (
-                  <Image
-                    src={projects.folder}
-                    alt={projects.name}
-                    key={projects.name}
-                    width={1920}
-                    height={1080}
-                    className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.3]"
-                  />
+                  <div className="imagedet" key={projects.name}>
+                    <Image
+                      src={projects.folder}
+                      alt={projects.name}
+                      width={1920}
+                      height={1080}
+                      className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.2]"
+                    />
+                  </div>
                 )
             )}
           </div>
         )}
         {fullstack && (
           <div
-            className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
+            className={`grid  grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
               fade ? "fade-in" : ""
             }`}
           >
             {projects.map(
               (projects) =>
                 projects.type === "fullstack" && (
-                  <Image
-                    src={projects.folder}
-                    alt={projects.name}
-                    key={projects.name}
-                    width={1920}
-                    height={1080}
-                    className="object-cover w-full   border-4 border-[#00abf0] hover:opacity-[0.3]"
-                  />
+                  <div className="imagedet" key={projects.name}>
+                    <Image
+                      src={projects.folder}
+                      alt={projects.name}
+                      width={1920}
+                      height={1080}
+                      className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.2]"
+                    />
+                  </div>
                 )
             )}
           </div>
