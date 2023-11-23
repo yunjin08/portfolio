@@ -78,7 +78,7 @@ function Portfolio() {
                 key={projects.name}
                 width={1920}
                 height={1080}
-                className="object-cover h-full w-full border-transparent border-4 hover:border-[#00abf0]"
+                className="object-cover h-full w-full  border-4 border-[#00abf0] hover:opacity-[0.3]"
               />
             ))}
           </div>
@@ -99,7 +99,7 @@ function Portfolio() {
                     key={projects.name}
                     width={1920}
                     height={1080}
-                    className="object-cover w-full h-full border-transparent border-2 hover:border-[#00abf0]"
+                    className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.3]"
                   />
                 )
             )}
@@ -120,7 +120,7 @@ function Portfolio() {
                     key={projects.name}
                     width={1920}
                     height={1080}
-                    className="object-cover w-full border-transparent  border-2 hover:border-[#00abf0] hover:opacity-[0.2]"
+                    className="object-cover w-full   border-4 border-[#00abf0] hover:opacity-[0.3]"
                   />
                 )
             )}
