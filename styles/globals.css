@@ -457,3 +457,15 @@ span {
 .imagedet:hover::before {
   opacity: 1;
 }
+
+.posts {
+  background: radial-gradient(
+    circle,
+    #1e547a 0%,
+    #0e2f46 70%,
+    #173e56 140%,
+    #173e56 150%
+  );
+
+  border: 2px solid var(--main-color);
+}

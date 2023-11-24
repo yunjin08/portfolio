@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { projects } from "/files";
+import Posts from "<jed>/components/Posts";
 
 function Portfolio() {
   const [all, setAll] = useState(true);
@@ -30,6 +31,7 @@ function Portfolio() {
   return (
     <section>
       <div className="relative flex w-full flex-col items-center justify-center">
+        <Posts />
         <div className=" abme flex w-full items-center justify-center flex-col">
           <h1 className="text-8xl font-bold">Projects</h1>
           <div className="mt-10 w-[8rem] border-t-4" />
