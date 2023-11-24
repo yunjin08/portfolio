@@ -78,7 +78,7 @@ function Portfolio() {
                   alt={projects.name}
                   width={1920}
                   height={1080}
-                  className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.2]"
+                  className="object-cover w-full h-full  border-4 border-[#00abf0] hover:cursor-pointer hover:opacity-[0.2]"
                 />
               </div>
             ))}
@@ -100,7 +100,7 @@ function Portfolio() {
                       alt={projects.name}
                       width={1920}
                       height={1080}
-                      className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.2]"
+                      className="object-cover w-full h-full  hover:cursor-pointer border-4 border-[#00abf0] hover:opacity-[0.2]"
                     />
                   </div>
                 )
@@ -122,7 +122,7 @@ function Portfolio() {
                       alt={projects.name}
                       width={1920}
                       height={1080}
-                      className="object-cover w-full h-full  border-4 border-[#00abf0] hover:opacity-[0.2]"
+                      className="object-cover w-full h-full  border-4 border-[#00abf0] hover:cursor-pointer hover:opacity-[0.2]"
                     />
                   </div>
                 )
