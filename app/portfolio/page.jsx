@@ -43,7 +43,11 @@ function Portfolio() {
 
   return (
     <section>
-      <div className="relative flex w-full flex-col items-center justify-center">
+      <div
+        className={`relative flex w-full flex-col items-center justify-center ${
+          post && "overlay"
+        }`}
+      >
         <div className=" abme flex w-full items-center justify-center flex-col">
           <h1 className="text-8xl font-bold">Projects</h1>
           <div className="mt-10 w-[8rem] border-t-4" />
@@ -159,7 +163,10 @@ function Portfolio() {
                           <p className="text-3xl pt-3 pb-20">
                             {projects.stack}
                           </p>
-                          <button className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]">
+                          <button
+                            className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
+                            onClick={() => handlePosts(projects)}
+                          >
                             LEARN MORE
                           </button>
                         </div>
@@ -201,7 +208,10 @@ function Portfolio() {
                           <p className="text-3xl pt-3 pb-20">
                             {projects.stack}
                           </p>
-                          <button className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]">
+                          <button
+                            className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
+                            onClick={() => handlePosts(projects)}
+                          >
                             LEARN MORE
                           </button>
                         </div>
