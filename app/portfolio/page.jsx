@@ -10,6 +10,8 @@ function Portfolio() {
   const [frontend, setFrontend] = useState(false);
   const [fullstack, setFullstack] = useState(false);
   const [projectHovered, setProjectHovered] = useState(null);
+  const [post, setPosts] = useState(false);
+  const [content, setContent] = useState({});
 
   const [fade, setFade] = useState(false);
 
@@ -28,10 +30,13 @@ function Portfolio() {
     setProjectHovered(null);
   };
 
+  const handlePosts = () => {
+    setPosts(true);
+  };
+
   return (
     <section>
       <div className="relative flex w-full flex-col items-center justify-center">
-        <Posts />
         <div className=" abme flex w-full items-center justify-center flex-col">
           <h1 className="text-8xl font-bold">Projects</h1>
           <div className="mt-10 w-[8rem] border-t-4" />
@@ -76,6 +81,7 @@ function Portfolio() {
             </div>
           </div>
         </div>
+        {post && <Posts post={post} setPosts={setPosts} />}
         {all && (
           <div
             className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
@@ -94,7 +100,10 @@ function Portfolio() {
                     <div className="flex flex-col w-full items-center justify-center">
                       <h1 className="text-4xl font-medium">{projects.title}</h1>
                       <p className="text-3xl pt-3 pb-20">{projects.stack}</p>
-                      <button className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]">
+                      <button
+                        className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
+                        onClick={setPosts}
+                      >
                         LEARN MORE
                       </button>
                     </div>
