@@ -30,8 +30,15 @@ function Portfolio() {
     setProjectHovered(null);
   };
 
-  const handlePosts = () => {
+  const handlePosts = (projects) => {
     setPosts(true);
+    setContent({
+      title: projects.title,
+      folder: projects.folder,
+      name: projects.name,
+      stack: projects.stack,
+      description: projects.description,
+    });
   };
 
   return (
@@ -81,7 +88,14 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        {post && <Posts post={post} setPosts={setPosts} />}
+        {post && (
+          <Posts
+            post={post}
+            setPosts={setPosts}
+            content={content}
+            setContent={setContent}
+          />
+        )}
         {all && (
           <div
             className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
@@ -102,7 +116,7 @@ function Portfolio() {
                       <p className="text-3xl pt-3 pb-20">{projects.stack}</p>
                       <button
                         className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
-                        onClick={setPosts}
+                        onClick={() => handlePosts(projects)}
                       >
                         LEARN MORE
                       </button>
