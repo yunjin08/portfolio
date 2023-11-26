@@ -34,15 +34,27 @@ function Home() {
         </div>
         <div className="flex items-center justify-center xl:justify-start">
           <div className="home-sci">
-            <Link href="https://github.com/yunjin08">
+            <a
+              href="https://github.com/yunjin08"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="text-[3rem] bx bxl-github"></i>
-            </Link>
-            <Link href="https://www.facebook.com/donairejededison/">
-              <i class="text-[3rem] bx bxl-facebook"></i>
-            </Link>
-            <Link href="https://www.linkedin.com/in/donaire-jed-edison-291a76282/">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/donaire-jed-edison-291a76282/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="text-[3rem] bx bxl-linkedin-square"></i>
-            </Link>
+            </a>
+            <a
+              href="https://www.facebook.com/donairejededison/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="text-[3rem] bx bxl-facebook"></i>
+            </a>
           </div>
         </div>
       </div>
