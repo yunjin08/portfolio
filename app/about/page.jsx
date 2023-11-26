@@ -49,10 +49,10 @@ function page() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
-          <div className="flex w-[50%] flex-col items-center justify-center ">
+        <div className="flex flex-col lg:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
+          <div className="flex lg:w-[50%] w-full flex-col items-center justify-center ">
             <div className="flex relative items-center justify-center">
-              <div className=" w-[60%] relative  ">
+              <div className=" w-[40%] lg:w-[60%] relative  ">
                 <div className="w-[100%]  ">
                   <Image
                     src="/jed2.png"
@@ -68,21 +68,21 @@ function page() {
             <h1 className="text-[2.8rem] md:text-[3.3rem] font-medium mt-8">
               Who's this <span>guy?</span>
             </h1>
-            <p className="text-[1.4rem] md:text-[1.4rem] xl:text-[1.8rem] max-w-[550px] md:text-center text-justify mt-4">
-              <k className="pl-10 md:pl-0">I'm</k> an aspiring Full Stack
-              Developer studying at University of the Philippines Cebu.
-              Proficient in leveraging the MERN stack, I am adept at utilizing
-              frameworks like NEXT.js to streamline both backend and frontend
-              development processes. My commitment to excellence drives me to
-              stay abreast of industry best practices and continuously seek ways
-              to enhance my skills in creating cutting-edge digital solutions.
+            <p className="text-[1.4rem] md:text-[1.4rem] xl:text-[1.8rem] lg:max-w-[550px] lg:text-center text-justify mt-4 w-full indent-20">
+              I'm an aspiring Full Stack Developer studying at University of the
+              Philippines Cebu. Proficient in leveraging the MERN stack, I am
+              adept at utilizing frameworks like NEXT.js to streamline both
+              backend and frontend development processes. My commitment to
+              excellence drives me to stay abreast of industry best practices
+              and continuously seek ways to enhance my skills in creating
+              cutting-edge digital solutions.
             </p>
           </div>
           <div className="flex items-center justify-center font-medium flex-col">
             <h1 className="text-[3.7rem] md:text-[4rem] font-bold mt-10 md:mt-0 mb-[3rem] text-center">
               Technology <span>Stack</span>
             </h1>
-            <div className="md:ml-[7rem] grid grid-cols-3 md:grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
+            <div className="md:ml-[7rem] grid grid-cols-3 xl:grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
               {stacks.map((stack) => (
                 <Image
                   src={stack.source}
