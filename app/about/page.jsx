@@ -84,14 +84,20 @@ function page() {
             </h1>
             <div className="lg:ml-[7rem] grid grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
               {stacks.map((stack) => (
-                <Image
-                  src={stack.source}
-                  alt={stack.id}
-                  key={stack.id}
-                  width={110}
-                  height={110}
-                  className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[11rem] xl:w-[12rem]"
-                />
+                <div key={stack.id} className="relative">
+                  <Image
+                    src={stack.source}
+                    alt={stack.id}
+                    key={stack.id}
+                    width={110}
+                    height={110}
+                    className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[11rem] xl:w-[12rem]"
+                  />
+                  <div className="absolute -bottom-[30%] right-[36%]">
+                    {" "}
+                    {stack.name}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

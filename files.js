@@ -67,7 +67,7 @@ export const stacks = [
   { source: "/js.svg", id: "js", name: "Javascript" },
   { source: "/c++.png", id: "c++", name: "C++" },
   { source: "/python.png", id: "python", name: "Python" },
-  { source: "/tailwind.png", id: "tailwind", name: "Tailwind CSS" },
+  { source: "/tailwind.png", id: "tailwind", name: "Tailwind" },
   { source: "/react.png", id: "react", name: "ReactJs" },
   { source: "/nextjs.svg", id: "nextjs", name: "NextJs" },
   { source: "/nodejs.svg", id: "nodejs", name: "NodeJs" },
