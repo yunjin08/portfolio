@@ -9,9 +9,9 @@ function Posts({ post, setPosts, content, setContent }) {
     setContent({});
   };
   return (
-    <div className="posts absolute z-[500] w-[80vw] h-[70vh] bg-red-500">
-      <div className="flex ">
-        <div className="w-[60%] h-[69vh]">
+    <div className="posts absolute z-[500] w-[80%] h-[60rem] overflow-hidden">
+      <div className="flex md:flex-row flex-col">
+        <div className="w-[60%] h-[59rem]">
           <Image
             src={content.folder}
             alt={content.name}
@@ -27,17 +27,17 @@ function Posts({ post, setPosts, content, setContent }) {
             onClick={handlePost}
           ></i>
 
-          <h1 className="text-7xl font-bold">{content.title}</h1>
+          <h1 className="text-6xl xl:text-7xl font-bold">{content.title}</h1>
           <p className="text-3xl pt-2 border-b-[1px] pb-10 w-[90%] text-center border-[#5196b1]">
             {content.stack}
           </p>
 
-          <p className="text-justify px-5 pt-16 text-3xl indent-20">
+          <p className="text-justify px-5 pt-16 text-2xl xl:text-3xl indent-20">
             {content.description}
           </p>
-          <button className="flex items-center justify-center px-[2rem] py-5 mt-10  hover:cursor-pointer duration-[400ms] bg-[#00abf0] hover:bg-transparent text-[#112e42] hover:text-white gap-3">
+          <button className="flex items-center justify-center px-[1rem] py-3 blg:px-[2rem] blg:py-5 mt-10  hover:cursor-pointer duration-[400ms] bg-[#00abf0] hover:bg-transparent text-[#112e42] hover:text-white gap-3">
             <i class="bx bx-link-external text-4xl"></i>
-            <p className="text-3xl ">View Site</p>
+            <p className="text-2xl xl:text-3xl ">View Site</p>
           </button>
         </div>
       </div>

@@ -48,19 +48,29 @@ function Portfolio() {
           post && "overlay"
         }`}
       >
+        {post && (
+          <Posts
+            post={post}
+            setPosts={setPosts}
+            content={content}
+            setContent={setContent}
+          />
+        )}
         <div className=" abme flex w-full items-center justify-center flex-col">
-          <h1 className="text-8xl font-bold">Projects</h1>
-          <div className="mt-10 w-[8rem] border-t-4" />
+          <h1 className="text-[4rem] md:text-7xl xl:text-8xl font-bold">
+            {!post && "Projects"}
+          </h1>
+          <div className="mt-4 md:mt-8 w-[9rem] border-t-4" />
         </div>
-        <div>
-          <div className="w-full flex mt-[5rem] text-5xl font-medium items-center justify-center gap-5">
+        <div className={`${post && "hidden"}`}>
+          <div className="w-full flex mt-[5rem] text-4xl  md:text-5xl xl:text-[3.5rem] font-medium items-center justify-center gap-5">
             <div
               onClick={() => {
                 setAll(true);
                 setFrontend(false);
                 setFullstack(false);
               }}
-              className={`text-center w-[24rem] hover:cursor-pointer ${
+              className={`text-center w-[12rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
                 all && "bg-[#112e42] border-[#00abf0] border-2"
               }`}
             >
@@ -72,7 +82,7 @@ function Portfolio() {
                 setAll(false);
                 setFullstack(false);
               }}
-              className={`text-center w-[24rem] hover:cursor-pointer ${
+              className={`text-center w-[12rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
                 frontend && "bg-[#112e42] border-[#00abf0] border-2"
               }`}
             >
@@ -84,7 +94,7 @@ function Portfolio() {
                 setAll(false);
                 setFrontend(false);
               }}
-              className={`text-center w-[24rem] hover:cursor-pointer ${
+              className={`text-center w-[12rem] sm:w-[16rem] md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
                 fullstack && "bg-[#112e42] border-[#00abf0] border-2"
               }`}
             >
@@ -92,19 +102,12 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        {post && (
-          <Posts
-            post={post}
-            setPosts={setPosts}
-            content={content}
-            setContent={setContent}
-          />
-        )}
+
         {all && (
           <div
-            className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
+            className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:w-[120rem] mt-24 gap-7 px-10 md:px-0 mb-44 ${
               fade ? "fade-in" : ""
-            }`}
+            } ${post && "hidden"}`}
           >
             {projects.map((projects, index) => (
               <div
@@ -141,9 +144,9 @@ function Portfolio() {
 
         {frontend && (
           <div
-            className={`grid grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
+            className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:w-[120rem] mt-24 gap-7 px-10 md:px-0 mb-44  ${
               fade ? "fade-in" : ""
-            }`}
+            } ${post && "hidden"}`}
           >
             {projects.map(
               (projects, index) =>
@@ -186,9 +189,9 @@ function Portfolio() {
         )}
         {fullstack && (
           <div
-            className={`grid  grid-cols-3 w-[120rem] mt-24 gap-7 mb-44 ${
+            className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:w-[120rem] mt-24 gap-7 px-10 md:px-0 mb-44  ${
               fade ? "fade-in" : ""
-            }`}
+            } ${post && "hidden"}`}
           >
             {projects.map(
               (projects, index) =>
