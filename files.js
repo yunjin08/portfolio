@@ -60,3 +60,10 @@ export const projects = [
     link: "yunjin08.github.io/A-book-Lib/",
   },
 ];
+
+export const stacks = [
+  { source: "/html.svg", id: "html", name: "HTML" },
+  { source: "/html.svg", id: "html", name: "HTML" },
+  { source: "/html.svg", id: "html", name: "HTML" },
+  { source: "/html.svg", id: "html", name: "HTML" },
+];
