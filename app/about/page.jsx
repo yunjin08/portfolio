@@ -52,7 +52,7 @@ function page() {
         <div className="flex flex-col lg:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
           <div className="flex lg:w-[50%] w-full flex-col items-center justify-center ">
             <div className="flex relative items-center justify-center">
-              <div className=" w-[40%] lg:w-[60%] relative  ">
+              <div className=" w-[45%] lg:w-[60%] relative  ">
                 <div className="w-[100%]  ">
                   <Image
                     src="/jed2.png"
@@ -82,7 +82,7 @@ function page() {
             <h1 className="text-[3.7rem] md:text-[4rem] font-bold mt-10 md:mt-0 mb-[3rem] text-center">
               Technology <span>Stack</span>
             </h1>
-            <div className="md:ml-[7rem] grid grid-cols-3 xl:grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
+            <div className="lg:ml-[7rem] grid grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
               {stacks.map((stack) => (
                 <Image
                   src={stack.source}
@@ -90,7 +90,7 @@ function page() {
                   key={stack.id}
                   width={110}
                   height={110}
-                  className=" object-cover"
+                  className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[11rem] xl:w-[12rem]"
                 />
               ))}
             </div>
