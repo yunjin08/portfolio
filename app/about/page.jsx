@@ -1,8 +1,19 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { stacks } from "<jed>/files";
+import { useState } from "react";
 
-function page() {
+function Page() {
+  const [projectHovered, setProjectHovered] = useState(null);
+
+  const handleHover = (index) => {
+    setProjectHovered(index);
+  };
+
+  const handleMouseLeave = () => {
+    setProjectHovered(null);
+  };
   return (
     <section>
       <div className="flex flex-col items-center justify-center -mt-10 md:mt-auto">
@@ -11,7 +22,7 @@ function page() {
         </h1>
         <div className="icons grid grid-cols-2 blg:grid-cols-4 w-full items-center gap-[2rem] md:gap-[7rem] mt-16">
           <div className="flex flex-col items-center">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  lg:w-[12rem] lg:h-[12rem] xl:w-[15rem] xl:h-[15rem]">
               <i class="gg bx bx-stopwatch"></i>
             </div>
             <h1>Fast</h1>
@@ -21,7 +32,7 @@ function page() {
             </p>
           </div>
           <div className="h-full flex flex-col items-center justify-start">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  lg:w-[12rem] lg:h-[12rem] xl:w-[15rem] xl:h-[15rem]">
               <i className="gg bx bx-devices"></i>
             </div>
             <h1>Responsive</h1>
@@ -30,7 +41,7 @@ function page() {
             </p>
           </div>
           <div className="flex h-full flex-col items-center justify-start">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem] md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem] lg:w-[12rem] lg:h-[12rem] xl:w-[15rem] xl:h-[15rem]">
               <i class="gg bx bx-sun"></i>
             </div>
             <h1>Intuitive</h1>
@@ -39,7 +50,7 @@ function page() {
             </p>
           </div>
           <div className="flex flex-col items-center h-full  justify-start ">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[10rem] h-[10rem]  lg:w-[12rem] lg:h-[12rem] xl:w-[15rem] xl:h-[15rem]">
               <i class="gg bx bx-unite"></i>
             </div>
             <h1>Dynamic</h1>
@@ -68,7 +79,7 @@ function page() {
             <h1 className="text-[2.8rem] md:text-[3.3rem] font-medium mt-8">
               Who's this <span>guy?</span>
             </h1>
-            <p className="text-[1.4rem] md:text-[1.4rem] xl:text-[1.8rem] lg:max-w-[550px] lg:text-center text-justify mt-4 w-full indent-20">
+            <p className="text-[1.4rem] md:text-[1.4rem] xl:text-[1.8rem] lg:max-w-[550px] lg:text-center text-justify mt-8 w-full indent-20">
               I'm an aspiring Full Stack Developer studying at University of the
               Philippines Cebu. Proficient in leveraging the MERN stack, I am
               adept at utilizing frameworks like NEXT.js to streamline both
@@ -79,24 +90,33 @@ function page() {
             </p>
           </div>
           <div className="flex items-center justify-center font-medium flex-col">
-            <h1 className="text-[3.7rem] md:text-[4rem] font-bold mt-10 md:mt-0 mb-[3rem] text-center">
+            <h1 className="text-[3.7rem] md:text-[4rem] font-bold mt-16 lg:mt-0 mb-[3rem] text-center">
               Technology <span>Stack</span>
             </h1>
             <div className="lg:ml-[7rem] grid grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
-              {stacks.map((stack) => (
-                <div key={stack.id} className="relative">
+              {stacks.map((stack, index) => (
+                <div
+                  key={stack.id}
+                  className="relative flex flex-col items-center "
+                >
                   <Image
                     src={stack.source}
                     alt={stack.id}
                     key={stack.id}
                     width={110}
+                    onMouseEnter={() => handleHover(index)}
+                    onMouseLeave={handleMouseLeave}
                     height={110}
-                    className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[11rem] xl:w-[12rem]"
+                    className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[11rem] xl:w-[12rem] mb-2"
                   />
-                  <div className="absolute -bottom-[30%] right-[36%]">
-                    {" "}
-                    {stack.name}
-                  </div>
+                  {projectHovered === index && (
+                    <div className="absolute   -bottom-20 text-2xl duration-500 ">
+                      <h1 className="text-2xl font-bold text-center">
+                        {stack.name}
+                      </h1>
+                      <p className="text-lg text-center">{stack.use}</p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -107,4 +127,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
