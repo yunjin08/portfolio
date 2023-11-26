@@ -51,9 +51,16 @@ function Posts({ post, setPosts, content, setContent }) {
           <p className="text-justify px-10 pt-8 lg:pt-16 text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.4rem] xl:text-[1.65rem] indent-20">
             {content.description}
           </p>
-          <button className="absolute -bottom-24 lg:bottom-20 flex items-center justify-center px-[1rem] py-3 blg:px-[2rem] blg:py-5   hover:cursor-pointer duration-[400ms] bg-[#00abf0] hover:bg-transparent text-[#112e42] hover:text-white gap-3">
-            <i class="bx bx-link-external text-4xl"></i>
-            <p className="text-2xl xl:text-3xl ">View Site</p>
+          <button className="absolute -bottom-24 lg:bottom-20 flex items-center justify-center px-[1rem] py-3 blg:px-[2rem] blg:py-5 rounded-xl   hover:cursor-pointer duration-[400ms] bg-[#00abf0] hover:bg-transparent text-[#112e42] hover:text-white gap-3">
+            <a
+              href={`http://${content.link}`}
+              className="flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bx-link-external text-4xl"></i>
+              <p className="text-2xl xl:text-3xl">View Site</p>
+            </a>
           </button>
         </div>
       </div>

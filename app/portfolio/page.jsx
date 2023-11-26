@@ -38,6 +38,7 @@ function Portfolio() {
       name: projects.name,
       stack: projects.stack,
       description: projects.description,
+      link: projects.link,
     });
   };
 
