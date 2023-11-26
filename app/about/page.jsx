@@ -11,7 +11,7 @@ function page() {
         </h1>
         <div className="icons grid grid-cols-2 blg:grid-cols-4 w-full items-center gap-[2rem] md:gap-[7rem] mt-16">
           <div className="flex flex-col items-center">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
               <i class="gg bx bx-stopwatch"></i>
             </div>
             <h1>Fast</h1>
@@ -21,7 +21,7 @@ function page() {
             </p>
           </div>
           <div className="h-full flex flex-col items-center justify-start">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
               <i className="gg bx bx-devices"></i>
             </div>
             <h1>Responsive</h1>
@@ -30,7 +30,7 @@ function page() {
             </p>
           </div>
           <div className="flex h-full flex-col items-center justify-start">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem] md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
               <i class="gg bx bx-sun"></i>
             </div>
             <h1>Intuitive</h1>
@@ -39,7 +39,7 @@ function page() {
             </p>
           </div>
           <div className="flex flex-col items-center h-full  justify-start ">
-            <div className="ggs bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[15rem] md:h-[15rem]">
+            <div className="ggs bg-[#112e42] border-2 border-[#00abf0]  rounded-full flex items-center justify-center w-[10rem] h-[10rem]  md:w-[12rem] md:h-[12rem] lg:w-[15rem] lg:h-[15rem]">
               <i class="gg bx bx-unite"></i>
             </div>
             <h1>Dynamic</h1>
