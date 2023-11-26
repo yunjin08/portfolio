@@ -50,10 +50,10 @@ function page() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
-          <div className="flex flex-col items-center justify-center ">
-            <div className="flexrelative items-center justify-center">
-              <div className=" w-[210px] relative sm:w-[400px] xl:w-[580px] 2xl:w-[350px]  h-[210px] sm:h-[400px] xl:h-[580px] 2xl:h-[350px] ">
-                <div className="w-[210px] sm:w-[400px] xl:w-[580px] 2xl:w-[350px]  h-[210px] sm:h-[400px] xl:h-[580px] 2xl:h-[350px] ">
+          <div className="flex w-[50%] flex-col items-center justify-center ">
+            <div className="flex relative items-center justify-center">
+              <div className=" w-[60%] relative  ">
+                <div className="w-[100%]  ">
                   <Image
                     src="/jed2.png"
                     alt="jed"
@@ -68,7 +68,7 @@ function page() {
             <h1 className="text-[2.8rem] md:text-[3.3rem] font-medium mt-8">
               Who's this <span>guy?</span>
             </h1>
-            <p className="text-[1.4rem] md:text-[1.8rem] max-w-[550px] md:text-center text-justify mt-4">
+            <p className="text-[1.4rem] md:text-[1.4rem] xl:text-[1.8rem] max-w-[550px] md:text-center text-justify mt-4">
               <k className="pl-10 md:pl-0">I'm</k> an aspiring Full Stack
               Developer studying at University of the Philippines Cebu.
               Proficient in leveraging the MERN stack, I am adept at utilizing
