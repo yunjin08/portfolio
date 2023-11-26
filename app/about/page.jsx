@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { stacks } from "<jed>/files";
 
 function page() {
   return (
@@ -82,99 +83,16 @@ function page() {
               Technology <span>Stack</span>
             </h1>
             <div className="md:ml-[7rem] grid grid-cols-3 md:grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
-              <Image
-                src="/html.svg"
-                alt="jed"
-                width={110}
-                height={110}
-                className=" object-cover"
-              />
-
-              <Image
-                src="/css.png"
-                alt="jed"
-                width={110}
-                height={110}
-                className=" object-cover "
-              />
-              <Image
-                src="/js.svg"
-                alt="jed"
-                width={100}
-                height={100}
-                className=" object-cover  "
-              />
-              <Image
-                src="/c++.png"
-                alt="jed"
-                width={115}
-                height={115}
-                className=" object-cover "
-              />
-              <Image
-                src="/python.png"
-                alt="jed"
-                width={110}
-                height={110}
-                className=" object-cover "
-              />
-
-              <Image
-                src="/tailwind.png"
-                alt="jed"
-                width={110}
-                height={110}
-                className=" object-cover  "
-              />
-              <Image
-                src="/react.png"
-                alt="jed"
-                width={120}
-                height={120}
-                className=" object-cover"
-              />
-              <Image
-                src="/nextjs.svg"
-                alt="jed"
-                width={115}
-                height={115}
-                className=" object-cover "
-              />
-              <Image
-                src="/nodejs.svg"
-                alt="jed"
-                width={120}
-                height={120}
-                className=" object-cover  "
-              />
-              <Image
-                src="/expressjs.svg"
-                alt="jed"
-                width={100}
-                height={100}
-                className=" object-cover  "
-              />
-              <Image
-                src="/mongodb.svg"
-                alt="jed"
-                width={108}
-                height={108}
-                className=" object-cover "
-              />
-              <Image
-                src="/vscode.svg"
-                alt="jed"
-                width={105}
-                height={105}
-                className=" object-cover  "
-              />
-              <Image
-                src="/typescript.svg"
-                alt="jed"
-                width={105}
-                height={105}
-                className=" object-cover "
-              />
+              {stacks.map((stack) => (
+                <Image
+                  src={stack.source}
+                  alt={stack.id}
+                  key={stack.id}
+                  width={110}
+                  height={110}
+                  className=" object-cover"
+                />
+              ))}
             </div>
           </div>
         </div>
