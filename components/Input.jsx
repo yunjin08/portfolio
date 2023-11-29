@@ -5,7 +5,7 @@ function Input({ placeholder }) {
     <input
       type="text"
       placeholder="Email Address"
-      className="w-[44%] h-5"
+      className="w-[45%] h-24"
     ></input>
   );
 }
