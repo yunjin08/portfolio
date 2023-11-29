@@ -30,6 +30,7 @@ function Page() {
               type="text"
               placeholder=""
               className="mb-2 w-[95%] ml-6 h-full  "
+              onChange={handleInputChange}
             />
             <label
               className={`absolute top-0 left-6 text-gray-500 pointer-events-none ${
