@@ -29,15 +29,15 @@ function Page() {
             <input
               type="text"
               placeholder=""
-              className="mb-2 w-[95%] ml-6 h-full  "
+              className="mb-2 w-[93.5%] ml-10 h-full  "
               onChange={handleInputChange}
             />
             <label
-              className={`absolute top-0 left-6 text-gray-500 pointer-events-none ${
+              className={`absolute top-1 left-11 text-gray-500 pointer-events-none ${
                 inputValue ? "hidden" : ""
               }`}
             >
-              Your Message
+              Your Message...
             </label>
           </div>
         </div>
