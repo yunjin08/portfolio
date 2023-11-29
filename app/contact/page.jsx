@@ -16,7 +16,7 @@ function Page() {
         <h1 className="abme text-6xl md:text-8xl font-bold mb-10 md:mb-20">
           Contact <span>Me!</span>{" "}
         </h1>
-        <div className="flex w-[60%] bg-red-500 flex-col h-[40rem]">
+        <div className="flex w-[60%] border-2 rounded-xl border-[#00abf0] flex-col h-[40rem]">
           <div className="flex w-full items-center justify-center h-[10rem] gap-10">
             <Input placeholder={"Fullname"} />
             <Input placeholder={"Email Address"} />
