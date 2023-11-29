@@ -29,7 +29,7 @@ function Page() {
             <input
               type="text"
               placeholder=""
-              className="mb-2 w-[93.5%] ml-10 h-full  "
+              className="mb-2 flex items-start self-start w-[93.5%] text-black  ml-10 h-24 "
               onChange={handleInputChange}
             />
             <label
