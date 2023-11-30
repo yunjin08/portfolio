@@ -4,35 +4,35 @@ import Image from "next/image";
 
 function Home() {
   return (
-    <section className="home flex flex-1 flex-col-reverse xl:flex-row">
+    <section className="home flex flex-1 flex-col-reverse mb-10 xl:flex-row">
       <div className="flex flex-1 flex-col w-full xl:mr-32">
         <div className="home-content text-center xl:text-left w-full">
           <h1 className="w-full xl:w-auto text-center xl:text-left">
             Hi, I&#39;m Jed Edison Donaire
           </h1>
-          <div className="text-animate">
+          <div className="text-animate flex flex-col">
             <h3>Full Stack Developer</h3>
-            <p className="text-justify ">
-              Specializing in server and client-side rendering for optimal web
-              performance and responsive website. With expertise in crafting
-              RESTful APIs, to bring seamless communication between front-end
-              and back-end components. A fast learner of new technologies,
-              dedicated to delivering cutting-edge solutions and ensuring an
-              exceptional user experience.
+            <p className="text-justify mt-[4rem]">
+              Passionate full-stack developer dedicated to crafting cutting-edge
+              websites, For me, my purpose in life is to contribute and innovate
+              in the tech realm, forging a path of creativity and development to
+              leave a lasting impact on the world.
+            </p>
+            <p className="text-justify mt-[2rem] mb-[6rem]">
+              I aspire to be a driving force in the dynamic tech industry,
+              contributing to the modernization of the digital world with
+              creativity and innovation.
             </p>
           </div>
 
           <div className="btn-box flex items-center justify-center xl:justify-start gap-10 mb-44 xl:mb-0">
             <Link href="/" className="btn rounded-lg">
-              Hire Me
-            </Link>
-            <Link href="/" className="btn rounded-lg">
               {" "}
-              Let's Talk
+              Let's Connect
             </Link>
           </div>
         </div>
-        <div className="flex items-center justify-center xl:justify-start">
+        <div className="flex items-center justify-center xl:justify-start mt-10">
           <div className="home-sci">
             <a
               href="https://github.com/yunjin08"

@@ -6,7 +6,7 @@ function Input({ placeholder }) {
       type="text"
       placeholder="Email Address"
       className="w-[45%] h-24 flex items-start text-black pb-20 flex-nowrap"
-    ></input>
+    />
   );
 }
 
