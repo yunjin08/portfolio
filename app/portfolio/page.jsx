@@ -136,7 +136,7 @@ function Portfolio() {
                   alt={projects.name}
                   width={1920}
                   height={1080}
-                  className="object-cover w-full h-full  border-4 border-[#00abf0]  hover:opacity-[0.2]"
+                  className="object-cover w-full h-full  border-[0.2px] border-[#00abf0]  hover:opacity-[0.2]"
                 />
               </div>
             ))}
@@ -203,6 +203,7 @@ function Portfolio() {
                     onMouseLeave={handleMouseLeave}
                     key={projects.name}
                   >
+                    {/*Project Hovering */}
                     {projectHovered === index && (
                       <div className="absolute top-[50%] left-[50%] z-[100] transform -translate-x-1/2 -translate-y-1/2 ">
                         <div className="flex flex-col w-full items-center justify-center">
