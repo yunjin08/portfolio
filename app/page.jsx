@@ -1,8 +1,14 @@
 "use client";
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 function Home() {
+  const socialMediaRef = useRef(null);
+
+  const scrollToSocialMedia = () => {
+    socialMediaRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <section className="home flex flex-1 flex-col-reverse mb-10 xl:flex-row">
       <div className="flex flex-1 flex-col w-full xl:mr-32">
@@ -18,7 +24,7 @@ function Home() {
               in the tech realm, forging a path of creativity and development to
               leave a lasting impact on the world.
             </p>
-            <p className="text-justify mt-[2rem] mb-[6rem]">
+            <p className="text-justify mt-[2rem] mb-[4rem]">
               I aspire to be a driving force in the dynamic tech industry,
               contributing to the modernization of the digital world with
               creativity and innovation.
@@ -26,13 +32,16 @@ function Home() {
           </div>
 
           <div className="btn-box flex items-center justify-center xl:justify-start gap-10 mb-44 xl:mb-0">
-            <Link href="/" className="btn rounded-lg">
+            <button onClick={scrollToSocialMedia} className="btn rounded-lg">
               {" "}
               Let's Connect
-            </Link>
+            </button>
           </div>
         </div>
-        <div className="flex items-center justify-center xl:justify-start mt-10">
+        <div
+          className="flex items-center justify-center xl:justify-start mt-10"
+          ref={socialMediaRef}
+        >
           <div className="home-sci">
             <a
               href="https://github.com/yunjin08"
@@ -58,7 +67,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-center my-20 xl:my-0 ">
+      <div className="flex flex-1 items-center justify-center my-20 xl:mt-20 ">
         <div className="homeimg"></div>
         <div className="relative w-[250px] sm:w-[400px] xl:w-[580px] 2xl:w-[600px]  h-[250px] sm:h-[400px] xl:h-[580px] 2xl:h-[600px] duration-700 hover:scale-[1.02] ">
           <div className="relative">
