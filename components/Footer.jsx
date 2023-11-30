@@ -36,7 +36,7 @@ function Footer() {
         </Link>
       </nav>
       <h3 className="text-sm md:text-xl text-center">
-        &#169; 2023 jed.donaire08@gmail.com. All rights reserved.{" "}
+        &#169; 2023 jed.donaire08@gmail.com{" "}
       </h3>
     </div>
   );

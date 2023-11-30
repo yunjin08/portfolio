@@ -12,17 +12,16 @@ function Home() {
   return (
     <section className="home flex flex-1 flex-col-reverse mb-10 xl:flex-row">
       <div className="flex flex-1 flex-col w-full xl:mr-32">
-        <div className="home-content text-center xl:text-left w-full">
+        <div className="home-content text-center xl:text-left w-full mb-[8rem]">
           <h1 className="w-full xl:w-auto text-center xl:text-left">
             Hi, I&#39;m Jed Edison Donaire
           </h1>
           <div className="text-animate flex flex-col">
             <h3>Full Stack Developer</h3>
-            <p className="text-justify mt-[4rem]">
-              Passionate full-stack developer dedicated to crafting cutting-edge
-              websites, For me, my purpose in life is to contribute and innovate
-              in the tech realm, forging a path of creativity and development to
-              leave a lasting impact on the world.
+            <p className="text-justify mt-[3rem]">
+              For me, my purpose in life is to contribute and innovate in the
+              tech realm, forging a path of creativity and development to leave
+              a lasting impact on the world.
             </p>
             <p className="text-justify mt-[2rem] mb-[4rem]">
               I aspire to be a driving force in the dynamic tech industry,
@@ -69,7 +68,7 @@ function Home() {
       </div>
       <div className="flex flex-1 items-center justify-center my-20 xl:mt-20 ">
         <div className="homeimg"></div>
-        <div className="relative w-[250px] sm:w-[400px] xl:w-[580px] 2xl:w-[600px]  h-[250px] sm:h-[400px] xl:h-[580px] 2xl:h-[600px] duration-700 hover:scale-[1.02] ">
+        <div className="relative w-[250px] sm:w-[400px] xl:w-[560px] 2xl:w-[580px]  h-[250px] sm:h-[400px] xl:h-[560px] 2xl:h-[580px] duration-700 hover:scale-[1.02] ">
           <div className="relative">
             <Image
               src="/jed2.png"

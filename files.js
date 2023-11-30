@@ -1,6 +1,7 @@
 export const projects = [
   {
-    folder: "/proj1.png",
+    folder: "/proj1.webp",
+    folder2: "",
     name: "proj1",
     type: "fullstack",
     title: "HooBank",
@@ -10,7 +11,8 @@ export const projects = [
     link: "hoobank-rouge.vercel.app",
   },
   {
-    folder: "/proj2.png",
+    folder: "/proj2.jpg",
+    folder2: "",
     name: "proj2",
     type: "fullstack",
     title: "LearnAIPrompts",
@@ -20,7 +22,8 @@ export const projects = [
     link: "learnaiprompts.vercel.app",
   },
   {
-    folder: "/proj3.png",
+    folder: "/proj3.jpg",
+    folder2: "",
     name: "proj3",
     type: "fullstack",
     title: "UProfile",
@@ -30,7 +33,8 @@ export const projects = [
     link: "users-management-system-six.vercel.app/",
   },
   {
-    folder: "/proj4.png",
+    folder: "/proj4.jpg",
+    folder2: "",
     name: "proj4",
     type: "frontend",
     title: "Omale",
@@ -40,7 +44,8 @@ export const projects = [
     link: "yunjin08.github.io/odin-project/",
   },
   {
-    folder: "/proj5.png",
+    folder: "/proj5.jpg",
+    folder2: "",
     name: "proj5",
     type: "frontend",
     title: "PawfectConnect",
@@ -50,7 +55,8 @@ export const projects = [
     link: "yunjin08.github.io/Second-Odin-Project/",
   },
   {
-    folder: "/proj6.png",
+    folder: "/proj6.jpg",
+    folder2: "",
     name: "proj6",
     type: "frontend",
     title: "Library Stack",
