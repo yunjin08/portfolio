@@ -2,6 +2,11 @@ import "<jed>/styles/globals.css";
 import Navbar from "<jed>/components/Navbar";
 import Footer from "<jed>/components/Footer";
 
+export const metadata = {
+  title: "Jed Edison Donaire",
+  description: "Portfolio",
+};
+
 function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -10,6 +15,27 @@ function RootLayout({ children }) {
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff"></meta>
       </head>
       <body>
         <main className="app">
