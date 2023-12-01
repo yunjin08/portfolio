@@ -418,6 +418,20 @@ span {
   }
 }
 
+.posting {
+  opacity: 0; /* Initial state, set to fully transparent */
+  animation: fadeIn 0.8s ease 0.2s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with full transparency */
+  }
+  100% {
+    opacity: 1; /* End with full visibility */
+  }
+}
+
 .fade-in {
   opacity: 0;
   /* Adjust the initial offset as needed */

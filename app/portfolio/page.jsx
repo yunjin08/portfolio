@@ -35,6 +35,7 @@ function Portfolio() {
     setContent({
       title: projects.title,
       folder: projects.folder,
+      folder2: projects.folder2,
       name: projects.name,
       stack: projects.stack,
       description: projects.description,

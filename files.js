@@ -51,7 +51,7 @@ export const projects = [
     title: "PawfectConnect",
     stack: "Js / Tailwind",
     description:
-      "Step into a whimsical realm where paws, feathers, and fins converge in a vibrant tapestry of connections – welcome to our frontend project, a social media platform exclusively designed for the charismatic inhabitants of our planet. Through a visually engaging and intuitively crafted interface, this project endeavors to celebrate the diversity of animal companionship, creating a digital sanctuary that seamlessly blends aesthetic allure with the joyous spirit of our furry, feathered, and scaled friends.",
+      "Step into a whimsical realm where paws, feathers, and fins converge in a vibrant tapestry of connections – welcome to my frontend project, a social media platform exclusively designed for the charismatic inhabitants of our planet. Through a visually engaging and intuitively crafted interface, this project endeavors to celebrate the diversity of animal companionship, creating a digital sanctuary that seamlessly blends aesthetic allure with the joyous spirit of our furry, feathered, and scaled friends.",
     link: "yunjin08.github.io/Second-Odin-Project/",
   },
   {
