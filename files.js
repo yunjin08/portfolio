@@ -1,7 +1,7 @@
 export const projects = [
   {
     folder: "/proj1.webp",
-    folder2: "",
+    folder2: "/proja.png",
     name: "proj1",
     type: "fullstack",
     title: "HooBank",
@@ -12,7 +12,7 @@ export const projects = [
   },
   {
     folder: "/proj2.jpg",
-    folder2: "",
+    folder2: "/projb.png",
     name: "proj2",
     type: "fullstack",
     title: "LearnAIPrompts",
@@ -23,7 +23,7 @@ export const projects = [
   },
   {
     folder: "/proj3.jpg",
-    folder2: "",
+    folder2: "/projc.png",
     name: "proj3",
     type: "fullstack",
     title: "UProfile",
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     folder: "/proj4.jpg",
-    folder2: "",
+    folder2: "/projd.png",
     name: "proj4",
     type: "frontend",
     title: "Omale",
@@ -45,7 +45,7 @@ export const projects = [
   },
   {
     folder: "/proj5.jpg",
-    folder2: "",
+    folder2: "/proje.png",
     name: "proj5",
     type: "frontend",
     title: "PawfectConnect",
@@ -56,7 +56,7 @@ export const projects = [
   },
   {
     folder: "/proj6.jpg",
-    folder2: "",
+    folder2: "/projf.png",
     name: "proj6",
     type: "frontend",
     title: "Library Stack",
