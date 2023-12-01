@@ -11,13 +11,13 @@ function Posts({ post, setPosts, content, setContent }) {
   return (
     <div className="posts posting absolute z-[500] w-[80%] h-[63rem] lg:h-[60rem] ">
       <div className="flex lg:flex-row flex-col">
-        <div className="w-[99.5%] lg:w-[60%] h-[30rem] lg:h-[59rem]">
+        <div className="w-[99.5%] lg:w-[60%] h-[30rem] lg:h-[59rem] flex items-center justify-center">
           <Image
             src={content.folder2}
             alt={content.name}
             width={1920}
             height={1080}
-            className="pt-2 pl-2 w-full h-full"
+            className="pt-2 pl-2 w-full h-full  "
           />
           <div
             className="flex lg:hidden absolute -top-4 -right-3"
