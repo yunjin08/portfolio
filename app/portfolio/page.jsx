@@ -65,14 +65,14 @@ function Portfolio() {
           <div className="mt-4 md:mt-8 w-[9rem] border-t-4" />
         </div>
         <div className={`${post && "hidden"}`}>
-          <div className="w-full flex mt-[5rem] text-4xl  md:text-5xl xl:text-[3.5rem] font-medium items-center justify-center gap-5">
+          <div className="w-full flex mt-[5rem] text-3xl sm:text-4xl md:text-5xl xl:text-[3.5rem] font-medium items-center justify-center gap-5">
             <div
               onClick={() => {
                 setAll(true);
                 setFrontend(false);
                 setFullstack(false);
               }}
-              className={`text-center w-[12rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
+              className={`text-center w-[10rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
                 all && "bg-[#112e42] border-[#00abf0] border-2"
               }`}
             >
@@ -84,7 +84,7 @@ function Portfolio() {
                 setAll(false);
                 setFullstack(false);
               }}
-              className={`text-center w-[12rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
+              className={`text-center w-[10rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
                 frontend && "bg-[#112e42] border-[#00abf0] border-2"
               }`}
             >
@@ -96,7 +96,7 @@ function Portfolio() {
                 setAll(false);
                 setFrontend(false);
               }}
-              className={`text-center w-[12rem] sm:w-[16rem] md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
+              className={`text-center w-[10rem] sm:w-[16rem] md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
                 fullstack && "bg-[#112e42] border-[#00abf0] border-2"
               }`}
             >
@@ -137,7 +137,7 @@ function Portfolio() {
                   alt={projects.name}
                   width={1920}
                   height={1080}
-                  className="w-[45rem] h-[25rem]  border-[0.2px] border-[#00abf0]  hover:opacity-[0.2]"
+                  className="w-[45rem] h-[20rem] sm:h-[25rem]  border-[0.2px] border-[#00abf0]  hover:opacity-[0.2]"
                 />
               </div>
             ))}
