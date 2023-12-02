@@ -10,7 +10,7 @@ function Home() {
     socialMediaRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className="home flex flex-1 flex-col-reverse mb-10 xl:flex-row">
+    <section className=" posting home flex flex-1 flex-col-reverse mb-10 xl:flex-row">
       <div className="flex flex-1 flex-col w-full xl:mr-32">
         <div className="home-content text-center xl:text-left w-full mb-[8rem]">
           <h1 className="w-full xl:w-auto text-center xl:text-left">

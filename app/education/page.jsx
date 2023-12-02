@@ -4,8 +4,8 @@ import Image from "next/image";
 function page() {
   return (
     <section>
-      <div className="flex items-center justify-center flex-col">
-        <div className="abme font-bold text-6xl text-center md:text-8xl">
+      <div className="posting flex items-center justify-center flex-col">
+        <div className=" font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>
         </div>
         <div className="flex w-full  lg:flex-row flex-col text-3xl  mt-44 justify-center items-start">

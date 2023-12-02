@@ -46,7 +46,7 @@ function Portfolio() {
   return (
     <section>
       <div
-        className={`relative flex w-full flex-col items-center justify-center ${
+        className={` posting relative flex w-full flex-col items-center justify-center ${
           post && "overlay"
         }`}
       >
@@ -58,7 +58,7 @@ function Portfolio() {
             setContent={setContent}
           />
         )}
-        <div className=" abme flex w-full items-center justify-center flex-col">
+        <div className="  flex w-full items-center justify-center flex-col">
           <h1 className="text-[4rem] md:text-7xl xl:text-8xl font-bold">
             {!post && "Projects"}
           </h1>
@@ -120,7 +120,7 @@ function Portfolio() {
               >
                 {projectHovered === index && (
                   <div className="absolute top-[50%] left-[50%] z-[100] transform -translate-x-1/2 -translate-y-1/2 ">
-                    <div className="flex flex-col w-full items-center justify-center">
+                    <div className="posting flex flex-col w-full items-center justify-center">
                       <h1 className="text-4xl font-medium">{projects.title}</h1>
                       <p className="text-3xl pt-3 pb-20">{projects.stack}</p>
                       <button
@@ -161,7 +161,7 @@ function Portfolio() {
                   >
                     {projectHovered === index && (
                       <div className="absolute top-[50%] left-[50%] z-[100] transform -translate-x-1/2 -translate-y-1/2 ">
-                        <div className="flex flex-col w-full items-center justify-center">
+                        <div className="posting flex flex-col w-full items-center justify-center">
                           <h1 className="text-4xl font-medium">
                             {projects.title}
                           </h1>
@@ -207,7 +207,7 @@ function Portfolio() {
                     {/*Project Hovering */}
                     {projectHovered === index && (
                       <div className="absolute top-[50%] left-[50%] z-[100] transform -translate-x-1/2 -translate-y-1/2 ">
-                        <div className="flex flex-col w-full items-center justify-center">
+                        <div className="posting flex flex-col w-full items-center justify-center">
                           <h1 className="text-4xl font-medium">
                             {projects.title}
                           </h1>

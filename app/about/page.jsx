@@ -16,8 +16,8 @@ function Page() {
   };
   return (
     <section>
-      <div className="flex flex-col items-center justify-center -mt-10 md:mt-auto">
-        <h1 className="abme text-6xl md:text-8xl font-bold mb-10 md:mb-20">
+      <div className="posting flex flex-col items-center justify-center -mt-10 md:mt-auto">
+        <h1 className=" text-6xl md:text-8xl font-bold mb-10 md:mb-20">
           About <span>Me</span>{" "}
         </h1>
         <div className="icons grid grid-cols-2 blg:grid-cols-4 w-full items-center gap-[2rem] md:gap-[7rem] mt-16">
