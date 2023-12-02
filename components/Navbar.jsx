@@ -83,7 +83,7 @@ function Navbar() {
               className={`link ${pathname === "/contact" ? "active" : ""}`}
               href="/contact"
             >
-              Contact
+              Resume
             </Link>
           </div>
         </nav>

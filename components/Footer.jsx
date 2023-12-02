@@ -32,7 +32,7 @@ function Footer() {
           className={`link ${pathname === "/contact" ? "active" : ""}`}
           href="/contact"
         >
-          Contact
+          Resume
         </Link>
       </nav>
       <h3 className="text-sm md:text-xl text-center">
