@@ -29,7 +29,7 @@ function page() {
                 </div>
               </div>
               <div className="precontent">
-                <div className="content  rounded-xl x`space-y-2  p-10 relative">
+                <div className="content  rounded-xl space-y-4  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2016-2022</p>
                   <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
                     High School Degree - Toledo City Science High School
