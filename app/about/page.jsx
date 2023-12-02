@@ -79,7 +79,7 @@ function Page() {
             <h1 className="text-[2.8rem] md:text-[3.3rem] font-medium mt-8">
               Who's this <span>guy?</span>
             </h1>
-            <p className="text-[1.4rem] md:text-[1.4rem] xl:text-[1.8rem] lg:max-w-[550px] lg:text-center text-justify mt-8 w-full indent-20">
+            <p className="text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] xl:text-[1.8rem] lg:max-w-[550px]  text-justify mt-8 w-full indent-20">
               I'm an aspiring Full Stack Developer studying at University of the
               Philippines Cebu. Proficient in leveraging the MERN stack, I am
               adept at utilizing frameworks like NEXT.js to streamline both
@@ -111,7 +111,7 @@ function Page() {
                   />
                   {projectHovered === index && (
                     <div className="absolute   -bottom-20 text-2xl duration-500 ">
-                      <h1 className="text-2xl font-bold text-center">
+                      <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-center">
                         {stack.name}
                       </h1>
                       <p className="text-lg text-center">{stack.use}</p>

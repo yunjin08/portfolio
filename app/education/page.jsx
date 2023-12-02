@@ -19,10 +19,10 @@ function page() {
               <div className="precontent">
                 <div className="content rounded-xl space-y-2  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2010-2016</p>
-                  <p className="font-semibold text-[1.9rem]">
+                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Elementary Degree - General P. del Rosario Elementary School
                   </p>
-                  <p className="text-[1.75rem]">
+                  <p className="text-[1.45rem] sm:text-[1.55rem] lg:text-[1.75rem]">
                     A class valedictorian graduate equipped to create dynamic
                     and inspiring learning environment.
                   </p>
@@ -31,7 +31,7 @@ function page() {
               <div className="precontent">
                 <div className="content  rounded-xl x`space-y-2  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2016-2022</p>
-                  <p className="font-semibold text-[1.9rem]">
+                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
                     High School Degree - Toledo City Science High School
                   </p>
                   <p className="text-[1.75rem]">
@@ -44,7 +44,7 @@ function page() {
               <div className="precontent">
                 <div className="content  rounded-xl space-y-2  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2022-Present</p>
-                  <p className="font-semibold text-[1.9rem]">
+                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
                     College Degree - University of the Philippines Cebu{" "}
                   </p>
                   <p className="text-[1.75rem]">
@@ -66,7 +66,7 @@ function page() {
               <div className="precontent">
                 <div className="content  rounded-xl space-y-2  p-10 relative ">
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
-                  <p className="font-semibold text-[1.9rem]">
+                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Career Series 2022: Industry Talks: Telecommunications and
                     E-commerce.
                   </p>
@@ -75,7 +75,7 @@ function page() {
               <div className="precontent">
                 <div className="content rounded-xl space-y-2  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
-                  <p className="font-semibold text-[1.9rem]">
+                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Career Series 2022: Industry Talks: Technology
                   </p>
                 </div>
@@ -84,7 +84,7 @@ function page() {
               <div className="precontent">
                 <div className="content rounded-xl space-y-2  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
-                  <p className="font-semibold text-[1.9rem]">
+                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Career Series 2022: Industry Talks: Start-up /NGO
                     /Entrepreneurship.
                   </p>
