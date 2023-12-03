@@ -8,7 +8,7 @@ function Posts({ post, setPosts, content, setContent }) {
   return (
     <div className="posts posting absolute z-[500] w-[70%] sm:w-[80%] h-[50rem] sm:h-[65rem] md:h-[70rem] lg:h-[60rem] ">
       <div className="flex lg:flex-row flex-col">
-        <div className="w-[99.5%] lg:w-[60%] h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[59rem] flex items-center justify-center">
+        <div className="posting w-[99.5%] lg:w-[60%] h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[59rem] flex items-center justify-center">
           <Image
             src={content.folder2}
             alt={content.name}
