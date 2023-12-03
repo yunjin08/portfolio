@@ -68,7 +68,7 @@ function Home() {
       </div>
       <div className="flex flex-1 items-center justify-center my-20 xl:mt-20 ">
         <div className="homeimg"></div>
-        <div className="relative w-[250px] sm:w-[400px] xl:w-[560px] 2xl:w-[580px]  h-[250px] sm:h-[400px] xl:h-[560px] 2xl:h-[580px] duration-700 hover:scale-[1.02] ">
+        <div className="relative w-[250px] sm:w-[400px] xl:w-[540px] 2xl:w-[560px]  h-[250px] sm:h-[400px] xl:h-[540px] 2xl:h-[560px] duration-700 hover:scale-[1.02] ">
           <div className="relative">
             <Image
               src="/jed2.png"
