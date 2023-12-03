@@ -9,7 +9,7 @@ function Posts({ post, setPosts, content, setContent }) {
     setContent({});
   };
   return (
-    <div className="posts posting absolute z-[500] w-[80%] h-[63rem] lg:h-[60rem] ">
+    <div className="posts posting absolute z-[500] w-[80%] h-[65rem] sm:h-[65rem] lg:h-[60rem] ">
       <div className="flex lg:flex-row flex-col">
         <div className="w-[99.5%] lg:w-[60%] h-[30rem] lg:h-[59rem] flex items-center justify-center">
           <Image
@@ -48,18 +48,20 @@ function Posts({ post, setPosts, content, setContent }) {
             {content.stack}
           </p>
 
-          <p className="text-justify px-10 pt-8 lg:pt-16 text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.4rem] xl:text-[1.65rem] indent-20">
+          <p className="text-justify px-10 pt-8 lg:pt-16 text-[1rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.4rem] xl:text-[1.65rem] indent-20">
             {content.description}
           </p>
-          <button className="absolute -bottom-24 lg:bottom-20 flex items-center justify-center px-[1rem] py-3 blg:px-[2rem] blg:py-5 rounded-xl   hover:cursor-pointer duration-[400ms] bg-[#00abf0] hover:bg-transparent text-[#112e42] hover:text-white gap-3">
+          <button className="flex items-center mt-10 justify-center px-[1rem] py-3 blg:px-[2rem] blg:py-5 rounded-xl   hover:cursor-pointer duration-[400ms] bg-[#00abf0] hover:bg-transparent text-[#112e42] hover:text-white gap-3">
             <a
               href={`http://${content.link}`}
               className="flex"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="bx bx-link-external text-4xl"></i>
-              <p className="text-2xl xl:text-3xl">View Site</p>
+              <i class="bx bx-link-external pt-[1px] text-2xl sm:text-3xl md:text-4xl xl:text-5xl"></i>
+              <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl">
+                View Site
+              </p>
             </a>
           </button>
         </div>

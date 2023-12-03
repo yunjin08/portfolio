@@ -18,12 +18,30 @@ function Page() {
 
   const scrollToCert1 = () => {
     cert1.current.scrollIntoView({ behavior: "smooth" });
+    {
+      /*Activating Certificates */
+    }
+    certToActive1(true);
+    certToActive2(false);
+    certToActive3(false);
   };
   const scrollToCert2 = () => {
     cert2.current.scrollIntoView({ behavior: "smooth" });
+    {
+      /*Activating Certificates */
+    }
+    certToActive1(false);
+    certToActive2(true);
+    certToActive3(false);
   };
   const scrollToCert3 = () => {
     cert3.current.scrollIntoView({ behavior: "smooth" });
+    {
+      /*Activating Certificates */
+    }
+    certToActive1(false);
+    certToActive2(false);
+    certToActive3(true);
   };
   return (
     <section>
@@ -101,7 +119,7 @@ function Page() {
               <div className="precontent">
                 <div
                   className="content rounded-xl space-y-2  p-10 relative hover:cursor-pointer"
-                  onClick={scrollToCert1}
+                  onClick={scrollToCert2}
                 >
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
                   <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
@@ -113,7 +131,7 @@ function Page() {
               <div className="precontent">
                 <div
                   className="content rounded-xl space-y-2  p-10 relative hover:cursor-pointer"
-                  onClick={scrollToCert1}
+                  onClick={scrollToCert3}
                 >
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
                   <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
@@ -136,7 +154,9 @@ function Page() {
               width={410}
               height={110}
               ref={cert1}
-              className="about-img object-cover rounded-lg hover:scale-[1.05] transition "
+              className={`about-img object-cover rounded-lg ${
+                certActive1 && "scale-[1.1] duration-500"
+              } transition `}
             />
             <Image
               src="/start.png"
@@ -144,7 +164,9 @@ function Page() {
               ref={cert2}
               width={410}
               height={110}
-              className="about-img object-cover rounded-lg hover:scale-[1.05] transition"
+              className={`about-img object-cover rounded-lg transition ${
+                certActive2 && "scale-[1.1] duration-500"
+              }`}
             />
           </div>
           <div className="flex items-center justify-center">
@@ -154,7 +176,9 @@ function Page() {
               ref={cert3}
               width={410}
               height={110}
-              className="about-img object-cover rounded-lg hover:scale-[1.05] transition"
+              className={`about-img object-cover rounded-lg ${
+                certActive3 && "scale-[1.1] duration-500"
+              } transition`}
             />
           </div>
         </div>
