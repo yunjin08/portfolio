@@ -9,9 +9,9 @@ function Posts({ post, setPosts, content, setContent }) {
     setContent({});
   };
   return (
-    <div className="posts posting absolute z-[500] w-[80%] h-[65rem] sm:h-[65rem] lg:h-[60rem] ">
+    <div className="posts posting absolute z-[500] w-[70%] sm:w-[80%] h-[50rem] sm:h-[65rem] md:h-[70rem] lg:h-[60rem] ">
       <div className="flex lg:flex-row flex-col">
-        <div className="w-[99.5%] lg:w-[60%] h-[30rem] lg:h-[59rem] flex items-center justify-center">
+        <div className="w-[99.5%] lg:w-[60%] h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[59rem] flex items-center justify-center">
           <Image
             src={content.folder2}
             alt={content.name}
@@ -41,14 +41,14 @@ function Posts({ post, setPosts, content, setContent }) {
             ></i>
           </div>
 
-          <h1 className="text-4xl pt-10 lg:pt-0 sm:text-5xl md:text-6xl xl:text-7xl font-bold">
+          <h1 className="text-3xl  pt-5 sm:pt-10 lg:pt-0 sm:text-5xl md:text-6xl xl:text-7xl font-bold">
             {content.title}
           </h1>
-          <p className="text-3xl pt-2 border-b-[1px] pb-5 lg:pb-10 w-[90%] text-center border-[#5196b1]">
+          <p className="text-xl sm:text-2xl pt-2 border-b-[1px] pb-5 lg:pb-10 w-[90%] text-center border-[#5196b1]">
             {content.stack}
           </p>
 
-          <p className="text-justify px-10 pt-8 lg:pt-16 text-[1rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.4rem] xl:text-[1.65rem] indent-20">
+          <p className="text-justify px-10 pt-8 lg:pt-16 text-[1rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.4rem] xl:text-[1.65rem] indent-10 md:indent-20">
             {content.description}
           </p>
           <button className="flex items-center mt-10 justify-center px-[1rem] py-3 blg:px-[2rem] blg:py-5 rounded-xl   hover:cursor-pointer duration-[400ms] bg-[#00abf0] hover:bg-transparent text-[#112e42] hover:text-white gap-3">
