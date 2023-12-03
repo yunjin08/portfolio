@@ -1,6 +1,3 @@
-"use client";
-import { projects } from "/files";
-import { useState } from "react";
 import Image from "next/image";
 
 function Posts({ post, setPosts, content, setContent }) {
