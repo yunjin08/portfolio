@@ -55,7 +55,7 @@ function Page() {
             </div>
             <h1>Dynamic</h1>
             <p className="max-w-[60rem]">
-              I enjoy giving pages life so that websites don't have to be
+              I enjoy giving pages life so that websites don&apos;t have to be
               static.
             </p>
           </div>
@@ -77,12 +77,12 @@ function Page() {
               </div>
             </div>
             <h1 className="text-[2.8rem] md:text-[3.3rem] font-medium mt-8">
-              Who's this <span>guy?</span>
+              Who&apos;s this <span>guy?</span>
             </h1>
             <p className="text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] xl:text-[1.8rem] lg:max-w-[550px]  text-justify mt-8 w-full indent-20">
-              I'm an aspiring Full Stack Developer studying at University of the
-              Philippines Cebu. Proficient in leveraging the MERN stack, I am
-              adept at utilizing frameworks like NEXT.js to streamline both
+              I&apos;m an aspiring Full Stack Developer studying at University
+              of the Philippines Cebu. Proficient in leveraging the MERN stack,
+              I am adept at utilizing frameworks like NEXT.js to streamline both
               backend and frontend development processes. My commitment to
               excellence drives me to stay abreast of industry best practices
               and continuously seek ways to enhance my skills in creating

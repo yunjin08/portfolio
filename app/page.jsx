@@ -33,7 +33,7 @@ function Home() {
           <div className="btn-box flex items-center justify-center xl:justify-start gap-10 mb-44 xl:mb-0">
             <button onClick={scrollToSocialMedia} className="btn rounded-lg">
               {" "}
-              Let's Connect
+              Let&apos;s Connect
             </button>
           </div>
         </div>
