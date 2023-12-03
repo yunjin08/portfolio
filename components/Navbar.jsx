@@ -45,12 +45,14 @@ function Navbar() {
         >
           Portfolio
         </Link>
-        <Link
+        <a
+          href="resume.pdf"
           className={`link ${pathname === "/contact" ? "active" : ""}`}
-          href="/contact"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Resume
-        </Link>
+        </a>
       </nav>
       {toggle && (
         <nav className="flex absolute top-[8rem] border-2 border-[#00abf0] right-10 md:hidden flex-col items-center justify-center  rounded-2xl bg-gradient-to-r from-[#133146] via-[#112e42] to-[#10334a]  z-50 overflow-hidden ">
@@ -81,7 +83,7 @@ function Navbar() {
             </Link>
             <Link
               className={`link ${pathname === "/contact" ? "active" : ""}`}
-              href="/contact"
+              href="/resume.pdf"
             >
               Resume
             </Link>
