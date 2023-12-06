@@ -22,17 +22,6 @@ export const projects = [
     link: "learnaiprompts.vercel.app",
   },
   {
-    folder: "/proj3.jpg",
-    folder2: "/projc.png",
-    name: "proj3",
-    type: "fullstack",
-    title: "UProfile",
-    stack: "ReactJs / ExpressJs",
-    description:
-      "Navigating the digital landscape of education, this project focuses on the development and optimization of a robust school data management system tailored for the distinctive needs of the University of the Philippines. With a commitment to efficiency and transparency, our initiative aims to streamline academic processes, providing a comprehensive solution for data handling within the esteemed institution.",
-    link: "users-management-system-six.vercel.app/",
-  },
-  {
     folder: "/proj4.jpg",
     folder2: "/projd.png",
     name: "proj4",
@@ -44,14 +33,14 @@ export const projects = [
     link: "yunjin08.github.io/odin-project/",
   },
   {
-    folder: "/proj5.jpg",
+    folder: "/portfolio.png",
     folder2: "/proje.png",
     name: "proj5",
     type: "frontend",
-    title: "PawfectConnect",
+    title: "PortfoTemp",
     stack: "Js / Tailwind",
     description:
-      "Step into a whimsical realm where paws, feathers, and fins converge in a vibrant tapestry of connections – welcome to my frontend project, a social media platform exclusively designed for the charismatic inhabitants of our planet. Through a visually engaging and intuitively crafted interface, this project endeavors to celebrate the diversity of animal companionship, creating a digital sanctuary that seamlessly blends aesthetic allure with the joyous spirit of our furry, feathered, and scaled friends.",
+      "This project encompasses a meticulously crafted portfolio template, meticulously designed to showcase your professional achievements and creative endeavors. With a sleek and modern aesthetic, the template is not only visually appealing but also user-friendly, allowing you to effortlessly present your work, skills, and experiences.",
     link: "yunjin08.github.io/Second-Odin-Project/",
   },
   {
