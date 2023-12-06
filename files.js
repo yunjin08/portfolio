@@ -52,7 +52,7 @@ export const projects = [
     stack: "NextJs / Expressjs",
     description:
       "    Embarking on a journey through the literary landscape, this frontend project redefines the way we engage with books, providing an aesthetically pleasing and user-friendly platform to manage and track your reading adventures. Seamlessly blending functionality and design, the project enables users to curate their reading lists, marking each book with a personalized touch to effortlessly navigate the world of literature and keep a visual record of completed reads.",
-    link: "https://libstack.vercel.app/",
+    link: "libstack.vercel.app",
   },
 ];
 
