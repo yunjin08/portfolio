@@ -28,12 +28,14 @@ function Footer() {
         >
           Portfolio
         </Link>
-        <Link
+        <a
+          href="resume.pdf"
           className={`link ${pathname === "/contact" ? "active" : ""}`}
-          href="/contact"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Resume
-        </Link>
+        </a>
       </nav>
       <h3 className="text-sm md:text-xl text-center">
         &#169; 2023 jed.donaire08@gmail.com{" "}
