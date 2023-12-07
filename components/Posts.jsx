@@ -6,7 +6,7 @@ function Posts({ post, setPosts, content, setContent }) {
     setContent({});
   };
   return (
-    <div className="posts posting absolute z-[500] w-[70%] sm:w-[80%] h-[50rem] sm:h-[65rem] md:h-[70rem] lg:h-[60rem] ">
+    <div className="posts posting absolute z-[500] w-[70%] sm:w-[73%] h-[50rem] md:w-[74%] sm:h-[60rem] md:h-[60rem] lg:h-[60rem] overflow-scroll pb-10">
       <div className="flex lg:flex-row flex-col">
         <div className="posting w-[99.5%] lg:w-[60%] h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[59rem] flex items-center justify-center">
           <Image
@@ -14,14 +14,14 @@ function Posts({ post, setPosts, content, setContent }) {
             alt={content.name}
             width={1920}
             height={1080}
-            className="pt-2 pl-2 w-full h-full  "
+            className="pt-1 pl-1 w-full h-full  "
           />
           <div
-            className="flex lg:hidden absolute -top-4 -right-3"
+            className="flex lg:hidden absolute top-1 right-1"
             onClick={handlePost}
           >
             <i
-              class="bx bx-minus  text-6xl border-2 border-transparent hover:border-[#5d91b6] bg-[#1e547a] font-bold hover:cursor-pointer"
+              class="bx bx-minus  text-4xl sm:text-6xl border-2 border-transparent hover:border-[#5d91b6] bg-[#1e547a] font-bold hover:cursor-pointer"
               onClick={handlePost}
             ></i>
           </div>
