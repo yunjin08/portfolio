@@ -3,7 +3,7 @@
 
 Welcome to my portfolio!
 
-![image](https://github.com/yunjin08/portfolio/assets/125939827/7a4728c8-83aa-4a9f-ad47-60be71960ef2)
+
 
 
 
@@ -13,4 +13,6 @@ Hello there! I'm Jed Edison J. DOnaire, a passionate Full Stack Developer with a
 Explore a showcase of my projects and learn more about my skills and experiences. Visit my portfolio to dive into a world of creativity, innovation, and passion for Full Stack Development. Let's connect and collaborate!
 
 Feel free to reach out if you have any inquiries or collaboration opportunities. I look forward to connecting with you!
+
+![image](https://github.com/yunjin08/portfolio/assets/125939827/7a4728c8-83aa-4a9f-ad47-60be71960ef2)
 
