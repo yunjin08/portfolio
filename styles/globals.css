@@ -26,6 +26,29 @@ html {
   font-size: 62.5%;
 }
 
+/* Styles for the specific container with the class "overflow-scroll" */
+.overflow-y-scroll {
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+
+  /* For WebKit (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #389fc8; /* Set the color of the thumb */
+    border-radius: 3px; /* Optional: Add rounded corners to the thumb */
+  }
+
+  /* For Mozilla Firefox */
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+
+  &::-moz-scrollbar-thumb {
+    background-color: #389fc8; /* Set the color of the thumb */
+    border-radius: 3px; /* Optional: Add rounded corners to the thumb */
+  }
+}
+
 body {
   background: radial-gradient(
     circle,
