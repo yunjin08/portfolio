@@ -14,5 +14,5 @@ Explore a showcase of my projects and learn more about my skills and experiences
 
 Feel free to reach out if you have any inquiries or collaboration opportunities. I look forward to connecting with you!
 
-![image](https://github.com/yunjin08/portfolio/assets/125939827/7a4728c8-83aa-4a9f-ad47-60be71960ef2)
+![image](https://github.com/yunjin08/portfolio/assets/125939827/e6a887f7-8669-4840-a41e-aaba1d4e0e09)
 
