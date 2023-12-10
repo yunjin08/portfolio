@@ -63,6 +63,12 @@ export const stacks = [
   { source: "/c++.png", id: "c++", name: "C++", use: "Backend" },
   { source: "/python.png", id: "python", name: "Python", use: "Backend" },
   {
+    source: "/rstud.svg",
+    id: "rstud",
+    name: "Rstudio",
+    use: "Data Science",
+  },
+  {
     source: "/tailwind.png",
     id: "tailwind",
     name: "Tailwind",
