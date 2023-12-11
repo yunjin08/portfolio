@@ -3,7 +3,7 @@ export const projects = [
     folder: "/proj1.webp",
     folder2: "/proja.png",
     name: "proj1",
-    type: "fullstack",
+    type: "frontend",
     title: "HooBank",
     stack: "ReactJs / NodeJs",
     description:
