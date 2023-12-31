@@ -1,6 +1,7 @@
 import "<jed>/styles/globals.css";
 import Navbar from "<jed>/components/Navbar";
 import Footer from "<jed>/components/Footer";
+import Image from "next/image";
 
 export const metadata = {
   title: "Jed Edison Donaire",
@@ -38,8 +39,24 @@ function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff"></meta>
       </head>
       <body>
-        <main className="app">
+        <main className="app relative">
           <Navbar />
+          <Image
+            src="/horse.png"
+            alt="horse"
+            width={250}
+            height={250}
+            className="absolute right-[27rem] bottom-[38rem] opacity-20  z-[-20]"
+          />
+
+          <Image
+            src="/cliff.webp"
+            alt="cliff"
+            width={250}
+            height={250}
+            className="absolute right-0 bottom-[0] w-[50rem] opacity-20 z-[-10]"
+          />
+
           {children}
           <Footer />
         </main>

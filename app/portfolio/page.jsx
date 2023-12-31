@@ -199,7 +199,7 @@ function Portfolio() {
               (projects, index) =>
                 projects.type === "fullstack" && (
                   <div
-                    className="imagedet"
+                    className="imagedet "
                     onMouseEnter={() => handleHover(index)}
                     onMouseLeave={handleMouseLeave}
                     key={projects.name}
