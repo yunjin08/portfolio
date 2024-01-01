@@ -41,7 +41,13 @@ function RootLayout({ children }) {
       <body>
         <main className="app relative">
           <Navbar />
-
+          <Image
+            src="/bg2.png"
+            alt="horse"
+            width={250}
+            height={250}
+            className="absolute right-0 bottom-32 opacity-10  z-[-20] w-full"
+          />
           {children}
           <Footer />
         </main>

@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import Image from "next/image";
 function Footer() {
   const pathname = usePathname();
   return (
-    <div className="flex items-center flex-col  justify-center w-full h-32 foter bg-[#112e42] ">
+    <div className="flex relative items-center flex-col  justify-center w-full h-32 foter bg-[#112e42] ">
       <nav className="flex relative flex-1 max-w-[550px] items-center justify-evenly space-x-3 md:space-x-5 text-[1.3rem] sm:text-[1.7rem] font-medium">
         <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
           Home
