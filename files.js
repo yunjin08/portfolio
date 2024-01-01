@@ -54,6 +54,17 @@ export const projects = [
       "    Embarking on a journey through the literary landscape, this frontend project redefines the way we engage with books, providing an aesthetically pleasing and user-friendly platform to manage and track your reading adventures. Seamlessly blending functionality and design, the project enables users to curate their reading lists, marking each book with a personalized touch to effortlessly navigate the world of literature and keep a visual record of completed reads.",
     link: "libstack.vercel.app",
   },
+  {
+    folder: "/proj7.jpg",
+    folder2: "/projg.png",
+    name: "proj7",
+    type: "fullstack",
+    title: "NoshNest",
+    stack: "VueJS / ExpressJS",
+    description:
+      "NoshNest is an innovative online platform designed to elevate your culinary experience by offering a diverse collection of recipes and a user-friendly food menu. Whether you're a seasoned chef or a kitchen novice, NoshNest aims to inspire, guide, and simplify the art of cooking, making every meal a delightful adventure.",
+    link: "noshnest.vercel.app",
+  },
 ];
 
 export const stacks = [

@@ -73,7 +73,7 @@ function Portfolio() {
                 setFullstack(false);
               }}
               className={`text-center w-[10rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
-                all && "bg-[#112e42] border-[#00abf0] border-2"
+                all && "bg-[#112e42] border-[#00abf0] object-cover border-2"
               }`}
             >
               All
@@ -85,7 +85,8 @@ function Portfolio() {
                 setFullstack(false);
               }}
               className={`text-center w-[10rem] sm:w-[16rem]  md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
-                frontend && "bg-[#112e42] border-[#00abf0] border-2"
+                frontend &&
+                "bg-[#112e42] border-[#00abf0] object-cover border-2"
               }`}
             >
               Frontend
@@ -97,7 +98,8 @@ function Portfolio() {
                 setFrontend(false);
               }}
               className={`text-center w-[10rem] sm:w-[16rem] md:w-[20rem] xl:w-[24rem] hover:cursor-pointer ${
-                fullstack && "bg-[#112e42] border-[#00abf0] border-2"
+                fullstack &&
+                "bg-[#112e42] border-[#00abf0] object-cover border-2"
               }`}
             >
               Full Stack
@@ -124,7 +126,7 @@ function Portfolio() {
                       <h1 className="text-4xl font-medium">{projects.title}</h1>
                       <p className="text-3xl pt-3 pb-20">{projects.stack}</p>
                       <button
-                        className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
+                        className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] object-cover hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
                         onClick={() => handlePosts(projects)}
                       >
                         LEARN MORE
@@ -137,7 +139,7 @@ function Portfolio() {
                   alt={projects.name}
                   width={1920}
                   height={1080}
-                  className="w-[45rem] h-[20rem] sm:h-[25rem]  border-[0.2px] border-[#00abf0]  hover:opacity-[0.2]"
+                  className="w-[45rem] h-[20rem] sm:h-[25rem] object-cover border-[0.2px] border-[#00abf0] object-cover  hover:opacity-[0.2]"
                 />
               </div>
             ))}
@@ -169,7 +171,7 @@ function Portfolio() {
                             {projects.stack}
                           </p>
                           <button
-                            className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
+                            className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] object-cover hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
                             onClick={() => handlePosts(projects)}
                           >
                             LEARN MORE
@@ -182,7 +184,7 @@ function Portfolio() {
                       alt={projects.name}
                       width={1920}
                       height={1080}
-                      className="w-[45rem] h-[25rem]   hover:cursor-pointer border-[0.2px] border-[#00abf0] hover:opacity-[0.2]"
+                      className="w-[45rem] h-[25rem]   hover:cursor-pointer border-[0.2px] border-[#00abf0] object-cover hover:opacity-[0.2]"
                     />
                   </div>
                 )
@@ -215,7 +217,7 @@ function Portfolio() {
                             {projects.stack}
                           </p>
                           <button
-                            className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
+                            className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] object-cover hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
                             onClick={() => handlePosts(projects)}
                           >
                             LEARN MORE
@@ -228,7 +230,7 @@ function Portfolio() {
                       alt={projects.name}
                       width={1920}
                       height={1080}
-                      className="w-[45rem] h-[25rem]   border-[0.2px] border-[#00abf0]  hover:cursor-pointer hover:opacity-[0.2]"
+                      className="w-[45rem] h-[25rem]   border-[0.2px] border-[#00abf0] object-cover   hover:cursor-pointer hover:opacity-[0.2]"
                     />
                   </div>
                 )

@@ -29,7 +29,7 @@ function Posts({ post, setPosts, content, setContent }) {
         <div className="flex pb-10 xl:pb-0 flex-col relative items-center lg:pt-[8rem] w-full lg:w-[40%]">
           {/* Exit bar */}
           <div
-            className="hidden lg:flex absolute top-3 right-2"
+            className="hidden lg:flex absolute top-2 right-2"
             onClick={handlePost}
           >
             <i
