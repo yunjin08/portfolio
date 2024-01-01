@@ -63,7 +63,7 @@ function Page() {
         <div className="flex flex-col lg:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
           <div className="flex lg:w-[50%] w-full flex-col items-center justify-center ">
             <div className="flex relative items-center justify-center">
-              <div className=" w-[45%] lg:w-[60%] relative  ">
+              <div className=" w-[60%] relative  ">
                 <div className="w-[100%]  ">
                   <Image
                     src="/jed2.png"
@@ -107,7 +107,7 @@ function Page() {
                     onMouseEnter={() => handleHover(index)}
                     onMouseLeave={handleMouseLeave}
                     height={110}
-                    className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[11rem] xl:w-[12rem] mb-2"
+                    className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[10.5rem] xl:w-[11rem] mb-2"
                   />
                   {projectHovered === index && (
                     <div className="absolute   -bottom-20 text-2xl duration-500 ">

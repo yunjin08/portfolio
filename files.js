@@ -86,6 +86,7 @@ export const stacks = [
     use: "Frontend",
   },
   { source: "/react.png", id: "react", name: "ReactJs", use: "Frontend" },
+  { source: "/vuejs.svg", id: "vuejs", name: "VueJS", use: "Frontend" },
   { source: "/nextjs.svg", id: "nextjs", name: "NextJs", use: "Fullstack" },
   { source: "/nodejs.svg", id: "nodejs", name: "NodeJs", use: "Backend" },
   {
@@ -95,11 +96,23 @@ export const stacks = [
     use: "Backend",
   },
   { source: "/mongodb.svg", id: "mongodb", name: "Mongodb", use: "Database" },
+  {
+    source: "/postgresql.svg",
+    id: "postgresql",
+    name: "Postgresql",
+    use: "Database",
+  },
   { source: "/vscode.svg", id: "vscode", name: "VSCode", use: "Code Editor" },
   {
     source: "/typescript.svg",
     id: "typescript",
     name: "Typescript",
     use: "Frontend Extension",
+  },
+  {
+    source: "/postman.svg",
+    id: "postman",
+    name: "Postman",
+    use: "API Client",
   },
 ];
