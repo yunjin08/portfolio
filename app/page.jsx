@@ -13,17 +13,17 @@ function Home() {
     <section className=" relative posting home flex flex-1 flex-col-reverse mb-10 xl:flex-row">
       <div className="flex flex-1 flex-col w-full xl:mr-32">
         <div className="home-content text-center xl:text-left w-full mb-[8rem]">
-          <h1 className="w-full xl:w-auto text-center xl:text-left">
+          <h1 className="w-full xl:w-auto text-[4.4rem] sm:text-[4.8rem] md:text-[5rem] xl:text-[5.6rem] text-center xl:text-left">
             Hi, I&#39;m Jed Edison Donaire
           </h1>
-          <div className="text-animate flex flex-col">
+          <div className="text-animate    text-[3.3rem] md:text-[3.7rem] xl:text-[3.9rem]   flex flex-col">
             <h3>Full Stack Developer</h3>
-            <p className="text-justify mt-[3rem]">
+            <p className="text-justify text-[1.4rem] md:text-[1.7rem] xl:text-[1.9rem]  mt-[3rem]">
               For me, my purpose in life is to contribute and innovate in the
               tech realm, forging a path of creativity and development to leave
               a lasting impact on the world.
             </p>
-            <p className="text-justify mt-[2rem] mb-[4rem]">
+            <p className="text-justify text-[1.4rem] md:text-[1.7rem] xl:text-[1.9rem] mt-[2rem] mb-[4rem]">
               I aspire to be a driving force in the dynamic tech industry,
               contributing to the modernization of the digital world with
               creativity and innovation.
@@ -38,7 +38,7 @@ function Home() {
           </div>
         </div>
         <div
-          className="flex items-center justify-center xl:justify-start mt-10"
+          className="flex items-center justify-center xl:justify-start mt-0"
           ref={socialMediaRef}
         >
           <div className="home-sci">
