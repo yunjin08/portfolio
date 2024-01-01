@@ -40,10 +40,18 @@ function RootLayout({ children }) {
       </head>
       <body>
         <main className="app relative">
+          <Image
+            src="/moon.png"
+            alt="moon"
+            width={250}
+            height={250}
+            className="absolute right-[-20rem] top-[-20rem] opacity-10  z-[-20] w-[50rem]"
+          />
+
           <Navbar />
           <Image
             src="/bg2.png"
-            alt="horse"
+            alt="bg"
             width={250}
             height={250}
             className="absolute right-0 bottom-32 opacity-10  z-[-20] w-full"

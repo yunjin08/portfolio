@@ -44,7 +44,7 @@ function Portfolio() {
   };
 
   return (
-    <section>
+    <section className="relative ">
       <div
         className={` posting relative flex w-full flex-col items-center justify-center ${
           post && "overlay"

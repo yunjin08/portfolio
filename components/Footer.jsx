@@ -5,7 +5,7 @@ import Image from "next/image";
 function Footer() {
   const pathname = usePathname();
   return (
-    <div className="flex relative  items-center justify-between px-[4rem]  md:px-[13.5rem] w-full h-36 foter border-t-2 border-[#19374c] bg-[#112e42]">
+    <div className="flex relative  items-center justify-between px-[2rem] min:px-[4rem]  md:px-[13.5rem] w-full h-36 foter border-t-2 border-[#112e42] bg-[#112e42]">
       <div className="flex relative  items-center   gap-2 md:gap-10 justify-start  ">
         <Link href="/" className="flex ">
           {" "}
