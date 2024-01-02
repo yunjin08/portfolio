@@ -8,7 +8,7 @@ function Navbar() {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
   return (
-    <div className="header relative ">
+    <div className="header relative overflow-x-hidden">
       <Link href={"/"} className="logo">
         {" "}
         Jed.{" "}

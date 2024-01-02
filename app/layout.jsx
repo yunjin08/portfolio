@@ -39,7 +39,7 @@ function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff"></meta>
       </head>
       <body>
-        <main className="app relative">
+        <main className="app relative overflow-x-hidden">
           <Image
             src="/moon.png"
             alt="moon"

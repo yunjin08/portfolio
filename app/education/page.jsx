@@ -44,7 +44,7 @@ function Page() {
     certToActive3(true);
   };
   return (
-    <section className="relative ">
+    <section className="relative overflow-x-hidden">
       <div className="posting flex items-center justify-center flex-col">
         <div className=" font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>

@@ -15,7 +15,7 @@ function Page() {
     setProjectHovered(null);
   };
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-x-hidden">
       <div className="posting flex flex-col items-center justify-center -mt-10 md:mt-auto">
         <h1 className=" text-6xl md:text-8xl font-bold mb-10 md:mb-20">
           About <span>Me</span>{" "}
