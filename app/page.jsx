@@ -66,10 +66,10 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex overflow-hidden flex-1 items-center justify-center my-20 xl:mt-20 ">
+      <div className="flex overflow-hidden flex-1 items-center  justify-center my-20 xl:mt-[-5rem] ">
         <div className="homeimg"></div>
-        <div className="relative w-[250px] sm:w-[400px] xl:w-[480px]   h-[250px] sm:h-[400px] xl:h-[480px] duration-700 hover:scale-[1.02] ">
-          <div className="relative">
+        <div className="relative w-[250px] sm:w-[400px] xl:w-[490px]   h-[250px] sm:h-[400px] xl:h-[490px] duration-700 hover:scale-[1.02] ">
+          <div className="relative h-full">
             <Image
               src="/jed2.png"
               alt="jed"
