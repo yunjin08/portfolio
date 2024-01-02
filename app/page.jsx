@@ -68,7 +68,7 @@ function Home() {
       </div>
       <div className="flex flex-1 items-center justify-center my-20 xl:mt-20 ">
         <div className="homeimg"></div>
-        <div className="relative w-[250px] sm:w-[400px] xl:w-[530px] 2xl:w-[550px]  h-[250px] sm:h-[400px] xl:h-[530px] 2xl:h-[550px] duration-700 hover:scale-[1.02] ">
+        <div className="relative w-[250px] sm:w-[400px] xl:w-[480px]   h-[250px] sm:h-[400px] xl:h-[480px] duration-700 hover:scale-[1.02] ">
           <div className="relative">
             <Image
               src="/jed2.png"
@@ -77,8 +77,7 @@ function Home() {
               height={1280}
               className="gradient-conic about-img object-cover  rounded-full"
             />
-            <span className="circle-spin"></span>
-            <span className=" circle-spin"></span>
+            <span className="circle-spin "></span>
           </div>
         </div>
       </div>
