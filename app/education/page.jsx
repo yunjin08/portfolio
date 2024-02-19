@@ -49,21 +49,21 @@ function Page() {
         <div className=" font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>
         </div>
-        <div className="flex w-full  lg:flex-row flex-col text-3xl  mt-44 justify-center items-start">
+        <div className="flex w-full  lg:flex-row flex-col text-3xl  mt-20 sm:mt-44 justify-center items-start">
           {/*Education */}
           <div className="w-full flex flex-col flex-1 lg:items-start items-center  justify-center">
             <h1 className="text-[3rem] flex flex-col font-semibold pb-10">
               Education{" "}
             </h1>
 
-            <div className="ed flex flex-col space-y-16 max-w-[650px] pl-10">
+            <div className="ed flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10">
               <div className="precontent">
                 <div className="content rounded-xl space-y-2  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2010-2016</p>
-                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
+                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Elementary Degree - General P. del Rosario Elementary School
                   </p>
-                  <p className="text-[1.45rem] sm:text-[1.55rem] lg:text-[1.75rem]">
+                  <p className="text-[1.25rem] sm:text-[1.55rem] lg:text-[1.75rem]">
                     A class valedictorian graduate equipped to create dynamic
                     and inspiring learning environment.
                   </p>
@@ -72,10 +72,10 @@ function Page() {
               <div className="precontent">
                 <div className="content  rounded-xl space-y-4  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2016-2022</p>
-                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
+                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
                     High School Degree - Toledo City Science High School
                   </p>
-                  <p className="text-[1.75rem]">
+                  <p className="text-[1.25rem] sm:text-[1.55rem] lg:text-[1.75rem]">
                     Batch salutatorian graduate from a Science High School,
                     proven commitment to academic inquiry, innovation, and
                     critical thinking.
@@ -85,10 +85,10 @@ function Page() {
               <div className="precontent">
                 <div className="content  rounded-xl space-y-2  p-10 relative">
                   <p className="date text-[1.7rem]">&#9634; 2022-Present</p>
-                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
+                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
                     College Degree - University of the Philippines Cebu{" "}
                   </p>
-                  <p className="text-[1.75rem]">
+                  <p className="text-[1.25rem] sm:text-[1.55rem] lg:text-[1.75rem]">
                     Pursuing undergraduate studies at UP, thrives in an academic
                     setting synonymous with excellence in academics, rigorous
                     research, creative innovation, and operational efficiency.
@@ -97,20 +97,21 @@ function Page() {
               </div>
             </div>
           </div>
+
           {/*Seminars Attended*/}
           <div className=" flex-1 w-full flex flex-col lg:items-start items-center justify-center lg:pl-12">
             <h1 className="text-[3rem] flex flex-col leading-[3rem] font-semibold text-center md:text-auto pb-10 pt-10 md:pt-0">
               Seminars Attended{" "}
             </h1>
 
-            <div className="ed flex flex-col space-y-16 max-w-[650px] pl-10 h-full">
+            <div className="ed flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10 h-full">
               <div className="precontent">
                 <div
                   className="content  rounded-xl space-y-2  p-10 relative hover:cursor-pointer"
                   onClick={scrollToCert1}
                 >
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
-                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
+                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Career Series 2022: Industry Talks: Telecommunications and
                     E-commerce.
                   </p>
@@ -122,7 +123,7 @@ function Page() {
                   onClick={scrollToCert2}
                 >
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
-                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
+                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Career Series 2022: Industry Talks: Technology
                   </p>
                 </div>
@@ -134,7 +135,7 @@ function Page() {
                   onClick={scrollToCert3}
                 >
                   <p className="date text-[1.7rem]">&#9634; 2022</p>
-                  <p className="font-semibold text-[1.5xl] sm:text-[1.7rem] lg:text-[1.9rem]">
+                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
                     Career Series 2022: Industry Talks: Start-up /NGO
                     /Entrepreneurship.
                   </p>

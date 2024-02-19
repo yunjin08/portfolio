@@ -105,6 +105,12 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+@media screen and (max-width: 350px) {
+  section {
+    padding-top: 5rem;
+  }
+}
+
 .home {
   align-items: center;
   max-width: 100%;
