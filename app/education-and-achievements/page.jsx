@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import EducationCard from "<jed>/components/EducationCard";
+import Certificates from "<jed>/components/Certificates";
+import Achievement from "<jed>/components/Achievement";
 
 function Page() {
   const [certActive1, certToActive1] = useState(false);
@@ -58,22 +60,22 @@ function Page() {
             </h1>
 
             <div className="ed flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10">
-              <EducationCard 
-                school = "Elementary Degree - General P. del Rosario Elementary School" 
-                year = "2010-2016" 
-                description = "A class valedictorian graduate equipped to create dynamic and inspiring learning environment."
+              <EducationCard
+                school="Elementary Degree - General P. del Rosario Elementary School"
+                year="2010-2016"
+                description="A class valedictorian graduate equipped to create dynamic and inspiring learning environment."
               />
-              <EducationCard 
-                school = "High School Degree - Toledo City Science High School" 
-                year = "2016-2022" 
-                description = {`Batch salutatorian graduate from a Science High School,
+              <EducationCard
+                school="High School Degree - Toledo City Science High School"
+                year="2016-2022"
+                description={`Batch salutatorian graduate from a Science High School,
                 proven commitment to academic inquiry, innovation, and
                 critical thinking.`}
               />
-              <EducationCard 
-                school = "College Degree - University of the Philippines Cebu" 
-                year = "2022-Present" 
-                description = {`Pursuing undergraduate studies at UP, thrives in an academic
+              <EducationCard
+                school="College Degree - University of the Philippines Cebu"
+                year="2022-Present"
+                description={`Pursuing undergraduate studies at UP, thrives in an academic
                 setting synonymous with excellence in academics, rigorous
                 research, creative innovation, and operational efficiency.`}
               />
@@ -127,45 +129,22 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 flex-col mt-24 mb-20">
-        <h1 className="text-6xl  font-semibold text-center">Certificates</h1>
-        <div className="flex flex-col xxl:flex-row space-y-10 xxl:space-y-0 items-center mt-10 lg:space-x-24">
-          <div className="flex  flex-col items-center space-y-10 justify-center blg:space-x-24   blg:flex-row blg:space-y-0">
-            <Image
-              src="/ecom.png"
-              alt="jed"
-              width={410}
-              height={110}
-              ref={cert1}
-              className={`about-img object-cover rounded-lg ${
-                certActive1 && "scale-[1.1] duration-500"
-              } transition `}
-            />
-            <Image
-              src="/start.png"
-              alt="jed"
-              ref={cert2}
-              width={410}
-              height={110}
-              className={`about-img object-cover rounded-lg transition ${
-                certActive2 && "scale-[1.1] duration-500"
-              }`}
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <Image
-              src="/tech.png"
-              alt="jed"
-              ref={cert3}
-              width={410}
-              height={110}
-              className={`about-img object-cover rounded-lg ${
-                certActive3 && "scale-[1.1] duration-500"
-              } transition`}
-            />
-          </div>
-        </div>
-      </div>
+      <Achievement
+        cert1={cert1}
+        cert2={cert2}
+        cert3={cert3}
+        certActive1={certActive1}
+        certActive2={certActive2}
+        certActive3={certActive3}
+      />
+      <Certificates
+        cert1={cert1}
+        cert2={cert2}
+        cert3={cert3}
+        certActive1={certActive1}
+        certActive2={certActive2}
+        certActive3={certActive3}
+      />
     </section>
   );
 }
