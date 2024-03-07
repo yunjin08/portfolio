@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import EducationCard from "<jed>/components/EducationCard";
 
 function Page() {
   const [certActive1, certToActive1] = useState(false);
@@ -52,49 +53,30 @@ function Page() {
         <div className="flex w-full  lg:flex-row flex-col text-3xl  mt-20 sm:mt-44 justify-center items-start">
           {/*Education */}
           <div className="w-full flex flex-col flex-1 lg:items-start items-center  justify-center">
-            <h1 className="text-[3rem] flex flex-col font-semibold pb-10">
-              Education{" "}
+            <h1 className="text-[3rem] flex flex-col font-semibold pb-14">
+              Education and Achievements{" "}
             </h1>
 
             <div className="ed flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10">
-              <div className="precontent">
-                <div className="content rounded-xl space-y-2  p-10 relative">
-                  <p className="date text-[1.7rem]">&#9634; 2010-2016</p>
-                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
-                    Elementary Degree - General P. del Rosario Elementary School
-                  </p>
-                  <p className="text-[1.25rem] sm:text-[1.55rem] lg:text-[1.75rem]">
-                    A class valedictorian graduate equipped to create dynamic
-                    and inspiring learning environment.
-                  </p>
-                </div>
-              </div>
-              <div className="precontent">
-                <div className="content  rounded-xl space-y-4  p-10 relative">
-                  <p className="date text-[1.7rem]">&#9634; 2016-2022</p>
-                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
-                    High School Degree - Toledo City Science High School
-                  </p>
-                  <p className="text-[1.25rem] sm:text-[1.55rem] lg:text-[1.75rem]">
-                    Batch salutatorian graduate from a Science High School,
-                    proven commitment to academic inquiry, innovation, and
-                    critical thinking.
-                  </p>
-                </div>
-              </div>
-              <div className="precontent">
-                <div className="content  rounded-xl space-y-2  p-10 relative">
-                  <p className="date text-[1.7rem]">&#9634; 2022-Present</p>
-                  <p className="font-semibold text-[1.3rem] sm:text-[1.7rem] lg:text-[1.9rem]">
-                    College Degree - University of the Philippines Cebu{" "}
-                  </p>
-                  <p className="text-[1.25rem] sm:text-[1.55rem] lg:text-[1.75rem]">
-                    Pursuing undergraduate studies at UP, thrives in an academic
-                    setting synonymous with excellence in academics, rigorous
-                    research, creative innovation, and operational efficiency.
-                  </p>
-                </div>
-              </div>
+              <EducationCard 
+                school = "Elementary Degree - General P. del Rosario Elementary School" 
+                year = "2010-2016" 
+                description = "A class valedictorian graduate equipped to create dynamic and inspiring learning environment."
+              />
+              <EducationCard 
+                school = "High School Degree - Toledo City Science High School" 
+                year = "2016-2022" 
+                description = {`Batch salutatorian graduate from a Science High School,
+                proven commitment to academic inquiry, innovation, and
+                critical thinking.`}
+              />
+              <EducationCard 
+                school = "College Degree - University of the Philippines Cebu" 
+                year = "2022-Present" 
+                description = {`Pursuing undergraduate studies at UP, thrives in an academic
+                setting synonymous with excellence in academics, rigorous
+                research, creative innovation, and operational efficiency.`}
+              />
             </div>
           </div>
 
