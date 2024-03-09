@@ -90,7 +90,7 @@ function Page() {
             </p>
           </div>
           <div className="flex items-center justify-center font-medium flex-col">
-            <h1 className="text-[3.7rem] md:text-[4rem] font-bold mt-16 lg:mt-0 mb-[3rem] text-center">
+            <h1 className="text-[2.8rem] sm:text-[3.6rem] md:text-[4rem] font-bold mt-16 lg:mt-0 mb-[3rem] text-center">
               Technology <span>Stack</span>
             </h1>
             <div className="lg:ml-[7rem] grid grid-cols-4 gap-[5rem] md:gap-[8rem] items-center  justify-center">
