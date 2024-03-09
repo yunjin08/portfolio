@@ -48,6 +48,11 @@ function Page() {
   };
   return (
     <section className="relative overflow-x-hidden">
+      <div className="absolute z-[100] -left-1/2 top-1/2 w-[30%] h-[30%] rounded-full white__gradient"/>
+      <div className="absolute z-[100] -left-1/2 top-1/2 w-[30%] h-[30%] rounded-full blue__gradient" />
+
+      <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full white__gradient"/>
+      <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full darkblue__gradient" />
       <div className="posting flex items-center justify-center flex-col">
         <div className=" font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>
@@ -55,7 +60,7 @@ function Page() {
         <div className="flex w-full  lg:flex-row flex-col text-3xl  mt-20 sm:mt-44 justify-center items-start">
           {/*Education */}
           <div className="w-full flex flex-col flex-1 lg:items-start items-center  justify-center">
-            <h1 className="text-[3rem] flex flex-col font-semibold pb-14">
+            <h1 className="text-[3rem] lg:text-left text-center flex flex-col font-semibold pb-14">
               Education and Achievements{" "}
             </h1>
 

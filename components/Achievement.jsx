@@ -6,12 +6,13 @@ function Achievement(props) {
   return (
     <div className="flex flex-1 flex-col mt-32 mb-20">
       <h1 className="text-6xl  font-semibold text-center">Achievements</h1>
-      <div className="flex flex-col  items-center justify-center mt-10 ">
+      <div className="flex relative flex-col  items-center justify-center mt-10 ">
+
         <Image
           src="/hackathon.jpeg"
           alt="jed"
-          width={210}
-          height={100}
+          width={11110}
+          height={11100}
           ref={cert1}
           className={`about-img  rounded-lg w-[30rem] md:w-[35rem] xl:w-[40rem] transition `}
         />

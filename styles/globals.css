@@ -524,3 +524,18 @@ span {
   ); /* Adjust the last value (0.5) for transparency */
   z-index: 99; /* Make sure the overlay is on top of other elements */
 }
+
+.white__gradient {
+  background: #4f93c1;
+  filter: blur(750px);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.darkblue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #024977 100%);
+  filter: blur(123px);
+}
