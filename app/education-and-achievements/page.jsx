@@ -48,10 +48,10 @@ function Page() {
   };
   return (
     <section className="relative overflow-x-hidden">
-      <div className="absolute z-[100] -left-1/2 top-1/2 w-[30%] h-[30%] rounded-full white__gradient"/>
+      <div className="absolute z-[100] -left-1/2 top-1/2 w-[30%] h-[30%] rounded-full white__gradient" />
       <div className="absolute z-[100] -left-1/2 top-1/2 w-[30%] h-[30%] rounded-full blue__gradient" />
 
-      <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full white__gradient"/>
+      <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full white__gradient" />
       <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full darkblue__gradient" />
       <div className="posting flex items-center justify-center flex-col">
         <div className=" font-bold text-6xl text-center md:text-8xl">
@@ -61,7 +61,7 @@ function Page() {
           {/*Education */}
           <div className="w-full flex flex-col flex-1 lg:items-start items-center  justify-center">
             <h1 className="text-[3rem] lg:text-left text-center flex flex-col font-semibold pb-14">
-              Education and Achievements{" "}
+              Education
             </h1>
 
             <div className="ed flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10">
@@ -134,14 +134,32 @@ function Page() {
           </div>
         </div>
       </div>
-      <Achievement
-        cert1={cert1}
-        cert2={cert2}
-        cert3={cert3}
-        certActive1={certActive1}
-        certActive2={certActive2}
-        certActive3={certActive3}
-      />
+      <div className="flex w-full  flex-col text-3xl  mt-20 sm:mt-22 justify-center items-center">
+        <div className="w-full flex flex-col flex-1 items-center  justify-center mb-24">
+          <h1 className="text-[3rem] justify-center text-center flex flex-col font-semibold pb-14">
+            Experience
+          </h1>
+
+          <div className="ed w-full flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10">
+            <EducationCard
+              school="Part time Fullstack Developer"
+              year="2024-Present"
+              description="Developing a website that scales workforces and its productivity using Vue, Django, and Postgresql."
+            />
+          </div>
+        </div>
+        <div className=" flex-1 w-full flex flex-col  items-center justify-center ">
+          <Achievement
+            cert1={cert1}
+            cert2={cert2}
+            cert3={cert3}
+            certActive1={certActive1}
+            certActive2={certActive2}
+            certActive3={certActive3}
+          />
+        </div>
+      </div>
+
       <Certificates
         cert1={cert1}
         cert2={cert2}

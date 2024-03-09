@@ -34,7 +34,9 @@ function Navbar() {
           About
         </Link>
         <Link
-          className={`link ${pathname === "/education-and-achievements" ? "active" : ""}`}
+          className={`link ${
+            pathname === "/education-and-achievements" ? "active" : ""
+          }`}
           href="/education-and-achievements"
         >
           Achievements
@@ -70,10 +72,12 @@ function Navbar() {
               About
             </Link>
             <Link
-              className={`link ${pathname === "/education-and-achievements" ? "active" : ""}`}
+              className={`link ${
+                pathname === "/education-and-achievements" ? "active" : ""
+              }`}
               href="/education-and-achievements"
             >
-              Education and Achievements
+              Achievements
             </Link>
             <Link
               className={`link ${pathname === "/portfolio" ? "active" : ""}`}
