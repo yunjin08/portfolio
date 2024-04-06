@@ -16,6 +16,13 @@ function Page() {
   };
   return (
     <section className="relative overflow-x-hidden">
+      <Image
+        src="/Animate.png"
+        alt="bg-photo"
+        height={1156}
+        width={1156}
+        className="absolute z-[0] left-[-4rem] sm:left-[-15rem] md:top-[-8rem] lg:top-[-10rem] xl:top-[-20rem] opacity-5 w-[70rem] sm:w-[75rem] md:w-[80rem] xl:w-[110rem] 2xl:w-[120rem]"
+      />
       <div className="posting flex flex-col items-center justify-center -mt-10 md:mt-auto">
         <h1 className=" text-6xl md:text-8xl font-bold mb-10 md:mb-20">
           About <span>Me</span>{" "}
@@ -107,7 +114,7 @@ function Page() {
                     onMouseEnter={() => handleHover(index)}
                     onMouseLeave={handleMouseLeave}
                     height={110}
-                    className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[10.5rem] xl:w-[11rem] mb-2"
+                    className=" object-cover w-[6rem] sm:w-[7rem] md:w-[9rem] lg:w-[10.5rem] xl:w-[11rem] mb-2 hover:scale-110 transition"
                   />
                   {projectHovered === index && (
                     <div className="absolute   -bottom-20 text-2xl duration-500 ">

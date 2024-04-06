@@ -106,6 +106,12 @@ export const stacks = [
     name: "ExpressJs",
     use: "Backend",
   },
+  {
+    source: "/django.svg",
+    id: "django",
+    name: "Django",
+    use: "Backend",
+  },
   { source: "/mongodb.svg", id: "mongodb", name: "Mongodb", use: "Database" },
   {
     source: "/postgresql.svg",

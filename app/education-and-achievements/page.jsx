@@ -48,15 +48,12 @@ function Page() {
   };
   return (
     <section className="relative overflow-x-hidden">
-      <div className="absolute z-[100] -left-1/2 top-1/2 w-[30%] h-[30%] rounded-full white__gradient" />
-      <div className="absolute z-[100] -left-1/2 top-1/2 w-[30%] h-[30%] rounded-full blue__gradient" />
-
       <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full white__gradient" />
       <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full darkblue__gradient" />
-      <Image src="/Animate1.png" alt='bg-photo'height={1156} width={1156} className="hidden 2xl:block absolute z-[0] right-[2rem] top-[38%] opacity-80 w-[30%]"/>
+
       <div className="hidden 2xl:block absolute z-[0] right-[2rem] top-[38%]  w-[30%] h-[20%] rounded-full darkblue__gradient" />
       <div className="hidden 2xl:block absolute z-[0] left-[2rem] top-[58%]  w-[30%] h-[20%] rounded-full darkblue__gradient" />
-      <Image src="/Animate1.png" alt='bg-photo'height={1156} width={1156} className="hidden 2xl:block absolute z-[0] left-[2rem] top-[58%] opacity-80 w-[30%]"/>
+
       <div className="posting flex items-center justify-center flex-col">
         <div className=" font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>
