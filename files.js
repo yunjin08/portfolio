@@ -65,6 +65,17 @@ export const projects = [
       "NoshNest is an innovative online platform designed to elevate your culinary experience by offering a diverse collection of recipes and a user-friendly food menu. Whether you're a seasoned chef or a kitchen novice, NoshNest aims to inspire, guide, and simplify the art of cooking, making every meal a delightful adventure.",
     link: "noshnest.vercel.app",
   },
+  {
+    folder: "/proj8.webp",
+    folder2: "/projh.webp",
+    name: "proj8",
+    type: "fullstack",
+    title: "Joom",
+    stack: "Nextjs / GetStream IO",
+    description:
+      "Joom, an innovative online conference platform, leverages Clerk for secure authentication and enhances its real-time communication capabilities using the GetStream.io library.",
+    link: "https://video-conference-app-phi.vercel.app/",
+  },
 ];
 
 export const stacks = [

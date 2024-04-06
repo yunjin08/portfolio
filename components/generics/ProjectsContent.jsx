@@ -61,7 +61,7 @@ function ProjectsContent(props) {
                   {projectHovered === index && (
                     <div className="absolute top-[50%] left-[50%] z-[100] transform -translate-x-1/2 -translate-y-1/2 ">
                       <div className="posting flex flex-col w-full items-center justify-center">
-                        <h1 className="text-4xl font-medium">
+                        <h1 className="text-4xl font-extrabold">
                           {projects.title}
                         </h1>
                         <p className="text-3xl pt-3 pb-20">{projects.stack}</p>

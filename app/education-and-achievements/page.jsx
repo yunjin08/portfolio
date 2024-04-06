@@ -53,6 +53,10 @@ function Page() {
 
       <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full white__gradient" />
       <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full darkblue__gradient" />
+      <Image src="/Animate1.png" alt='bg-photo'height={1156} width={1156} className="hidden 2xl:block absolute z-[0] right-[2rem] top-[38%] opacity-80 w-[30%]"/>
+      <div className="hidden 2xl:block absolute z-[0] right-[2rem] top-[38%]  w-[30%] h-[20%] rounded-full darkblue__gradient" />
+      <div className="hidden 2xl:block absolute z-[0] left-[2rem] top-[58%]  w-[30%] h-[20%] rounded-full darkblue__gradient" />
+      <Image src="/Animate1.png" alt='bg-photo'height={1156} width={1156} className="hidden 2xl:block absolute z-[0] left-[2rem] top-[58%] opacity-80 w-[30%]"/>
       <div className="posting flex items-center justify-center flex-col">
         <div className=" font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>
@@ -142,9 +146,19 @@ function Page() {
 
           <div className="ed w-full flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10">
             <EducationCard
-              school="Part time Fullstack Developer"
+              school="Part time Fullstack Developer at BPOSeats"
               year="2024-Present"
               description="Developing a website that scales workforces and its productivity using Vue, Django, and Postgresql."
+            />
+            <EducationCard
+              school="Self Employed Fullstack Developer at Beacon"
+              year="2024-Present"
+              description="Created and develop a website that generated career path model using AI with stack using Nextjs, Firebase, and python."
+            />
+            <EducationCard
+              school="Software Developer at Bitworks Solutions"
+              year="2024-Present"
+              description="Startup company that develops website based on clients needs using Nextjs, Fast API, and Postgresql."
             />
           </div>
         </div>
