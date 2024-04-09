@@ -88,12 +88,12 @@ function Page() {
             </h1>
             <p className="text-[1.2rem] sm:text-[1.4rem] md:text-[1.5rem] xl:text-[1.8rem] lg:max-w-[550px]  text-justify mt-8 w-full indent-20">
               I&apos;m an aspiring Full Stack Developer studying at University
-              of the Philippines Cebu. Proficient in leveraging the MERN stack,
-              I am adept at utilizing frameworks like NEXT.js to streamline both
-              backend and frontend development processes. My commitment to
-              excellence drives me to stay abreast of industry best practices
-              and continuously seek ways to enhance my skills in creating
-              cutting-edge digital solutions.
+              of the Philippines Cebu. Proficient in leveraging the MERN, and
+              MEVN stack, I am adept at utilizing frameworks like NEXT.js to
+              streamline both backend and frontend development processes. My
+              commitment to excellence drives me to stay abreast of industry
+              best practices and continuously seek ways to enhance my skills in
+              creating cutting-edge digital solutions.
             </p>
           </div>
           <div className="flex items-center justify-center font-medium flex-col">

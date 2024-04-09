@@ -50,7 +50,6 @@ function Page() {
     <section className="relative overflow-x-hidden">
       <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full white__gradient" />
       <div className="absolute z-[100] -right-1/2 top-1/4 w-[30%] h-[30%] rounded-full darkblue__gradient" />
-
       <div className="hidden 2xl:block absolute z-[0] right-[2rem] top-[38%]  w-[30%] h-[20%] rounded-full darkblue__gradient" />
       <div className="hidden 2xl:block absolute z-[0] left-[2rem] top-[58%]  w-[30%] h-[20%] rounded-full darkblue__gradient" />
 
@@ -58,9 +57,12 @@ function Page() {
         <div className=" font-bold text-6xl text-center md:text-8xl">
           My <span>Background</span>
         </div>
-        <div className="flex w-full  lg:flex-row flex-col text-3xl  mt-20 sm:mt-44 justify-center items-start">
+        <div className="flex w-full relative lg:flex-row flex-col text-3xl  mt-20 sm:mt-44 justify-center items-start">
+          <i class="bx bxl-vuejs invisible  lg:visible  absolute top-[20rem] text-[50rem] opacity-5"></i>
+
           {/*Education */}
-          <div className="w-full flex flex-col flex-1 lg:items-start items-center  justify-center">
+          <div className="w-full relative flex flex-col flex-1 lg:items-start items-center  justify-center">
+            <i class="bx bxl-vuejs visible lg:invisible  absolute top-[20rem] text-[35rem] sm:text-[50rem] opacity-5"></i>
             <h1 className="text-[3rem] lg:text-left text-center flex flex-col font-semibold pb-14">
               Education
             </h1>
@@ -89,7 +91,9 @@ function Page() {
           </div>
 
           {/*Seminars Attended*/}
-          <div className=" flex-1 w-full flex flex-col lg:items-start items-center justify-center lg:pl-12">
+          <div className=" flex-1  relative w-full flex flex-col lg:items-start items-center justify-center lg:pl-12">
+            <i class="bx bxl-python absolute bottom-0 visible lg:invisible text-[35rem] sm:text-[50rem] opacity-5"></i>
+
             <h1 className="text-[3rem] flex flex-col leading-[3rem] font-semibold text-center md:text-auto pb-10 pt-10 md:pt-0">
               Seminars Attended{" "}
             </h1>
@@ -135,7 +139,10 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="flex w-full  flex-col text-3xl  mt-20 sm:mt-22 justify-center items-center">
+      <div className="flex w-full relative  flex-col text-3xl  mt-20 sm:mt-22 justify-center items-center">
+        <i class="bx bxl-react absolute top-[20rem] lg:right-[-10rem] text-[35rem] sm:text-[50rem] opacity-5"></i>
+        <i class="bx bxl-python absolute bottom-0 invisible lg:visible lg:left-[-10rem]  text-[35rem] sm:text-[50rem] opacity-5"></i>
+
         <div className="w-full flex flex-col flex-1 items-center  justify-center mb-24">
           <h1 className="text-[3rem] justify-center text-center flex flex-col font-semibold pb-14">
             Experience
