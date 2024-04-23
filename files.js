@@ -74,7 +74,7 @@ export const projects = [
     stack: "Nextjs / GetStream IO",
     description:
       "Joom, an innovative online conference platform, leverages Clerk for secure authentication and enhances its real-time communication capabilities using the GetStream.io library.",
-    link: "https://video-conference-app-phi.vercel.app/",
+    link: "video-conference-app-phi.vercel.app",
   },
 ];
 

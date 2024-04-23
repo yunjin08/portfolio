@@ -14,7 +14,7 @@ function ProjectsContent(props) {
   } = props;
   return (
     <div
-      className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:w-[120rem] mt-24 gap-7 px-10 md:px-0 mb-44 ${
+      className={`grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:w-[120rem] mt-24 gap-7 px-10 md:px-0 mb-44 ${
         fade ? "fade-in" : ""
       } ${post && "hidden"}`}
     >
