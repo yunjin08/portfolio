@@ -71,21 +71,21 @@ function Page() {
               <EducationCard
                 school="Elementary Degree - General P. del Rosario Elementary School"
                 year="2010-2016"
-                description="A class valedictorian graduate equipped to create dynamic and inspiring learning environment."
+                description={["A class valedictorian graduate equipped to create dynamic and inspiring learning environment."]}
               />
               <EducationCard
                 school="High School Degree - Toledo City Science High School"
                 year="2016-2022"
-                description={`Batch salutatorian graduate from a Science High School,
+                description={[`Batch salutatorian graduate from a Science High School,
                 proven commitment to academic inquiry, innovation, and
-                critical thinking.`}
+                critical thinking.`]}
               />
               <EducationCard
                 school="College Degree - University of the Philippines Cebu"
                 year="2022-Present"
-                description={`Pursuing undergraduate studies at UP, thrives in an academic
+                description={[`Pursuing undergraduate studies at UP, thrives in an academic
                 setting synonymous with excellence in academics, rigorous
-                research, creative innovation, and operational efficiency.`}
+                research, creative innovation, and operational efficiency.`]}
               />
             </div>
           </div>
@@ -148,21 +148,36 @@ function Page() {
             Experience
           </h1>
 
-          <div className="ed w-full flex flex-col space-y-5 sm:space-y-16 max-w-[650px] pl-10">
+          <div className="ed w-full flex flex-col space-y-5 sm:space-y-16 max-w-full pl-10">
             <EducationCard
               school="Part time Fullstack Developer at BPOSeats"
               year="2024-Present"
-              description="Developing a website that scales workforces and its productivity using Vue, Django, and Postgresql."
+              description={[
+                 "Oversaw the initial planning and development phases to improve customer service in our app, projecting a 55% increase in operational efficiency.",
+                 "Integrated Vue and Django unit tests into automated pipelines, reducing deployment failures by 80%.",
+                 "Assisted in developing the time and money feature, providing granular access control to optimize usage for both employees and owners.",
+                  "Debugged code, significantly reducing bugs and contributing to a 65% increase in system availability."
+                ]}
             />
             <EducationCard
               school="Self Employed Fullstack Developer at Beacon"
               year="2024-Present"
-              description="Created and develop a website that generated career path model using AI with stack using Nextjs, Firebase, and python."
+              description={[
+                "Plan and conducted the development phase of the app.",
+                "Integrated Nextjs, Python, and GPT4 to power up our app and produce good results",
+                "Assisted in developing and testing the site.",
+                 "Debugged code, significantly reducing bugs and improved UI."
+               ]}
             />
             <EducationCard
               school="Software Developer at Bitworks Solutions"
               year="2024-Present"
-              description="Startup company that develops website based on clients needs using Nextjs, Fast API, and Postgresql."
+              description={[
+                "Conducted the initial planning and development phases in making an app based on client needs and wants.",
+                "Integrated NextJs and and Animation Libraries to better enhance the frontend and satisfy client needs.",
+                "One of the pioneers in making the design in Figma, making the prototype and flow of the app.",
+                 "Worked on website, on mobile application using react-native as well as integrating it to web app."
+               ]}
             />
           </div>
         </div>
