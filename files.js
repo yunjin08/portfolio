@@ -84,7 +84,8 @@ export const projects = [
     title: "FAVisualizer",
     stack: "Nextjs / React-flow",
     description:
-      "Joom, an innovative online conference platform, leverages Clerk for secure authentication and enhances its real-time communication capabilities using the GetStream.io library.",
+      "A visualizer for generating DFA diagrams from regular expressions converts given regular expressions into their corresponding deterministic finite automata and presents them as visual diagrams. \
+       This tool helps users understand the structure and behavior of DFAs by providing an interactive and graphical representation.",
     link: "favisualizer.vercel.app",
   },
   {
@@ -95,7 +96,8 @@ export const projects = [
     title: "Beacon",
     stack: "GPT4 / Langchain",
     description:
-      "Joom, an innovative online conference platform, leverages Clerk for secure authentication and enhances its real-time communication capabilities using the GetStream.io library.",
+      "A career guidance web app that uses Generative AI creates personalized visual roadmaps for users, guiding them toward viable career options based on their individual information. This tool \
+       leverages AI to analyze user data and generate tailored career paths, helping users navigate their professional journey with clear and customized steps.",
     link: "beaconph.site",
   },
 ];

@@ -14,7 +14,7 @@ function ProjectsContent(props) {
   } = props;
   return (
     <div
-      className={`grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:w-[120rem] mt-24 gap-7 px-10 md:px-0 mb-44 ${
+      className={`grid  grid-cols-1 md:grid-cols-2 xl:grid-cols-3  mt-24 gap-7 px-0 sm:px-10 md:px-0 mb-44 ${
         fade ? "fade-in" : ""
       } ${post && "hidden"}`}
     >
@@ -32,7 +32,7 @@ function ProjectsContent(props) {
                     <h1 className="text-4xl font-medium">{projects.title}</h1>
                     <p className="text-3xl pt-3 pb-20">{projects.stack}</p>
                     <button
-                      className="w-[20rem] text-4xl  h-[5rem] border-2  border-[#00abf0] object-cover hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
+                      className="px-10 text-3xl  h-[4rem] border-2  border-[#00abf0] object-cover hover:cursor-pointer hover:bg-[#00abf0] hover:text-[#112e42]"
                       onClick={() => handlePosts(projects)}
                     >
                       LEARN MORE
