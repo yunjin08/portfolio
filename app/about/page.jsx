@@ -23,12 +23,12 @@ function Page() {
         width={1156}
         className="absolute z-[0] left-[-4rem] sm:left-[-15rem] md:top-[-8rem] lg:top-[-10rem] xl:top-[-20rem] opacity-5 w-[70rem] sm:w-[75rem] md:w-[80rem] xl:w-[110rem] 2xl:w-[120rem]"
       />
-      <div className="posting flex flex-col items-center justify-center -mt-10 md:mt-auto">
+      <div className="posting relative h-full w-full flex flex-col items-center justify-center -mt-10 md:mt-auto">
         <h1 className=" text-6xl md:text-8xl font-bold mb-10 md:mb-20">
           About <span>Me</span>{" "}
         </h1>
-        <div className="icons grid grid-cols-2 blg:grid-cols-4 w-full items-center gap-[2rem] md:gap-[7rem] mt-16">
-          <div className="flex flex-col items-center">
+        <div className="icons grid h-full grid-cols-2 lg:grid-cols-4 w-full items-center gap-[2rem] md:gap-[7rem] mt-16">
+          <div className="flex h-full flex-col items-center justify-start">
             <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  lg:w-[12rem] lg:h-[12rem] xl:w-[15rem] xl:h-[15rem]">
               <i class="gg bx bx-stopwatch"></i>
             </div>
@@ -38,7 +38,7 @@ function Page() {
               to me.
             </p>
           </div>
-          <div className="h-full flex flex-col items-center justify-start">
+          <div className="flex h-full flex-col items-center justify-start">
             <div className="ggs bg-[#112e42] border-2 border-[#00abf0] rounded-full flex items-center justify-center w-[10rem] h-[10rem]  lg:w-[12rem] lg:h-[12rem] xl:w-[15rem] xl:h-[15rem]">
               <i className="gg bx bx-devices"></i>
             </div>
@@ -67,7 +67,7 @@ function Page() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
+        <div className="flex relative h-full flex-col lg:flex-row w-full mt-28 md:mt-44 mb-[10rem]">
           <div className="flex lg:w-[50%] w-full flex-col items-center justify-center ">
             <div className="flex relative items-center justify-center">
               <div className=" w-[60%] relative  ">
