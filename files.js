@@ -70,11 +70,22 @@ export const projects = [
     folder2: "/projh.webp",
     name: "proj8",
     type: "fullstack",
-    title: "Joom",
-    stack: "Nextjs / GetStream IO",
+    title: "Linkup",
+    stack: "Nextjs / GetStream IO ",
+    description:
+      "Linkup, an innovative online conference platform, leverages Clerk for secure authentication and enhances its real-time communication capabilities using the GetStream.io library.",
+    link: "linkup-connect.vercel.app",
+  },
+  {
+    folder: "/proj9.png",
+    folder2: "/proji.png",
+    name: "proj9",
+    type: "fullstack",
+    title: "FAVisualizer",
+    stack: "Nextjs / React-flow",
     description:
       "Joom, an innovative online conference platform, leverages Clerk for secure authentication and enhances its real-time communication capabilities using the GetStream.io library.",
-    link: "video-conference-app-phi.vercel.app",
+    link: "favisualizer.vercel.app",
   },
 ];
 

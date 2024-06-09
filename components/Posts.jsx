@@ -6,7 +6,7 @@ function Posts({ post, setPosts, content, setContent }) {
     setContent({});
   };
   return (
-    <div className="posts posting relative z-[500] w-[70%] sm:w-[71%] h-[50rem] md:w-[70%] sm:h-[52rem] md:h-[54rem] lg:h-[54rem] overflow-y-scroll ">
+    <div className="posts posting items-center translate-y-1/4 justify-center relative z-[500] w-[70%] sm:w-[71%] h-[50rem] md:w-[70%] sm:h-[52rem] md:h-[54rem] lg:h-[54rem] overflow-y-scroll ">
       <div className="flex lg:flex-row flex-col">
         <div className="posting w-[99.5%] lg:w-[60%] h-[20rem] sm:h-[30rem] md:h-[40rem] lg:h-[59rem] flex items-center justify-center">
           <Image
@@ -14,7 +14,7 @@ function Posts({ post, setPosts, content, setContent }) {
             alt={content.name}
             width={1920}
             height={1080}
-            className="pt-1 pl-1 w-full h-full   "
+            className="pt-1 pl-1 w-full h-full "
           />
           <div
             className="flex lg:hidden absolute top-1 right-1 "
