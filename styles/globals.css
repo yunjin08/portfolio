@@ -49,7 +49,7 @@ html {
   }
 }
 
-body {
+html, body {
   background: radial-gradient(
     circle,
     #081b29 0%,
