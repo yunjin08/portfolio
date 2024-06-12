@@ -36,7 +36,14 @@ function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff"></meta>
+        <meta name="theme-color" content="#102e44"></meta>
+
+        <meta property="og:title" content="Your Page Title"/>
+        <meta property="og:description" content="Jed Edison Donaire Portfolio"/>
+        <meta property="og:image" content="https://imgur.com/a/YWoM7E6"/>
+        <meta property="og:url" content="https://jed-donaire.vercel.app/"/>
+        <meta property="og:type" content="website"/>
+
       </head>
       <body>
         <main className="app relative overflow-x-hidden">
