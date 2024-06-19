@@ -50,6 +50,7 @@ function RootLayout({ children }) {
           <Image
             src="/moon.png"
             alt="moon"
+            priority={true} 
             width={250}
             height={250}
             className="absolute right-[-20rem] top-[-20rem] opacity-10  z-[-20] w-[50rem]"
