@@ -1,11 +1,9 @@
 import "<jed>/styles/globals.css";
-import Navbar from "<jed>/components/Navbar";
-import Footer from "<jed>/components/Footer";
-import Image from "next/image";
+import { ThemeProvider } from "./provider";
 
 export const metadata = {
   title: "Jed Edison Donaire",
-  description: "Portfolio",
+  description: "Fullstack Developer Portfolio",
 };
 
 function RootLayout({ children }) {
@@ -47,25 +45,14 @@ function RootLayout({ children }) {
       </head>
       <body>
         <main className="app relative overflow-x-hidden">
-          <Image
-            src="/moon.png"
-            alt="moon"
-            priority={true} 
-            width={250}
-            height={250}
-            className="absolute right-[-20rem] top-[-20rem] opacity-10  z-[-20] w-[50rem]"
-          />
-
-          <Navbar />
-          <Image
-            src="/bg2.png"
-            alt="bg"
-            width={250}
-            height={250}
-            className="absolute right-0 bottom-32 opacity-10  z-[-20] w-full"
-          />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
           {children}
-          <Footer />
+          </ThemeProvider>
         </main>
       </body>
     </html>

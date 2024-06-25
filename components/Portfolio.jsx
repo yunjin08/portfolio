@@ -2,8 +2,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { projects } from "/files";
-import Posts from "<jed>/components/Posts";
+import { projects } from "<jed>/constants/files";
+import Posts from "<jed>/components/generics/Posts";
 import ProjectsContent from "<jed>/components/generics/ProjectsContent";
 import ChangeStackModal from "<jed>/components/generics/ChangeStackModal";
 

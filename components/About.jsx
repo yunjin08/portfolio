@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { stacks } from "<jed>/files";
+import { stacks } from "<jed>/constants/files";
 import { useState } from "react";
 
 function Page() {

@@ -7,9 +7,10 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Link from "next/link";
-import { cn } from "@/utils/cn";
+import { cn } from "<jed>/utils/cn";
+import { navItems } from "<jed>/constants/files";
 
-export const FloatingNav = () => {
+export const FloatingNav = ({ className }: { className?: string }) => {
   const { scrollYProgress } = useScroll();
 
   // set true for the initial state so that nav bar is visible in the hero section
@@ -18,7 +19,7 @@ export const FloatingNav = () => {
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = !current - !scrollYProgress.getPrevious();
+      let direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
         // also set true for the initial state
@@ -61,7 +62,7 @@ export const FloatingNav = () => {
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-        {navItems.map((navItem, idx) => (
+        {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
@@ -69,10 +70,14 @@ export const FloatingNav = () => {
               "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
+            <span className=" block sm:hidden">
+              <i className={`bx ${navItem.icon} text-xl text-neutral-50`}></i>
+            </span>
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className=" text-sm hidden sm:block !cursor-pointer">
+              {navItem.name}
+            </span>
           </Link>
         ))}
         {/* remove this login btn */}

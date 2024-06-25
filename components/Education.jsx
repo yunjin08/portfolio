@@ -3,9 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import EducationCard from "<jed>/components/EducationCard";
-import Certificates from "<jed>/components/Certificates";
-import Achievement from "<jed>/components/Achievement";
+import EducationCard from "<jed>/components/generics/EducationCard";
+import Certificates from "<jed>/components/generics/Certificates";
+import Achievement from "<jed>/components/generics/Achievement";
 
 function Page() {
   const [certActive1, certToActive1] = useState(false);
