@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --primary-color: 17, 46, 66; /* RGB values of #112e42 */
+
+    --background: var(--primary-color);
+    --foreground: 0 0% 98%;
+
+    --card: var(--primary-color);
+    --card-foreground: 0 0% 98%;
+
+    --popover: var(--primary-color);
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%; /* Light color for contrast */
+    --primary-foreground: var(--primary-color);
+
+    --secondary: 240 3.7% 15.9%; /* Slightly lighter or different hue for secondary elements */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%; /* Muted color harmonizing with primary */
+    --muted-foreground: var(--primary-color);
+
+    --accent: var(--primary-color); /* Accent color same as primary */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%; /* Destructive color usually red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%; /* Border color harmonizing with primary */
+    --input: 240 3.7% 15.9%; /* Input color harmonizing with primary */
+    --ring: 240 4.9% 83.9%; /* Ring color for focus states */
+  }
+}
+
+html,
+body {
+  background: radial-gradient(
+    circle,
+    #081b29 0%,
+    #081b29 70%,
+    #173e56 140%,
+    #173e56 150%
+  );
+
+  background: linear-gradient(to bottom, #081b29, #102e44, #173e56);
+}
+
+@layer base {
+  * {
+    @apply border-border !scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button {
+    @apply active:outline-none;
+  }
+}
+
+@layer utilities {
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-infinite {
+  animation: rotate 5s linear infinite;
+}
