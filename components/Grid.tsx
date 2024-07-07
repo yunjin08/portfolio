@@ -1,7 +1,35 @@
+'use client'
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import gsap from 'gsap';
+import useGAP, { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// Register the ScrollTrigger plugin with GSAP
+gsap.registerPlugin(ScrollTrigger);
 
 const Grid = () => {
+  useGSAP(() => {
+    gsap.fromTo(".bento-grid-item", 
+      {
+        y: 50,
+        opacity: 0,
+      }, 
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".bento-grid-item",
+          start: "top 80%", // When the top of the element hits 80% of the viewport height
+          end: "bottom 20%", // When the bottom of the element hits 20% of the viewport height
+          toggleActions: "play none none reverse", // Play the animation when in view
+        },
+      }
+    );
+  }, [])
   return (
     <section id="about">
       <h1 className="heading pb-20 flex items-center justify-center flex-col gap-5">
@@ -17,7 +45,7 @@ const Grid = () => {
             description={item.description}
             // remove icon prop
             // remove original classname condition
-            className={item.className}
+            className={`bento-grid-item ${item.className}`}
             img={item.img}
             imgClassName={item.imgClassName}
             titleClassName={item.titleClassName}

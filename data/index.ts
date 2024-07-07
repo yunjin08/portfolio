@@ -175,7 +175,7 @@ export const testimonials = [
   {
     quote:
       "Pursuing undergraduate studies at UP, thrives in an academic setting synonymous with excellence in academics, rigorous research, creative innovation, and operational efficiency. Consistent dean's lister despite having to work as a software developer for different companies without any degree, reliant to skills only.",
-    name: "Current Univeristy Scholar and Sunlife Scholar (Sophomore)",
+    name: "University Scholar and Sunlife Scholar (Sophomore)",
     title: "University of the Philippines Cebu",
   },
 ];

@@ -3,11 +3,35 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const RecentProjects = () => {
   const handleNavigation = (link: any) => {
     window.open(link, "_blank");
   };
+
+    useGSAP(() => {
+    gsap.fromTo(".portfolio-items", 
+      {
+        y: 50,
+        opacity: 0,
+      }, 
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".portfolio-items",
+          start: "top 80%", // When the top of the element hits 80% of the viewport height
+          end: "bottom 20%", // When the bottom of the element hits 20% of the viewport height
+          toggleActions: "play none none reverse", // Play the animation when in view
+        },
+      }
+    );
+  }, [])
 
   return (
     <div className="">
@@ -17,7 +41,7 @@ const RecentProjects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center p-4 gap-x-16 mt-10">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="portfolio-items lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
             <div
