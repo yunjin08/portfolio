@@ -27,7 +27,7 @@ export default function RootLayout({
 
         <meta property="og:title" content="Jed Edison Portfolio"/>
         <meta property="og:description" content="Philippine Based Experienced Programmer"/>
-        <meta property="og:image" content="https://imgur.com/a/YWoM7E6"/>
+        <meta property="og:image" content="https://i.imgur.com/s9jjfVs.jpeg"/>
         <meta property="og:url" content="https://jed-edison.com/"/>
         <meta property="og:type" content="website"/>
       </head>
