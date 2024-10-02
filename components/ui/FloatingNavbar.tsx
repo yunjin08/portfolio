@@ -75,6 +75,8 @@ export const FloatingNav = ({
           <Link
             key={`link=${idx}`}
             href={navItem.link}
+            target={navItem.name === 'Resume' ? "_blank" : "_self"}
+            rel={navItem.name === 'Resume' ? "noopener noreferrer" : undefined}
             className={cn(
               "relative text-neutral-50 items-center  flex space-x-1  hover:text-[#00abf0]"
             )}

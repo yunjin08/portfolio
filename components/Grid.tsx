@@ -32,7 +32,7 @@ const Grid = () => {
   }, [])
   return (
     <section id="about">
-      <h1 className="heading pb-20 flex items-center justify-center flex-col gap-5">
+      <h1 className="heading pb-20 mt-20 lg:mt-0 flex items-center justify-center flex-col gap-5">
         <p>ABOUT ME </p>
         <span className="text-[#00abf0]">AS A SOFTWARE DEVELOPER</span>
       </h1>
