@@ -32,7 +32,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://jed-edison.com/"/>
         <meta property="og:type" content="website"/>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
