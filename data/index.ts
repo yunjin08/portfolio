@@ -219,13 +219,14 @@ export const workExperience = [
     id: 1,
     title: "Fullstack Developer at BPOSeats (Dec 2023-Present)",
     desc: [
-      "Oversaw the initial planning and development phases to improve customer service in our app, projecting a 55% increase in operational efficiency.",
+      "Implemented custom framework  built upon Django REST framework",
       "Integrated Vue and Django unit tests into automated pipelines, reducing deployment failures by 80%.",
       "Assisted in developing the time and money feature, providing granular access control to optimize usage for both employees and owners.",
       "Debugged code, significantly reducing bugs and contributing to a 65% increase in system availability.",
     ],
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
+    techStack: ["/vuejs.svg", "/ts.svg", "/django.svg", "/scss.svg"],
   },
   {
     id: 2,
@@ -238,6 +239,15 @@ export const workExperience = [
     ],
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
+    techStack: [
+      "/next.svg",
+      "/ts.svg",
+      "/figma.svg",
+      "/tail.svg",
+      "/re.svg",
+      "/directus.svg",
+      "/aws.svg",
+    ],
   },
   {
     id: 3,
@@ -251,6 +261,7 @@ export const workExperience = [
     ],
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
+    techStack: ["/next.svg", "/re.svg", "/tail.svg", "/three.svg", "/gsap.svg"],
   },
   {
     id: 4,
@@ -263,6 +274,15 @@ export const workExperience = [
     ],
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
+    techStack: [
+      "/svelte.svg",
+      "/ts.svg",
+      "/djangorest.svg",
+      "/tail.svg",
+      "/django.svg",
+      "/aws.svg",
+      "/figma.svg",
+    ],
   },
 ];
 

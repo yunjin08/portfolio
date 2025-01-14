@@ -11,12 +11,13 @@ const RecentProjects = () => {
     window.open(link, "_blank");
   };
 
-    useGSAP(() => {
-    gsap.fromTo(".portfolio-items", 
+  useGSAP(() => {
+    gsap.fromTo(
+      ".portfolio-items",
       {
         y: 50,
         opacity: 0,
-      }, 
+      },
       {
         y: 0,
         opacity: 1,
@@ -31,7 +32,7 @@ const RecentProjects = () => {
         },
       }
     );
-  }, [])
+  }, []);
 
   return (
     <div id="projects" className="">
