@@ -3,7 +3,7 @@ export const navItems = [
   { name: "Projects", link: "#projects" },
   { name: "Background", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
-  { name: "Resume", link: '/cv.pdf'}
+  { name: "Resume", link: "/cv.pdf" },
 ];
 
 export const gridItems = [
@@ -176,7 +176,7 @@ export const testimonials = [
   {
     quote:
       "Pursuing undergraduate studies at UP, thrives in an academic setting synonymous with excellence in academics, rigorous research, creative innovation, and operational efficiency. Consistent dean's lister despite having to work as a software developer for different companies without any degree, reliant to skills only.",
-    name: "University Scholar and Sunlife Scholar (Sophomore)",
+    name: "University Scholar and Sunlife Scholar (Junior)",
     title: "University of the Philippines Cebu",
   },
 ];
@@ -217,19 +217,7 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Self Employed Fullstack Developer at Beacon (2024)",
-    desc: [
-      "Plan and conducted the development phase of the app.",
-      "Integrated Nextjs, Python, and GPT4 to power up our app and produce good results",
-      "Assisted in developing and testing the site.",
-      "Debugged code, significantly reducing bugs and improved UI.",
-    ],
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 2,
-    title: "Fullstack Developer at BPOSeats (2024-Present)",
+    title: "Fullstack Developer at BPOSeats (Dec 2023-Present)",
     desc: [
       "Oversaw the initial planning and development phases to improve customer service in our app, projecting a 55% increase in operational efficiency.",
       "Integrated Vue and Django unit tests into automated pipelines, reducing deployment failures by 80%.",
@@ -240,8 +228,8 @@ export const workExperience = [
     thumbnail: "/exp1.svg",
   },
   {
-    id: 3,
-    title: "Software Developer at Bitworks Solutions (2024-Present)",
+    id: 2,
+    title: "Software Developer at Bitworks Solutions (Feb 2024 - Sept 2024)",
     desc: [
       "Conducted the initial planning and development phases in making an app based on client needs and wants.",
       "Integrated NextJs and and Animation Libraries to better enhance the frontend and satisfy client needs.",
@@ -249,17 +237,29 @@ export const workExperience = [
       "Worked on website, on mobile application using react-native as well as integrating it to web app.",
     ],
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    thumbnail: "/exp2.svg",
   },
   {
-    id: 4,
+    id: 3,
     title:
-      "Fullstack Developer and Co-Founder at Unravyl, Start-up Company (2024-Present)",
+      "Fullstack Developer and Co-Founder at Unravyl, Start-up Company (Mar 2024 - Dec 2024)",
     desc: [
       "Conducted the creation, planning, and development of the company.",
       "Pioneered in making the portfolio or the company website of the company.",
       "Assisted in making the design, making the prototype and flow of the app.",
       "Worked on website, on mobile application using react-native as well as integrating it to web app.",
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg",
+  },
+  {
+    id: 4,
+    title: "Lead Frontend Developer at Tranches (Sept 2024 - Present)",
+    desc: [
+      "Served as the lead frontend developer for the company, overseeing the UI/UX of the application.",
+      "From the initial planning and development phases, I was able to create a seamless and user-friendly experience for the users.",
+      "Directly communicated with the client to ensure that the app is meeting their needs and expectations.",
+      "Fast development and deployment of the app, one month of development and deployment from the initial planning.",
     ],
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
