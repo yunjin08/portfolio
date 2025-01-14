@@ -39,10 +39,10 @@ const RecentProjects = () => {
       <h1 className="heading">
         My <span className="text-[#00abf0]">Projects</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center p-4 gap-x-16 mt-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center p-4 gap-x-4 mt-28">
         {projects.map((item) => (
           <div
-            className="portfolio-items lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="portfolio-items lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center w-full"
             key={item.id}
           >
             <div
@@ -50,7 +50,7 @@ const RecentProjects = () => {
               className="w-full h-full cursor-pointer"
             >
               <PinContainer title={item.title} href={item.link}>
-                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                <div className="relative flex items-center justify-center w-full overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
