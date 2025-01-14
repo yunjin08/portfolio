@@ -39,6 +39,19 @@ const Experience = () => {
                 <h1 className="text-start text-xl md:text-2xl mb-3 font-bold">
                   {card.title}
                 </h1>
+                <div className="flex items-center">
+                  {card.techStack.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      style={{
+                        transform: `translateX(-${5 * 1 + 2}px)`,
+                      }}
+                    >
+                      <img src={tech} alt="icon5" className="p-2" />
+                    </div>
+                  ))}
+                </div>
                 {card.desc.map((data, index) => (
                   <p
                     key={index}
