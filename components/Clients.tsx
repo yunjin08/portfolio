@@ -26,25 +26,22 @@ const Clients = () => {
           />
         </div>
 
-        <div className="flex relative flex-col  items-center justify-center max-lg:mt-10 ">
+        <div className="flex relative flex-col items-center justify-center max-lg:mt-10 ">
           <Image
             src="/hackathon.jpeg"
             alt="jed"
-            width={11110}
-            height={11100}
-            className={`about-img  rounded-lg w-[20rem] md:w-[25rem] xl:w-[30rem] transition `}
+            width={1110}
+            height={1110}
+            className={`about-img  rounded-lg w-[20rem] md:w-[22rem] xl:w-[25rem] transition `}
           />
-          <p className="max-w-[80rem] text-justify indent-10 text-sm sm:text-lg lg:text-xl mt-10">
+          <p className="p-4 max-w-[45rem] border-[#00abf0] border-2 rounded-lg bg-black-100 text-justify font-normal indent-10 text-sm lg:text-md mt-10">
             {`Our team created "Beacon," a career
           counseling application, during an 8-hour hackathon that addressed
           important issues in Philippine employment. Beacon creates customized
           career roadmaps based on user input and artificial intelligence to
           assist users in navigating their professional journeys. We won the
           hackathon and were recognized for our creative solution thanks to our
-          teamwork, which included Maxell Milay heading development, Sheldon
-          Arthur Sagrado concentrating on user experience, Louise Fermin
-          Deiparine managing design, Arwin Delasan handling data analysis, and I
-          which heads on testing and data management for both frontend and backend.`}
+          teamwork.`}
           </p>
         </div>
       </div>
