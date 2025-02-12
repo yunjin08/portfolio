@@ -77,20 +77,6 @@ export const gridItems = [
 
 export const projects = [
   {
-    id: 1,
-    title: "Library Stack",
-    des: "Seamlessly blending functionality and design to curate your reading lists using Serverless NextJS",
-    img: "/libstack.png",
-    iconLists: [
-      "/re.svg",
-      "/tail.svg",
-      "/mongodb.svg",
-      "/expressjs.svg",
-      "/next.svg",
-    ],
-    link: "https://libstack.vercel.app",
-  },
-  {
     id: 2,
     title: "LearnAI Prompts",
     des: "Dissecting and refining the intricacies of AI-generated prompts, fostering effective utilization of AI.",
