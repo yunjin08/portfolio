@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
 
 /**
  *  UI: border magic from tailwind css btns
@@ -21,9 +22,17 @@ const MagicButton = ({
   handleClick?: () => void;
   otherClasses?: string;
 }) => {
+  useEffect(() => {
+    gsap.to(".magicbtn", {
+      opacity: 1,
+      duration: 6,
+      delay: 1,
+      ease: "power2.out",
+    });
+  }, []);
   return (
     <button
-      className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none"
+      className="relative magicbtn opacity-0 inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none"
       onClick={handleClick}
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00abf0_0%,#081b29_50%,#173e56_100%)]" />
