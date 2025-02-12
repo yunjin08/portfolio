@@ -1,20 +1,21 @@
-'use client'
+"use client";
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-import gsap from 'gsap';
-import useGAP, { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import useGAP, { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 const Grid = () => {
   useGSAP(() => {
-    gsap.fromTo(".bento-grid-item", 
+    gsap.fromTo(
+      ".bento-grid-item",
       {
         y: 50,
         opacity: 0,
-      }, 
+      },
       {
         y: 0,
         opacity: 1,
@@ -29,10 +30,10 @@ const Grid = () => {
         },
       }
     );
-  }, [])
+  }, []);
   return (
     <section id="about">
-      <h1 className="heading pb-20 mt-20 lg:mt-0 flex items-center justify-center flex-col gap-5">
+      <h1 className="heading pb-10 mt-20 lg:mt-0 flex items-center justify-center flex-col gap-5">
         <p>ABOUT ME </p>
         <span className="text-[#00abf0]">AS A SOFTWARE DEVELOPER</span>
       </h1>
