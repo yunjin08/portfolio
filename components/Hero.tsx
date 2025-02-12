@@ -15,6 +15,20 @@ const Hero = () => {
       duration: 3,
       ease: "power2.inOut",
     });
+    gsap.fromTo(
+      ".borderImg",
+      {
+        clipPath: "inset(0 100% 0 0)", // Fully hidden
+        opacity: 1,
+      },
+      {
+        clipPath: "inset(0 0% 0 0)", // Fully revealed
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.inOut",
+        delay: 0.1,
+      }
+    );
   }, []);
 
   return (
@@ -66,7 +80,7 @@ const Hero = () => {
         </div>
         <div className="w-1/2 flex items-center justify-center">
           <div className="relative mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
-            <div className="absolute inset-0 rounded-full border-x-4 border-[#389fc8] rotate-infinite"></div>
+            <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-[#389fc8] rotate-infinite"></div>
             <div className="relative w-full h-full flex items-center justify-center">
               <PixelatedImage
                 src="/jed2.png"
