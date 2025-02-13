@@ -30,12 +30,30 @@ const Grid = () => {
         },
       }
     );
+    gsap.fromTo(
+      ".textAnim",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".textAnim",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
   }, []);
   return (
     <section id="about" className="mt-[-12rem] sm:mt-0">
       <h1 className="heading pb-10 mt-20 lg:mt-0 flex items-center justify-center flex-col gap-2 sm:gap-5">
-        <p>ABOUT ME </p>
-        <span className="text-[#00abf0]">AS A SOFTWARE DEVELOPER</span>
+        <p className="textAnim">ABOUT ME </p>
+        <span className="text-[#00abf0] textAnim">AS A SOFTWARE DEVELOPER</span>
       </h1>
       <BentoGrid className="w-full pb-10 sm:pb-20">
         {gridItems.map((item, i) => (

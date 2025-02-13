@@ -32,12 +32,34 @@ const RecentProjects = () => {
         },
       }
     );
+
+    gsap.fromTo(
+      ".textAnimProjects",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".textAnimProjects",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
   }, []);
 
   return (
     <div id="projects" className="">
-      <h1 className="heading">
-        My <span className="text-[#00abf0]">Projects</span>
+      <h1 className="heading flex items-center justify-center gap-2">
+        <p className="textAnimProjects opacity-0">My</p>
+        <span className="text-[#00abf0] textAnimProjects opacity-0">
+          Projects
+        </span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 mt-2 sm:mt-10 md:mt-14">
         {projects.map((item) => (
