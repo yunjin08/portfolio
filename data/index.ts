@@ -149,7 +149,7 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "As class valedictorian graduate at elementary level, as young as I am, I was already equipped to create dynamic and inspiring learning environment. I have cultivated discipline for studying and learning, as well as adapting new change and advancement with new knowledge.",
+      "As class valedictorian graduate at elementary level, as young as I am, I was already equipped to create dynamic and inspiring learning environment.",
     name: "Valedictorian",
     title: "Gen. P. del Rosario Elementary School (Primary)",
   },
@@ -161,7 +161,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Pursuing undergraduate studies at UP, thrives in an academic setting synonymous with excellence in academics, rigorous research, creative innovation, and operational efficiency. Consistent dean's lister despite having to work as a software developer for different companies without any degree, reliant to skills only.",
+      "Pursuing undergraduate studies at UP, thrives in an academic setting synonymous with excellence in academics, rigorous research, and creative innovation.",
     name: "University Scholar and Sunlife Scholar (Junior)",
     title: "University of the Philippines Cebu",
   },

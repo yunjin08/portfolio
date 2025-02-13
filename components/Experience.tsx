@@ -5,12 +5,12 @@ import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
   return (
-    <div className="py-20 w-full">
+    <div className="py-4 sm:py-14 md:py-16 w-full">
       <h1 className="heading">
         My <span className="text-[#00abf0]">work experience</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-4 sm:gap-8 md:gap-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -33,17 +33,17 @@ const Experience = () => {
               <img
                 src={card.thumbnail}
                 alt={card.thumbnail}
-                className="lg:w-32 md:w-20 w-16"
+                className="lg:w-32 md:w-20 sm:w-16 w-12"
               />
               <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl mb-3 font-bold">
+                <h1 className="text-start text-sm sm:text-lg md:text-xl mb-3 font-bold">
                   {card.title}
                 </h1>
-                <div className="flex items-center">
+                <div className="flex pl-1 items-center">
                   {card.techStack.map((tech, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:size-8 size-7 flex justify-center items-center"
                       style={{
                         transform: `translateX(-${5 * 1 + 2}px)`,
                       }}
@@ -55,7 +55,7 @@ const Experience = () => {
                 {card.desc.map((data, index) => (
                   <p
                     key={index}
-                    className="text-start text-white-100 my-2 font-semibold"
+                    className="text-start text-[0.62rem] sm:text-sm lg:text-base text-white-100 my-2 font-semibold"
                   >
                     &#8226; {data}
                   </p>

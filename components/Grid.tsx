@@ -37,7 +37,7 @@ const Grid = () => {
         <p>ABOUT ME </p>
         <span className="text-[#00abf0]">AS A SOFTWARE DEVELOPER</span>
       </h1>
-      <BentoGrid className="w-full pb-20">
+      <BentoGrid className="w-full pb-10 sm:pb-20">
         {gridItems.map((item, i) => (
           <BentoGridItem
             id={item.id}
