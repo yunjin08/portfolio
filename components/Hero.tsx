@@ -32,7 +32,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="pb-20 ">
+    <div className="pb-20 overflow-hidden">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -43,7 +43,7 @@ const Hero = () => {
           fill="#112e42"
         />
         <Spotlight
-          className="left-80 top-28 h-[80vh] w-[50vw]"
+          className="left-full top-20 h-[80vh] w-[50vw]"
           fill="#00abf0"
         />
       </div>
