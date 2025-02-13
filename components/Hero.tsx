@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+        className="w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex items-center justify-center"
       >
         {/* Radial gradient for the container to give a faded look */}
@@ -59,11 +59,11 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center lg:pt-0 items-center gap-5 lg:flex-row flex-col-reverse relative h-[100svh] z-10">
-        <div className="w-1/2 flex flex-col items-center justify-center">
+      <div className="flex justify-center lg:pt-0 items-center gap-5 lg:flex-row flex-col-reverse relative h-[70svh] md:h-[100svh] z-10">
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
           <TextGenerateEffect
             words="Crafting Seamless User Experiences"
-            className="text-center text-3xl lg:text-4xl xl:text-5xl"
+            className="text-center text-xl sm:text-2xl lg:text-4xl xl:text-5xl"
           />
 
           <p className="text-center description opacity-0 md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">
@@ -79,7 +79,7 @@ const Hero = () => {
           </a>
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="relative mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
+          <div className="relative mt-0 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
             <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-[#389fc8] rotate-infinite"></div>
             <div className="relative w-full h-full flex items-center justify-center">
               <PixelatedImage

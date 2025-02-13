@@ -61,7 +61,7 @@ export const FloatingNav = ({
           // change rounded-full to rounded-lg
           // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
           // change  pr-2 pl-8 py-2 to px-10 py-5
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
+          "flex w-fit fixed z-[5000] top-6 md:top-8 inset-x-0 mx-auto px-4 sm:px-2 py-3 md:py-4 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center flex-grow flex-1",
           className
         )}
         style={{
@@ -75,16 +75,18 @@ export const FloatingNav = ({
           <Link
             key={`link=${idx}`}
             href={navItem.link}
-            target={navItem.name === 'Resume' ? "_blank" : "_self"}
-            rel={navItem.name === 'Resume' ? "noopener noreferrer" : undefined}
+            target={navItem.name === "Resume" ? "_blank" : "_self"}
+            rel={navItem.name === "Resume" ? "noopener noreferrer" : undefined}
             className={cn(
-              "relative text-neutral-50 items-center  flex space-x-1  hover:text-[#00abf0]"
+              "relative text-neutral-50 px-0 sm:px-2 items-center w-full justify-center text-xs sm:text-sm  flex space-x-1  hover:text-[#00abf0]"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className="text-[0.6rem] md:text-xs xl:text-sm !cursor-pointer">
+              {navItem.name}
+            </span>
           </Link>
         ))}
         {/* remove this login btn */}
