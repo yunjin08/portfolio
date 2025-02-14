@@ -3,19 +3,22 @@ import Link from "next/link";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer
-      className="w-full pt-8 md:pt-20 pb-4 sm:pb-10 overflow-hidden"
+      className="w-full pt-8 md:pt-20 relative pb-4 overflow-hidden"
       id="contact"
     >
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
-        <img
+      <div className="w-full absolute left-0 bottom-0 md:bottom-32 min-h-96">
+        <Image
           src="/footer-grid.svg"
           alt="grid"
-          className="w-full h-full opacity-50 "
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
         />
       </div>
 
@@ -37,7 +40,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-[0.6rem] sm:text-sm md:font-normal font-light">
+        <p className=" text-[0.6rem] sm:text-xs md:font-normal font-light">
           Copyright © 2024 Jed Edison Donaire
         </p>
 

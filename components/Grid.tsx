@@ -4,6 +4,7 @@ import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import gsap from "gsap";
 import useGAP, { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 // Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -50,7 +51,17 @@ const Grid = () => {
     );
   }, []);
   return (
-    <section id="about" className="mt-[-12rem] sm:mt-0">
+    <section id="about" className="mt-[-6rem] relative lg:mt-[1rem]">
+      {/* background grid */}
+      <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
       <h1 className="heading pb-10 mt-20 lg:mt-0 flex items-center justify-center flex-col gap-2 sm:gap-5">
         <p className="textAnim">ABOUT ME </p>
         <span className="text-[#00abf0] textAnim">AS A SOFTWARE DEVELOPER</span>

@@ -33,6 +33,16 @@ const Hero = () => {
 
   return (
     <div className="pb-20 overflow-hidden">
+      {/* background grid */}
+      <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -59,14 +69,14 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center lg:pt-0 items-center gap-5 lg:flex-row flex-col-reverse relative h-[70svh] md:h-[100svh] z-10">
-        <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
+      <div className="flex justify-center lg:pt-0 items-center gap-6 md:gap-5 lg:flex-row flex-col-reverse relative h-[70svh] md:h-[100svh] z-10">
+        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center">
           <TextGenerateEffect
             words="Crafting Seamless User Experiences"
             className="text-center text-xl sm:text-2xl lg:text-4xl xl:text-5xl"
           />
 
-          <p className="text-center description opacity-0 md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">
+          <p className="text-center description opacity-0 md:tracking-wider mb-10 md:mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">
             Hi! I&apos;m Jed, a Fullstack Developer based in Philippines.
           </p>
 
@@ -79,7 +89,7 @@ const Hero = () => {
           </a>
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="relative mt-0 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
+          <div className="relative mt-6 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
             <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-[#389fc8] rotate-infinite"></div>
             <div className="relative w-full h-full flex items-center justify-center">
               <PixelatedImage

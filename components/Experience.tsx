@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import gsap from "gsap";
+import Image from "next/image";
 
 const Experience = () => {
   useEffect(() => {
@@ -69,7 +70,29 @@ const Experience = () => {
     );
   }, []);
   return (
-    <div className="py-4 sm:py-14 md:py-16 w-full">
+    <div className="py-4 sm:py-14 md:py-16 w-full relative">
+      {/* background grid */}
+      <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
+
+      {/* background grid */}
+      <div className="w-full absolute left-0 -top-64 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
+
       <h1 className="heading">
         My <span className="text-[#00abf0]">work experience</span>
       </h1>

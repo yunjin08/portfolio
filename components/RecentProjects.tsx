@@ -5,6 +5,7 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 const RecentProjects = () => {
   const handleNavigation = (link: any) => {
@@ -54,7 +55,17 @@ const RecentProjects = () => {
   }, []);
 
   return (
-    <div id="projects" className="">
+    <div id="projects" className="relative">
+      {/* background grid */}
+      <div className="w-full absolute left-0 top-0 md:top-32 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
       <h1 className="heading flex items-center justify-center gap-2">
         <p className="textAnimProjects opacity-0">My</p>
         <span className="text-[#00abf0] textAnimProjects opacity-0">

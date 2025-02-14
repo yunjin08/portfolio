@@ -71,7 +71,17 @@ const Clients = () => {
     );
   }, []);
   return (
-    <section id="testimonials" className="py-4 mt-[-5rem] sm:py-10">
+    <section id="testimonials" className="py-4 mt-[-5rem] sm:py-10 relative">
+      {/* background grid */}
+      <div className="w-full absolute left-0 -top-64 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
       <h1 className="heading headingAnimEdu">
         Educational
         <span className="text-[#00abf0]"> Background</span>

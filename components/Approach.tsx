@@ -1,11 +1,22 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
-    <section className="w-full pt-4 sm:pt-14 md:pt-16">
+    <section className="w-full pt-4 sm:pt-14 md:pt-16 relative">
+      {/* background grid */}
+      <div className="w-full absolute left-0 top-0 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
       <h1 className="heading">
         My <span className="text-[#00abf0]">approach</span>
       </h1>
