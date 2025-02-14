@@ -20,7 +20,7 @@ const Clients = () => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".cardsAnim",
-          start: "top 95%",
+          start: "top 75%",
           end: "bottom 20%",
           toggleActions: "play none none reverse",
         },
