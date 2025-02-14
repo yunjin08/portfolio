@@ -43,7 +43,7 @@ const Hero = () => {
           className="w-full h-full opacity-50 object-cover"
         />
       </div>
-      <div className="overflow-hidden">
+      {/* <div className="overflow-hidden">
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="#389fc8"
@@ -52,7 +52,7 @@ const Hero = () => {
           className="h-[80vh] w-[50vw] top-10 left-full"
           fill="#112e42"
         />
-      </div>
+      </div> */}
 
       <div
         className="w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
