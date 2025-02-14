@@ -7,7 +7,7 @@ import Image from "next/image";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 import gsap from "gsap";
 
-const Clients = () => {
+const Education = () => {
   useEffect(() => {
     gsap.fromTo(
       ".cardsAnim",
@@ -20,7 +20,7 @@ const Clients = () => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".cardsAnim",
-          start: "top 75%",
+          start: "top 80%",
           end: "bottom 20%",
           toggleActions: "play none none reverse",
         },
@@ -122,4 +122,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default Education;

@@ -9,7 +9,7 @@ import Image from "next/image";
 // Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
-const Grid = () => {
+const About = () => {
   useGSAP(() => {
     gsap.fromTo(
       ".bento-grid-item",
@@ -87,4 +87,4 @@ const Grid = () => {
   );
 };
 
-export default Grid;
+export default About;

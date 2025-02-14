@@ -3,9 +3,9 @@
 import { navItems } from "@/data";
 
 import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
+import About from "@/components/About";
 import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
+import Education from "@/components/Education";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
@@ -17,9 +17,9 @@ const Home = () => {
       <div className="max-w-7xl w-full overflow-hidden">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
+        <About />
         <RecentProjects />
-        <Clients />
+        <Education />
         <Experience />
         <Approach />
         <Footer />
