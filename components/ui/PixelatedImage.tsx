@@ -3,7 +3,17 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { cn } from "@/lib/utils";
 
-const PixelatedImage = ({ src, width = 500, height = 500, className }) => {
+const PixelatedImage = ({
+  src,
+  width = 500,
+  height = 500,
+  className,
+}: {
+  src: string;
+  width?: number;
+  height?: number;
+  className?: string;
+}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imageLoaded = useRef(false);
   const opacityRef = useRef(0);
@@ -32,7 +42,7 @@ const PixelatedImage = ({ src, width = 500, height = 500, className }) => {
       gsap.to(canvas, {
         opacity: 1,
         duration: 0.1,
-        delay: 1,
+        delay: 0.6,
         onComplete: () => {
           let frame = 0;
           let isAnimating = true;
