@@ -34,7 +34,16 @@ const Hero = () => {
   return (
     <div className="pb-20 overflow-hidden h-[100svh] md:h-auto">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
+      <div className="w-full absolute left-0 top-0 md:-bottom-32 min-h-96">
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
+      <div className="w-full absolute md:hidden block left-0 bottom-0  min-h-96">
         <Image
           src="/footer-grid.svg"
           alt="grid"
