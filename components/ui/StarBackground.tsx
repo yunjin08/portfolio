@@ -21,7 +21,7 @@ const StarBackground = () => {
 
     // Star properties
     const stars: { x: number; y: number; size: number; speed: number }[] = [];
-    const numStars = 400;
+    const numStars = 500;
     const maxSize = 1;
 
     // Initialize stars
