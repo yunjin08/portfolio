@@ -78,6 +78,9 @@ body {
     #173e56 150%
   );
 
+  overflow-x: hidden;
+  width: 100vw;
+
   background: linear-gradient(to bottom, #081b29, #102e44, #173e56);
 }
 
