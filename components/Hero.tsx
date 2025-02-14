@@ -43,7 +43,7 @@ const Hero = () => {
           className="w-full h-full opacity-50 object-cover"
         />
       </div>
-      <div>
+      <div className="overflow-hidden">
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="#389fc8"
@@ -51,10 +51,6 @@ const Hero = () => {
         <Spotlight
           className="h-[80vh] w-[50vw] top-10 left-full"
           fill="#112e42"
-        />
-        <Spotlight
-          className="left-full top-20 h-[80vh] w-[50vw]"
-          fill="#00abf0"
         />
       </div>
 
@@ -69,7 +65,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center lg:pt-0 items-center gap-6 md:gap-5 lg:flex-row flex-col-reverse relative h-[70svh] md:h-[100svh] z-10">
+      <div className="flex justify-center lg:pt-0 items-center gap-12 md:gap-5 lg:flex-row flex-col-reverse relative h-[70svh] md:h-[100svh] z-10">
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-center">
           <TextGenerateEffect
             words="Crafting Seamless User Experiences"
@@ -90,7 +86,7 @@ const Hero = () => {
           </a>
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="relative mt-6 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
+          <div className="relative mt-16 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
             <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-[#389fc8] rotate-infinite"></div>
             <div className="relative w-full h-full flex items-center justify-center">
               <PixelatedImage
