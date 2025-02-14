@@ -61,7 +61,7 @@ const Experience = () => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".card-desc",
-          start: "top 95%",
+          start: "top 85%",
           end: "bottom 20%",
           toggleActions: "play none none reverse",
         },

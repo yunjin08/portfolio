@@ -61,7 +61,7 @@ const RecentProjects = () => {
           Projects
         </span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 mt-2 sm:mt-10 md:mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 gap-y-2 sm:gap-y-0 mt-2 sm:mt-10 md:mt-14">
         {projects.map((item) => (
           <div
             className="portfolio-items lg:min-h-[32.5rem] sm:h-[25rem] h-[23rem] flex items-center justify-center w-full"
