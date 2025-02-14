@@ -76,8 +76,9 @@ const Hero = () => {
             className="text-center text-xl sm:text-2xl lg:text-4xl xl:text-5xl"
           />
 
-          <p className="text-center description opacity-0 md:tracking-wider mb-10 md:mb-4 text-sm md:text-lg lg:text-2xl xl:text-3xl">
-            Hi! I&apos;m Jed, a Fullstack Developer based in Philippines.
+          <p className="text-center description opacity-0 md:tracking-wider mb-10 md:mb-4 text-[0.6rem] sm:text-sm md:text-md lg:text-lg xl:text-xl">
+            Hi! I&apos;m Jed, a Fullstack Developer specializing in Web and
+            Mobile Applications with AI integration.
           </p>
 
           <a href="#about">
