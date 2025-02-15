@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -21,9 +21,55 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
-  // set true for the initial state so that nav bar is visible in the hero section
+  const [activeHash, setActiveHash] = useState("");
   const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    // Function to get hash without the #
+    const getCleanHash = () => {
+      const hash = window.location.hash;
+      return hash ? hash.replace("#", "").toLowerCase() : "";
+    };
+
+    // Set initial hash
+    setActiveHash(getCleanHash());
+
+    // Function to handle hash changes
+    const handleHashChange = () => {
+      setActiveHash(getCleanHash());
+    };
+
+    // Function to handle scroll and update active section
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = (section as HTMLElement).clientHeight;
+        if (window.scrollY >= sectionTop - 100) {
+          // 100px offset for better UX
+          currentSection = section.id.toLowerCase();
+        }
+      });
+
+      if (currentSection !== activeHash) {
+        setActiveHash(`#${currentSection}`);
+      }
+    };
+    // Add event listeners
+    window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial scroll check
+    handleScroll();
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -78,7 +124,8 @@ export const FloatingNav = ({
             target={navItem.name === "Resume" ? "_blank" : "_self"}
             rel={navItem.name === "Resume" ? "noopener noreferrer" : undefined}
             className={cn(
-              "relative text-neutral-50 px-0 sm:px-2 items-center w-full justify-center text-xs sm:text-sm  flex space-x-1  hover:text-[#00abf0]"
+              "relative text-neutral-50 px-0 sm:px-2 items-center w-full justify-center text-xs sm:text-sm  flex space-x-1  hover:text-[#00abf0]",
+              activeHash === navItem.link && "text-[#00abf0]"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>

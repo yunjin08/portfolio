@@ -70,88 +70,90 @@ const Experience = () => {
     );
   }, []);
   return (
-    <div className="py-4 sm:py-14 md:py-16 w-full relative">
-      {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1000}
-          height={1000}
-          className="w-full h-full opacity-50 object-cover"
-        />
-      </div>
+    <section id="experience">
+      <div className="py-4 sm:py-14 md:py-16 w-full relative">
+        {/* background grid */}
+        <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
+          <Image
+            src="/footer-grid.svg"
+            alt="grid"
+            width={1000}
+            height={1000}
+            className="w-full h-full opacity-50 object-cover"
+          />
+        </div>
 
-      {/* background grid */}
-      <div className="w-full absolute left-0 -top-64 min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1000}
-          height={1000}
-          className="w-full h-full opacity-50 object-cover"
-        />
-      </div>
+        {/* background grid */}
+        <div className="w-full absolute left-0 -top-64 min-h-96">
+          <Image
+            src="/footer-grid.svg"
+            alt="grid"
+            width={1000}
+            height={1000}
+            className="w-full h-full opacity-50 object-cover"
+          />
+        </div>
 
-      <h1 className="heading">
-        My <span className="text-[#00abf0]">work experience</span>
-      </h1>
+        <h1 className="heading">
+          My <span className="text-[#00abf0]">work experience</span>
+        </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-4 sm:gap-8 md:gap-10">
-        {workExperience.map((card) => (
-          <Button
-            key={card.id}
-            //   random duration will be fun , I think , may be not
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="1.75rem"
-            style={{
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "#081b29",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              borderRadius: `calc(1.75rem* 0.96)`,
-            }}
-            // remove bg-white dark:bg-slate-900
-            className="flex-1 text-white cursor-default border-[#00abf0] pointer-events-none"
-          >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-7 gap-2">
-              <img
-                src={card.thumbnail}
-                alt={card.thumbnail}
-                className="lg:w-32 md:w-20 sm:w-16 w-12"
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start card-title opacity-0 text-sm sm:text-lg md:text-xl mb-3 font-bold">
-                  {card.title}
-                </h1>
-                <div className="flex pl-1 items-center">
-                  {card.techStack.map((tech, index) => (
-                    <div
+        <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-4 sm:gap-8 md:gap-10">
+          {workExperience.map((card) => (
+            <Button
+              key={card.id}
+              //   random duration will be fun , I think , may be not
+              duration={Math.floor(Math.random() * 10000) + 10000}
+              borderRadius="1.75rem"
+              style={{
+                //   add these two
+                //   you can generate the color from here https://cssgradient.io/
+                background: "#081b29",
+                backgroundColor:
+                  "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                borderRadius: `calc(1.75rem* 0.96)`,
+              }}
+              // remove bg-white dark:bg-slate-900
+              className="flex-1 text-white cursor-default border-[#00abf0] pointer-events-none"
+            >
+              <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-7 gap-2">
+                <img
+                  src={card.thumbnail}
+                  alt={card.thumbnail}
+                  className="lg:w-32 md:w-20 sm:w-16 w-12"
+                />
+                <div className="lg:ms-5">
+                  <h1 className="text-start card-title opacity-0 text-sm sm:text-lg md:text-xl mb-3 font-bold">
+                    {card.title}
+                  </h1>
+                  <div className="flex pl-1 items-center">
+                    {card.techStack.map((tech, index) => (
+                      <div
+                        key={index}
+                        className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:size-8 size-7 flex justify-center card-images opacity-0 items-center"
+                        style={{
+                          transform: `translateX(-${5 * 1 + 2}px)`,
+                        }}
+                      >
+                        <img src={tech} alt="icon5" className="p-2" />
+                      </div>
+                    ))}
+                  </div>
+                  {card.desc.map((data, index) => (
+                    <p
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:size-8 size-7 flex justify-center card-images opacity-0 items-center"
-                      style={{
-                        transform: `translateX(-${5 * 1 + 2}px)`,
-                      }}
+                      className="text-start card-desc text-[0.62rem] sm:text-sm  text-white-100 my-2 font-semibold"
                     >
-                      <img src={tech} alt="icon5" className="p-2" />
-                    </div>
+                      &#8226; {data}
+                    </p>
                   ))}
                 </div>
-                {card.desc.map((data, index) => (
-                  <p
-                    key={index}
-                    className="text-start card-desc text-[0.62rem] sm:text-sm  text-white-100 my-2 font-semibold"
-                  >
-                    &#8226; {data}
-                  </p>
-                ))}
               </div>
-            </div>
-          </Button>
-        ))}
+            </Button>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

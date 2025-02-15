@@ -72,7 +72,7 @@ const Education = () => {
   }, []);
   return (
     <section
-      id="testimonials"
+      id="education"
       className="py-4 mt-[-1rem] md:mt-[-5rem] sm:py-10 relative"
     >
       {/* background grid */}

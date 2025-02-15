@@ -55,7 +55,7 @@ const RecentProjects = () => {
   }, []);
 
   return (
-    <div id="projects" className="relative">
+    <section id="projects" className="relative">
       {/* background grid */}
       <div className="w-full absolute left-0 top-0 md:top-32 min-h-96">
         <Image
@@ -141,7 +141,7 @@ const RecentProjects = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
