@@ -24,7 +24,7 @@ const Footer = () => {
 
       <div className="flex text-xs sm:text-sm md:text-base flex-col items-center">
         <h1 className="heading text-sm sm:text-lg md:text-xl lg:max-w-[45vw]">
-          Are you prepared to <span className="text-[#389fc8]">elevate</span>{" "}
+          Are you prepared to <span className="text-secondary">elevate</span>{" "}
           your digital presence?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">

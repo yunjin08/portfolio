@@ -28,6 +28,7 @@ const config = {
     extend: {
       colors: {
         primary: "#00abf0",
+        secondary: "#389fc8",
         black: {
           DEFAULT: "#000",
           100: "#112e42",
@@ -48,10 +49,6 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
