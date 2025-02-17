@@ -4,6 +4,7 @@ import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import gsap from "gsap";
 import Image from "next/image";
+import WebGrid from "./ui/WebGrid";
 
 const Experience = () => {
   useEffect(() => {
@@ -73,15 +74,7 @@ const Experience = () => {
     <section id="experience">
       <div className="py-4 sm:py-14 md:py-16 w-full relative">
         {/* background grid */}
-        <div className="w-full absolute left-0 -bottom-0 md:-bottom-32 min-h-96">
-          <Image
-            src="/footer-grid.svg"
-            alt="grid"
-            width={1000}
-            height={1000}
-            className="w-full h-full opacity-50 object-cover"
-          />
-        </div>
+        <WebGrid className="-bottom-0 md:-bottom-32" />
 
         {/* background grid */}
         <div className="w-full absolute left-0 -top-64 min-h-96">

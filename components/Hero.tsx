@@ -7,6 +7,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import gsap from "gsap";
 import { useEffect } from "react";
 import PixelatedImage from "./ui/PixelatedImage";
+import WebGrid from "./ui/WebGrid";
 
 const Hero = () => {
   useEffect(() => {
@@ -34,27 +35,11 @@ const Hero = () => {
   return (
     <section id="hero" className="pb-20 overflow-hidden h-[100svh] md:h-auto">
       {/* background grid */}
-      <div className="w-full absolute left-0 top-0 md:-bottom-32 min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1000}
-          height={1000}
-          className="w-full h-full opacity-50 object-cover"
-        />
-      </div>
-      <div className="w-full absolute md:hidden block left-0 bottom-0  min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1000}
-          height={1000}
-          className="w-full h-full opacity-50 object-cover"
-        />
-      </div>
+      <WebGrid className="top-0 md:-bottom-32" />
+      <WebGrid className="block md:hidden bottom-0" />
       <div
         className="w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       absolute top-0 left-0 flex items-center justify-center"
+       absolute top-0 left-0 flex-center"
       >
         {/* Radial gradient for the container to give a faded look */}
         <div
@@ -86,7 +71,7 @@ const Hero = () => {
         <div className="w-1/2 flex-center">
           <div className="relative mt-36 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
             <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-secondary rotate-infinite"></div>
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-full flex-center">
               <PixelatedImage
                 src="/jed2.png"
                 width={1280}

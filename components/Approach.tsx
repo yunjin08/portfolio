@@ -3,26 +3,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
-
+import WebGrid from "./ui/WebGrid";
 const Approach = () => {
   return (
     <section className="w-full pt-4 sm:pt-14 md:pt-16 relative">
       {/* background grid */}
-      <div className="w-full absolute left-0 top-0 min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1000}
-          height={1000}
-          className="w-full h-full opacity-50 object-cover"
-        />
-      </div>
+      <WebGrid className="top-0" />
       <h1 className="heading">
         My <span className="text-primary">approach</span>
       </h1>
-      {/* remove bg-white dark:bg-black */}
-      <div className="my-6 sm:my-14 md:my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
-        {/* add des prop */}
+      <div className=" flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}

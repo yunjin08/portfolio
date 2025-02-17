@@ -4,6 +4,7 @@ import Link from "next/link";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import Image from "next/image";
+import WebGrid from "./ui/WebGrid";
 
 const Footer = () => {
   return (
@@ -11,17 +12,7 @@ const Footer = () => {
       className="w-full pt-8 md:pt-20 relative pb-4 overflow-hidden"
       id="contact"
     >
-      {/* background grid */}
-      <div className="w-full absolute left-0 bottom-0 md:bottom-32 min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1000}
-          height={1000}
-          className="w-full h-full opacity-50 object-cover"
-        />
-      </div>
-
+      <WebGrid className="bottom-0 md:bottom-32" />
       <div className="flex text-xs sm:text-sm md:text-base flex-col items-center">
         <h1 className="heading text-sm sm:text-lg md:text-xl lg:max-w-[45vw]">
           Are you prepared to <span className="text-secondary">elevate</span>{" "}

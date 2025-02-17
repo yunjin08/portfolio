@@ -6,6 +6,7 @@ import { companies, testimonials } from "@/data";
 import Image from "next/image";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 import gsap from "gsap";
+import WebGrid from "./ui/WebGrid";
 
 const Education = () => {
   useEffect(() => {
@@ -75,16 +76,7 @@ const Education = () => {
       id="education"
       className="py-4 mt-[-1rem] md:mt-[-5rem] sm:py-10 relative"
     >
-      {/* background grid */}
-      <div className="w-full absolute left-0 -top-64 min-h-96">
-        <Image
-          src="/footer-grid.svg"
-          alt="grid"
-          width={1000}
-          height={1000}
-          className="w-full h-full opacity-50 object-cover"
-        />
-      </div>
+      <WebGrid className="top-0 -top-64" />
       <h1 className="heading headingAnimEdu">
         Educational
         <span className="text-primary"> Background</span>
