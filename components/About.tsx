@@ -55,7 +55,7 @@ const About = () => {
     <section id="about" className="mt-[-6rem] relative lg:mt-[1rem]">
       {/* background grid */}
       <WebGrid className="block md:hidden -bottom-0 md:-bottom-32" />
-      <h1 className="heading pb-10 mt-20 lg:mt-0 flex items-center justify-center flex-col gap-2 sm:gap-5">
+      <h1 className="heading pb-10 mt-20 lg:mt-0 flex-center flex-col gap-2 sm:gap-5">
         <p className="textAnim">ABOUT ME </p>
         <span className="text-primary textAnim">AS A SOFTWARE DEVELOPER</span>
       </h1>

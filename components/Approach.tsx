@@ -12,7 +12,7 @@ const Approach = () => {
       <h1 className="heading">
         My <span className="text-primary">approach</span>
       </h1>
-      <div className="flex-center flex-col lg:flex-row w-full gap-4">
+      <div className="flex-center mt-4 md:mt-10 flex-col lg:flex-row w-full gap-4">
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
