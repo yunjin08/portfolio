@@ -60,7 +60,7 @@ const RecentProjects = () => {
       <WebGrid className="top-0 md:top-32" />
       <WebGrid className="bottom-0" />
 
-      <h1 className="heading flex items-center justify-center gap-2">
+      <h1 className="heading flex-center gap-2">
         <p className="textAnimProjects opacity-0">My</p>
         <span className="text-primary textAnimProjects opacity-0">
           Projects
@@ -70,7 +70,7 @@ const RecentProjects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 gap-y-2 sm:gap-y-0 mt-2 sm:mt-10 md:mt-14">
         {projects.map((item) => (
           <div
-            className="portfolio-items group lg:min-h-[32.5rem] sm:h-[25rem] h-[23rem] flex items-center justify-center w-full"
+            className="portfolio-items group lg:min-h-[32.5rem] sm:h-[25rem] h-[23rem] flex-center w-full"
             key={item.id}
           >
             <div
@@ -78,7 +78,7 @@ const RecentProjects = () => {
               className="w-full h-full cursor-pointer"
             >
               <PinContainer title={item.title} href={item.link}>
-                <div className="relative flex items-center justify-center w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl h-[25vh] lg:h-[30vh] mb-5 sm:mb-7 md:mb-10">
+                <div className="relative flex-center w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl h-[25vh] lg:h-[30vh] mb-5 sm:mb-7 md:mb-10">
                   <div
                     className="relative w-full h-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
@@ -111,7 +111,7 @@ const RecentProjects = () => {
                     {item.iconLists.map((icon, index) => (
                       <div
                         key={index}
-                        className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:w-8 w-7 flex justify-center items-center"
+                        className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:w-8 w-7 flex-center"
                         style={{
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
@@ -121,7 +121,7 @@ const RecentProjects = () => {
                     ))}
                   </div>
 
-                  <div className="flex justify-center items-center">
+                  <div className="flex-center">
                     <p className="flex responsive-text text-purple">
                       Check Live Site
                     </p>

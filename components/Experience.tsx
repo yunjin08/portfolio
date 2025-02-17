@@ -123,7 +123,7 @@ const Experience = () => {
                     {card.techStack.map((tech, index) => (
                       <div
                         key={index}
-                        className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:size-8 size-7 flex justify-center card-images opacity-0 items-center"
+                        className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:size-8 size-7 flex-center card-images opacity-0"
                         style={{
                           transform: `translateX(-${5 * 1 + 2}px)`,
                         }}

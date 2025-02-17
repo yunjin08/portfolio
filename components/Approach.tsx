@@ -12,7 +12,7 @@ const Approach = () => {
       <h1 className="heading">
         My <span className="text-primary">approach</span>
       </h1>
-      <div className=" flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+      <div className="flex-center flex-col lg:flex-row w-full gap-4">
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
@@ -80,7 +80,7 @@ const Card = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       // change h-[30rem] to h-[35rem], add rounded-3xl
-      className="border border-primary group/canvas-card flex items-center justify-center
+      className="border border-primary group/canvas-card flex-center
         max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
       style={{
         //   add these two
@@ -113,7 +113,7 @@ const Card = ({
           // add this for making it center
           // absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
           className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
-        group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center"
+        group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex-center"
         >
           {icon}
         </div>

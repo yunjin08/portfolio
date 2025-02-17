@@ -85,7 +85,7 @@ const Education = () => {
       <div className="flex flex-col items-center">
         <div
           // remove bg-white dark:bg-black dark:bg-grid-white/[0.05], h-[40rem] to 30rem , md:h-[30rem] are for the responsive design
-          className="py-5 rounded-md flex flex-col antialiased  items-center justify-center relative overflow-x-hidden"
+          className="py-5 rounded-md flex-center flex-col antialiased relative overflow-x-hidden"
         >
           <InfiniteMovingCards
             items={testimonials}
@@ -94,7 +94,7 @@ const Education = () => {
           />
         </div>
 
-        <div className="flex relative flex-col items-center justify-center ">
+        <div className="flex-center relative flex-col">
           <Image
             src="/hackathon.jpeg"
             alt="jed"
