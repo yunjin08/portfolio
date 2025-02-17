@@ -68,7 +68,7 @@ const RecentProjects = () => {
       </div>
       <h1 className="heading flex items-center justify-center gap-2">
         <p className="textAnimProjects opacity-0">My</p>
-        <span className="text-[#00abf0] textAnimProjects opacity-0">
+        <span className="text-primary textAnimProjects opacity-0">
           Projects
         </span>
       </h1>
@@ -127,7 +127,7 @@ const RecentProjects = () => {
                   </div>
 
                   <div className="flex justify-center items-center">
-                    <p className="flex lg:text-md text-[0.6rem] sm:text-sm text-purple">
+                    <p className="flex responsive-text text-purple">
                       Check Live Site
                     </p>
                     <FaLocationArrow

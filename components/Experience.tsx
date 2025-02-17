@@ -95,7 +95,7 @@ const Experience = () => {
         </div>
 
         <h1 className="heading">
-          My <span className="text-[#00abf0]">work experience</span>
+          My <span className="text-primary">work experience</span>
         </h1>
 
         <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-4 sm:gap-8 md:gap-10">
@@ -114,7 +114,7 @@ const Experience = () => {
                 borderRadius: `calc(1.75rem* 0.96)`,
               }}
               // remove bg-white dark:bg-slate-900
-              className="flex-1 text-white cursor-default border-[#00abf0] pointer-events-none"
+              className="flex-1 text-white cursor-default border-primary pointer-events-none"
             >
               <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-7 gap-2">
                 <img

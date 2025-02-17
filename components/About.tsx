@@ -64,7 +64,7 @@ const About = () => {
       </div>
       <h1 className="heading pb-10 mt-20 lg:mt-0 flex items-center justify-center flex-col gap-2 sm:gap-5">
         <p className="textAnim">ABOUT ME </p>
-        <span className="text-[#00abf0] textAnim">AS A SOFTWARE DEVELOPER</span>
+        <span className="text-primary textAnim">AS A SOFTWARE DEVELOPER</span>
       </h1>
       <BentoGrid className="w-full pb-10 sm:pb-20">
         {gridItems.map((item, i) => (

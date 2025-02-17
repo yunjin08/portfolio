@@ -12,7 +12,7 @@ export const gridItems = [
     title: "Cultivating Client Connections with Clear Communication",
     description: "",
     className:
-      "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] border-2 border-[#00abf0]",
+      "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] border-2 border-primary",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",
@@ -23,7 +23,7 @@ export const gridItems = [
     title: "I'm very flexible with time zone communications",
     description: "",
     className:
-      "lg:col-span-2 md:col-span-3 md:row-span-2 border-2 border-[#00abf0]",
+      "lg:col-span-2 md:col-span-3 md:row-span-2 border-2 border-primary",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
@@ -34,7 +34,7 @@ export const gridItems = [
     title: "My tech stack",
     description: "I constantly try to improve",
     className:
-      "lg:col-span-2 md:col-span-3 md:row-span-2 border-2 border-[#00abf0]",
+      "lg:col-span-2 md:col-span-3 md:row-span-2 border-2 border-primary",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -45,7 +45,7 @@ export const gridItems = [
     title: "Tech enthusiast with a passion for development and growth.",
     description: "",
     className:
-      "lg:col-span-2 md:col-span-3 md:row-span-1 border-2 border-[#00abf0]",
+      "lg:col-span-2 md:col-span-3 md:row-span-1 border-2 border-primary",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
@@ -56,7 +56,7 @@ export const gridItems = [
     id: 5,
     title: "Currently learning Cloud Architecture",
     description: "AWS Certification",
-    className: "md:col-span-3 md:row-span-2 border-2 border-[#00abf0]",
+    className: "md:col-span-3 md:row-span-2 border-2 border-primary",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
@@ -67,7 +67,7 @@ export const gridItems = [
     title: "Do you want to start a project together?",
     description: "",
     className:
-      "lg:col-span-2 md:col-span-3 md:row-span-1 border-2 border-[#00abf0]",
+      "lg:col-span-2 md:col-span-3 md:row-span-1 border-2 border-primary",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",

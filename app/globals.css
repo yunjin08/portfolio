@@ -111,6 +111,14 @@ body {
   }
 }
 
+.responsive-text {
+  @apply text-[0.6rem] sm:text-xs lg:text-sm;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
 .rotate-infinite {
   animation: rotate 5s linear infinite;
 }

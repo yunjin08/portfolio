@@ -87,7 +87,7 @@ const Education = () => {
       </div>
       <h1 className="heading headingAnimEdu">
         Educational
-        <span className="text-[#00abf0]"> Background</span>
+        <span className="text-primary"> Background</span>
       </h1>
 
       <div className="flex flex-col items-center">
@@ -110,7 +110,7 @@ const Education = () => {
             height={1110}
             className={`about-img hackathon-img rounded-lg w-[20rem] md:w-[22rem] xl:w-[25rem] transition `}
           />
-          <p className="p-4 hackathon-image max-w-[45rem] border-[#00abf0] border-2 rounded-lg bg-black-100 text-justify font-normal indent-10 text-[0.6rem] sm:text-sm lg:text-md mt-10">
+          <p className="p-4 hackathon-image max-w-[45rem] border-primary border-2 rounded-lg bg-black-100 text-justify font-normal indent-10 responsive-text mt-10">
             {`Our team created "Beacon," a career
           counseling application, during an 8-hour hackathon that addressed
           important issues in Philippine employment. Beacon creates customized

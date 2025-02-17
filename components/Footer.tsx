@@ -40,7 +40,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className=" text-[0.6rem] sm:text-xs md:font-normal font-light">
+        <p className=" text-[0.56rem] sm:text-xs md:font-normal font-light">
           Copyright © 2024 Jed Edison Donaire
         </p>
 

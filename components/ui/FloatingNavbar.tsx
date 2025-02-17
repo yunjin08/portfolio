@@ -31,7 +31,6 @@ export const FloatingNav = ({
       return hash ? hash.replace("#", "").toLowerCase() : "";
     };
 
-    // Set initial hash
     setActiveHash(getCleanHash());
 
     // Function to handle hash changes
@@ -48,7 +47,6 @@ export const FloatingNav = ({
         const sectionTop = (section as HTMLElement).offsetTop;
         const sectionHeight = (section as HTMLElement).clientHeight;
         if (window.scrollY >= sectionTop - 100) {
-          // 100px offset for better UX
           currentSection = section.id.toLowerCase();
         }
       });
@@ -57,14 +55,12 @@ export const FloatingNav = ({
         setActiveHash(`#${currentSection}`);
       }
     };
-    // Add event listeners
+
     window.addEventListener("hashchange", handleHashChange);
     window.addEventListener("scroll", handleScroll);
 
-    // Initial scroll check
     handleScroll();
 
-    // Cleanup
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
       window.removeEventListener("scroll", handleScroll);
@@ -77,7 +73,6 @@ export const FloatingNav = ({
       let direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
         setVisible(true);
       } else {
         if (direction < 0) {
@@ -104,9 +99,6 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          // change rounded-full to rounded-lg
-          // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
-          // change  pr-2 pl-8 py-2 to px-10 py-5
           "flex w-fit fixed z-[5000] top-6 md:top-8 inset-x-0 mx-auto px-4 sm:px-2 py-3 md:py-4 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center flex-grow flex-1",
           className
         )}
@@ -124,14 +116,14 @@ export const FloatingNav = ({
             target={navItem.name === "Resume" ? "_blank" : "_self"}
             rel={navItem.name === "Resume" ? "noopener noreferrer" : undefined}
             className={cn(
-              "relative text-neutral-50 px-0 sm:px-2 items-center w-full justify-center text-xs sm:text-sm  flex space-x-1  hover:text-[#00abf0]",
-              activeHash === navItem.link && "text-[#00abf0]"
+              "relative text-neutral-50 flex-center px-0 sm:px-2 w-full responsive-text space-x-1  hover:text-primary",
+              activeHash === navItem.link && "text-primary"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
-            <span className="text-[0.6rem] md:text-xs xl:text-sm !cursor-pointer">
+            <span className="responsive-text cursor-pointer">
               {navItem.name}
             </span>
           </Link>

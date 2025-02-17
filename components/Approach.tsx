@@ -18,7 +18,7 @@ const Approach = () => {
         />
       </div>
       <h1 className="heading">
-        My <span className="text-[#00abf0]">approach</span>
+        My <span className="text-primary">approach</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-6 sm:my-14 md:my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -90,7 +90,7 @@ const Card = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       // change h-[30rem] to h-[35rem], add rounded-3xl
-      className="border border-[#00abf0] group/canvas-card flex items-center justify-center
+      className="border border-primary group/canvas-card flex items-center justify-center
         max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
       style={{
         //   add these two

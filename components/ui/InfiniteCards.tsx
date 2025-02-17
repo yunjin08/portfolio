@@ -91,7 +91,7 @@ export const InfiniteMovingCards = ({
           <li
             //   change md:w-[450px] to md:w-[60vw] , px-8 py-6 to p-16, border-slate-700 to border-slate-800
             className="w-[90vw] cardsAnim max-w-full relative rounded-2xl border 
-             flex-shrink-0 border-[#00abf0] p-4 sm:p-6 md:p-8 md:w-[60vw]"
+             flex-shrink-0 border-primary p-4 sm:p-6 md:p-8 md:w-[60vw]"
             style={{
               //   background:
               //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)", //remove this one
@@ -110,7 +110,7 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               {/* change text color, text-lg */}
-              <span className=" relative z-20 text-[0.6rem] sm:text-base md:text-sm leading-[1.6] text-white font-normal">
+              <span className=" relative z-20 responsive-text leading-[1.6] text-white font-normal">
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
@@ -128,7 +128,7 @@ export const InfiniteMovingCards = ({
                     {item.name}
                   </span>
                   {/* change text color */}
-                  <span className=" text-[0.6rem] sm:text-sm leading-[1.6] text-white-200 font-normal">
+                  <span className="responsive-text leading-[1.6] text-white-200 font-normal">
                     {item.title}
                   </span>
                 </span>
