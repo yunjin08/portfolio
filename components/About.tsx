@@ -2,55 +2,20 @@
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import gsap from "gsap";
-import useGAP, { useGSAP } from "@gsap/react";
+import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import WebGrid from "./ui/WebGrid";
+import { animateAbout } from "@/animations/layout";
 
 // Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".bento-grid-item",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".bento-grid-item",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-    gsap.fromTo(
-      ".textAnim",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".textAnim",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+  useEffect(() => {
+    animateAbout();
   }, []);
+
   return (
     <section id="about" className="mt-[-6rem] relative lg:mt-[1rem]">
       {/* background grid */}

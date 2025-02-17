@@ -2,73 +2,13 @@ import React, { useEffect } from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
-import gsap from "gsap";
 import Image from "next/image";
 import WebGrid from "./ui/WebGrid";
+import { animateExperience } from "@/animations/layout";
 
 const Experience = () => {
   useEffect(() => {
-    gsap.fromTo(
-      ".card-images",
-      {
-        opacity: 0,
-        x: -100,
-        scale: 0.8,
-        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-      },
-      {
-        opacity: 1,
-        x: 0,
-        scale: 1,
-        delay: 1,
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 2,
-        ease: "power3.out",
-        stagger: {
-          amount: 1, // Total amount of stagger between all elements
-          from: "start",
-        },
-        scrollTrigger: {
-          trigger: ".hackathon-img",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-    gsap.fromTo(
-      ".card-title",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 2,
-        delay: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".card-title",
-          start: "top 95%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-    gsap.fromTo(
-      ".card-desc",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 5,
-        stagger: 0.2,
-        delay: 0.4,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".card-desc",
-          start: "top 85%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    animateExperience();
   }, []);
   return (
     <section id="experience">

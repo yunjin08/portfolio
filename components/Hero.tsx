@@ -8,28 +8,11 @@ import gsap from "gsap";
 import { useEffect } from "react";
 import PixelatedImage from "./ui/PixelatedImage";
 import WebGrid from "./ui/WebGrid";
+import { animateHero } from "@/animations/layout";
 
 const Hero = () => {
   useEffect(() => {
-    gsap.to(".description", {
-      opacity: 1,
-      duration: 3,
-      ease: "power2.inOut",
-    });
-    gsap.fromTo(
-      ".borderImg",
-      {
-        clipPath: "inset(0 100% 0 0)", // Fully hidden
-        opacity: 1,
-      },
-      {
-        clipPath: "inset(0 0% 0 0)", // Fully revealed
-        opacity: 1,
-        duration: 1.5,
-        ease: "power2.inOut",
-        delay: 0.1,
-      }
-    );
+    animateHero();
   }, []);
 
   return (

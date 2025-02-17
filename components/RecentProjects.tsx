@@ -7,52 +7,16 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import WebGrid from "./ui/WebGrid";
+import { animateRecentProjects } from "@/animations/layout";
+import { useEffect } from "react";
 
 const RecentProjects = () => {
   const handleNavigation = (link: any) => {
     window.open(link, "_blank");
   };
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".portfolio-items",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".portfolio-items",
-          start: "top 80%", // When the top of the element hits 80% of the viewport height
-          end: "bottom 20%", // When the bottom of the element hits 20% of the viewport height
-          toggleActions: "play none none reverse", // Play the animation when in view
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".textAnimProjects",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".textAnimProjects",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+  useEffect(() => {
+    animateRecentProjects();
   }, []);
 
   return (

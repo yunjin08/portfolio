@@ -5,71 +5,12 @@ import React, { useEffect } from "react";
 import { companies, testimonials } from "@/data";
 import Image from "next/image";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
-import gsap from "gsap";
 import WebGrid from "./ui/WebGrid";
+import { animateEducation } from "@/animations/layout";
 
 const Education = () => {
   useEffect(() => {
-    gsap.fromTo(
-      ".cardsAnim",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1.3,
-        stagger: 0.4,
-        delay: -1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".cardsAnim",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-    gsap.fromTo(
-      ".headingAnimEdu",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".headingAnimEdu",
-          start: "top 95%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-    gsap.fromTo(
-      ".hackathon-img",
-      {
-        opacity: 0,
-        x: -100,
-        scale: 0.8,
-        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-      },
-      {
-        opacity: 1,
-        x: 0,
-        scale: 1,
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        duration: 1.2,
-        ease: "power3.out",
-        stagger: {
-          amount: 0.3, // Total amount of stagger between all elements
-          from: "start",
-        },
-        scrollTrigger: {
-          trigger: ".hackathon-img",
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    animateEducation();
   }, []);
   return (
     <section
