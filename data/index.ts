@@ -203,6 +203,20 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
+    title:
+      "Fullstack Developer at Unravyl, Start-up Company (Sept 2022 - Jun 2023)",
+    desc: [
+      "Conducted the creation, planning, and development of the company.",
+      "Pioneered in making the portfolio or the company website of the company.",
+      "Assisted in making the design, making the prototype and flow of the app.",
+      "Worked on website, on mobile application using react-native as well as integrating it to web app.",
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg",
+    techStack: ["/next.svg", "/re.svg", "/tail.svg", "/three.svg", "/gsap.svg"],
+  },
+  {
+    id: 2,
     title: "Fullstack Developer at BPOSeats (Dec 2023-Present)",
     desc: [
       "Implemented custom framework  built upon Django REST framework",
@@ -215,7 +229,7 @@ export const workExperience = [
     techStack: ["/vuejs.svg", "/ts.svg", "/django.svg", "/scss.svg"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Software Developer at Bitworks Solutions (Feb 2024 - Sept 2024)",
     desc: [
       "Conducted the initial planning and development phases in making an app based on client needs and wants.",
@@ -234,20 +248,6 @@ export const workExperience = [
       "/directus.svg",
       "/aws.svg",
     ],
-  },
-  {
-    id: 3,
-    title:
-      "Fullstack Developer and Co-Founder at Unravyl, Start-up Company (Mar 2024 - Dec 2024)",
-    desc: [
-      "Conducted the creation, planning, and development of the company.",
-      "Pioneered in making the portfolio or the company website of the company.",
-      "Assisted in making the design, making the prototype and flow of the app.",
-      "Worked on website, on mobile application using react-native as well as integrating it to web app.",
-    ],
-    className: "md:col-span-2",
-    thumbnail: "/exp3.svg",
-    techStack: ["/next.svg", "/re.svg", "/tail.svg", "/three.svg", "/gsap.svg"],
   },
   {
     id: 4,
