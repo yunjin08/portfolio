@@ -230,7 +230,8 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Software Developer at Bitworks Solutions (Feb 2024 - Sept 2024)",
+    title:
+      "Software Developer at Bitworks Solutions (March 2024 - October 2024)",
     desc: [
       "Conducted the initial planning and development phases in making an app based on client needs and wants.",
       "Integrated NextJs and and Animation Libraries to better enhance the frontend and satisfy client needs.",
