@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { MutableRefObject } from "react";
+
 export const animatePixelatedImages = (
   canvas: HTMLCanvasElement,
   opacityRef: MutableRefObject<number>,
@@ -26,125 +27,89 @@ export const animatePixelatedImages = (
     canvas.width = width;
     canvas.height = height;
 
-    // Start with opacity 0
+    // Create pixel array
+    const pixels: {
+      x: number;
+      y: number;
+      targetX: number;
+      targetY: number;
+      color: string;
+    }[] = [];
+
+    // Draw image once to get pixel data
+    ctx.drawImage(img, 0, 0, width, height);
+    const imageData = ctx.getImageData(0, 0, width, height);
+    const data = imageData.data;
+
+    // Sample pixels (adjust step for performance)
+    const step = 4; // Increase for fewer pixels, decrease for more detail
+    for (let y = 0; y < height; y += step) {
+      for (let x = 0; x < width; x += step) {
+        const i = (y * width + x) * 4;
+        if (data[i + 3] > 0) {
+          // If pixel is not transparent
+          const color = `rgba(${data[i]}, ${data[i + 1]}, ${data[i + 2]}, ${
+            data[i + 3] / 255
+          })`;
+          pixels.push({
+            x: Math.random() * width, // Start at random position
+            y: Math.random() * height,
+            targetX: x, // Where pixel should end up
+            targetY: y,
+            color: color,
+          });
+        }
+      }
+    }
+
     gsap.to(canvas, {
       opacity: 1,
       duration: 0.1,
       delay: 0.6,
       onComplete: () => {
-        let frame = 0;
-        let isAnimating = true;
-
-        // Animate opacity from 0 to 1 over the duration of the glitch
-        gsap.to(opacityRef, {
-          current: 1,
-          duration: 2,
-          ease: "power1.inOut",
-        });
+        let progress = 0;
+        const duration = 2; // Animation duration in seconds
+        const startTime = Date.now();
 
         const animate = () => {
-          if (!isAnimating) return;
-          frame++;
+          const currentTime = Date.now();
+          progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
 
-          // Clear and draw base image with current opacity
           ctx.clearRect(0, 0, width, height);
-          ctx.globalAlpha = opacityRef.current;
-          ctx.drawImage(img, 0, 0, width, height);
-          ctx.globalAlpha = 1;
 
-          // Major glitch blocks
-          for (let i = 0; i < 30; i++) {
-            const x = Math.random() * width;
-            const y = Math.random() * height;
-            const sw = Math.random() * width * 0.5;
-            const sh = Math.random() * height * 0.2;
+          // Draw scattered pixels
+          pixels.forEach((pixel) => {
+            const easeProgress = gsap.parseEase("power2.inOut")(progress);
 
-            ctx.globalAlpha = opacityRef.current;
-            ctx.drawImage(
-              canvas,
-              x,
-              y,
-              sw,
-              sh,
-              x + (Math.random() * 50 - 25),
-              y + (Math.random() * 20 - 10),
-              sw,
-              sh
-            );
+            // Calculate current position
+            const currentX = pixel.x + (pixel.targetX - pixel.x) * easeProgress;
+            const currentY = pixel.y + (pixel.targetY - pixel.y) * easeProgress;
 
-            // Blue color overlays
-            if (frame % 2 === 0) {
-              const blueShade = Math.random() * 155 + 100; // Range from 100-255 for blue
-              ctx.fillStyle = `rgba(0, ${Math.random() * 150}, ${blueShade}, ${
-                0.2 * opacityRef.current
-              })`;
-              ctx.fillRect(x, y, sw, sh);
+            // Draw pixel
+            ctx.fillStyle = pixel.color;
+            ctx.fillRect(currentX, currentY, step, step);
+          });
+
+          // Add some glitch effects during formation
+          if (progress < 0.8) {
+            for (let i = 0; i < 10; i++) {
+              const x = Math.random() * width;
+              const y = Math.random() * height;
+              ctx.fillStyle = `rgba(0, 195, 255, ${0.1 * (1 - progress)})`;
+              ctx.fillRect(x, y, Math.random() * 20, Math.random() * 2);
             }
           }
 
-          // Blue scan lines
-          if (Math.random() < 0.8) {
-            for (let i = 0; i < 3; i++) {
-              const lineY = Math.random() * height;
-              ctx.fillStyle = `rgba(0, 195, 255, ${0.4 * opacityRef.current})`;
-              ctx.fillRect(0, lineY, width, 5);
-            }
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            // Final image
+            ctx.clearRect(0, 0, width, height);
+            ctx.drawImage(img, 0, 0, width, height);
           }
-
-          // Blue digital noise
-          for (let i = 0; i < 500; i++) {
-            const x = Math.random() * width;
-            const y = Math.random() * height;
-            const size = Math.random() * 3;
-            const blueNoise = Math.random() * 155 + 100;
-            ctx.fillStyle = `rgba(0, ${Math.random() * 150}, ${blueNoise}, ${
-              Math.random() * 0.2 * opacityRef.current
-            })`;
-            ctx.fillRect(x, y, size, size);
-          }
-
-          // Random color blocks with increasing opacity
-          if (Math.random() < 0.3) {
-            const blockX = Math.random() * width;
-            const blockWidth = width * 0.2;
-            const blueNoise = Math.random() * 155 + 100;
-            ctx.fillStyle = `rgba(0, ${blueNoise}, ${blueNoise}, ${
-              0.5 * opacityRef.current
-            })`;
-            ctx.fillRect(blockX, 0, blockWidth, height);
-          }
-
-          // Occasional full-width glitch
-          if (Math.random() < 0.1) {
-            const sliceY = Math.random() * height;
-            const sliceHeight = height * 0.1;
-            ctx.globalAlpha = opacityRef.current;
-            ctx.drawImage(
-              canvas,
-              0,
-              sliceY,
-              width,
-              sliceHeight,
-              Math.random() * 50 - 25,
-              sliceY,
-              width,
-              sliceHeight
-            );
-          }
-
-          ctx.globalAlpha = 1;
-          requestAnimationFrame(animate);
         };
 
         animate();
-
-        // Stop glitch effect after 2 seconds
-        setTimeout(() => {
-          isAnimating = false;
-          ctx.clearRect(0, 0, width, height);
-          ctx.globalAlpha = 1;
-          ctx.drawImage(img, 0, 0, width, height);
-        }, 2000);
       },
     });
   };
