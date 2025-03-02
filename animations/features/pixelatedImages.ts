@@ -73,7 +73,7 @@ export const animatePixelatedImages = (
     gsap.to(canvas, {
       opacity: 1,
       duration: 0.1,
-      delay: 0.6,
+      delay: 0.2,
       onComplete: () => {
         let progress = 0;
         const duration = 2;
