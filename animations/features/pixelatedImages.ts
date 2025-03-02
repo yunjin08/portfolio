@@ -50,7 +50,7 @@ export const animatePixelatedImages = (
       color: string;
     }[] = [];
 
-    // Sample pixels
+    // Added more pixels for better resolution
     const step = 6;
     for (let y = 0; y < height; y += step) {
       for (let x = 0; x < width; x += step) {
@@ -92,22 +92,34 @@ export const animatePixelatedImages = (
 
           ctx.clearRect(0, 0, width, height);
 
-          // Draw scattered pixels with opacity
+          // Draw the final image with increasing opacity near the end of animation
+          if (progress > 0.8) {
+            const finalImageOpacity = (progress - 0.8) * 5; // Scale 0.8-1.0 to 0-1
+            ctx.globalAlpha = finalImageOpacity * opacityRef.current;
+            ctx.drawImage(img, 0, 0, width, height);
+            ctx.globalAlpha = 1;
+          }
+
+          // Draw scattered pixels with opacity (fading out as final image fades in)
           pixels.forEach((pixel) => {
-            const easeProgress = gsap.parseEase("power2.inOut")(progress);
+            const easeProgress = gsap.parseEase("power3.inOut")(progress);
             const currentX = pixel.x + (pixel.targetX - pixel.x) * easeProgress;
             const currentY = pixel.y + (pixel.targetY - pixel.y) * easeProgress;
 
-            // Apply current opacity to each pixel
+            // Fade out pixels as final image fades in
+            const pixelOpacity = progress > 0.8 ? 1 - (progress - 0.8) * 5 : 1;
+
             const [r, g, b] = pixel.color.match(/\d+/g)?.map(Number) || [
               0, 0, 0,
             ];
-            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${opacityRef.current})`;
+            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${
+              opacityRef.current * pixelOpacity
+            })`;
             ctx.fillRect(currentX, currentY, step, step);
           });
 
-          // Glitch effects with opacity
-          if (progress < 0.8) {
+          // Glitch effects only in the early stages
+          if (progress < 0.6) {
             for (let i = 0; i < 10; i++) {
               const x = Math.random() * width;
               const y = Math.random() * height;
@@ -121,7 +133,7 @@ export const animatePixelatedImages = (
           if (progress < 1) {
             requestAnimationFrame(animate);
           } else {
-            // Final image with opacity
+            // Ensure final state is perfect
             ctx.clearRect(0, 0, width, height);
             ctx.globalAlpha = opacityRef.current;
             ctx.drawImage(img, 0, 0, width, height);
