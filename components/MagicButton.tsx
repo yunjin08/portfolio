@@ -17,8 +17,8 @@ const MagicButton = ({
   useEffect(() => {
     gsap.to(".magicbtn", {
       opacity: 1,
-      duration: 6,
-      delay: 1,
+      duration: 4,
+      delay: 1.6,
       ease: "power2.out",
     });
   }, []);
