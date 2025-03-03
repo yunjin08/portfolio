@@ -8,23 +8,31 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import type { NavItem } from "@/interfaces";
 
 export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+  navItems: NavItem[];
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
   const [activeHash, setActiveHash] = useState("");
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Enable scrolling on mount
+    document.body.style.overflow = "auto";
+    document.body.style.height = "auto";
+
+    // Delay showing the navbar, I do this manually because I cant access gsap or frame for this
+    const mountTimer = setTimeout(() => {
+      setMounted(true);
+      setVisible(true); // Show navbar after delay
+    }, 2000);
+
     // Function to get hash without the #
     const getCleanHash = () => {
       const hash = window.location.hash;
@@ -45,7 +53,6 @@ export const FloatingNav = ({
 
       sections.forEach((section) => {
         const sectionTop = (section as HTMLElement).offsetTop;
-        const sectionHeight = (section as HTMLElement).clientHeight;
         if (window.scrollY >= sectionTop - 100) {
           currentSection = section.id.toLowerCase();
         }
@@ -59,36 +66,40 @@ export const FloatingNav = ({
     window.addEventListener("hashchange", handleHashChange);
     window.addEventListener("scroll", handleScroll);
 
-    handleScroll();
+    // Initial scroll check
+    setTimeout(handleScroll, 100);
 
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeHash]);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+    if (!mounted) return;
 
-      if (scrollYProgress.get() < 0.05) {
+    if (typeof current === "number") {
+      // Show navbar when at the top of the page
+      if (window.scrollY < 100) {
         setVisible(true);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        return;
       }
+
+      // Compare with previous scroll position
+      const direction = current! - scrollYProgress.getPrevious()!;
+
+      // Show when scrolling up, hide when scrolling down
+      setVisible(direction < 0);
     }
   });
+
+  if (!mounted) return null;
 
   return (
     <AnimatePresence mode="wait">
       <motion.div
         initial={{
-          opacity: 1,
+          opacity: 0,
           y: -100,
         }}
         animate={{
@@ -96,7 +107,8 @@ export const FloatingNav = ({
           opacity: visible ? 1 : 0,
         }}
         transition={{
-          duration: 0.2,
+          duration: 0.4,
+          ease: [0.22, 1, 0.36, 1],
         }}
         className={cn(
           "flex-center w-fit fixed z-[5000] top-6 md:top-8 inset-x-0 mx-auto px-4 sm:px-2 py-3 md:py-4 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] flex-grow flex-1",
@@ -109,7 +121,7 @@ export const FloatingNav = ({
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem: NavItem, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
