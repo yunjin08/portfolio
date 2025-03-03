@@ -53,7 +53,7 @@ const Hero = () => {
             <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-secondary rotate-infinite"></div>
             <div className="relative w-full h-full flex-center">
               <PixelatedImage
-                src="/jed2.png"
+                src="/jed2.webp"
                 width={1280}
                 height={1280}
                 className="rounded-full"
