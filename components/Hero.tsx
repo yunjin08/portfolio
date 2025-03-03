@@ -16,7 +16,6 @@ const Hero = () => {
     <section id="hero" className="pb-20 overflow-hidden h-[100svh] md:h-auto">
       {/* background grid */}
       <WebGrid className="top-0 md:-bottom-32" />
-      <WebGrid className="block md:hidden bottom-0" />
       <div
         className="w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex-center"

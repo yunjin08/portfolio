@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  experimental: {
+    optimizeCss: true, // Enable CSS optimization
+    optimizePackageImports: ["gsap", "three", "framer-motion"],
+  },
+  output: "standalone",
   // This enables static optimization and reduces server-side execution
   poweredByHeader: false,
 };
