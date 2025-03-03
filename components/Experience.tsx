@@ -50,10 +50,12 @@ const Experience = () => {
               className="flex-1 text-white cursor-default border-primary pointer-events-none"
             >
               <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-7 gap-2">
-                <img
+                <Image
                   src={card.thumbnail}
                   alt={card.thumbnail}
                   className="lg:w-32 md:w-20 sm:w-16 w-12"
+                  width={1000}
+                  height={1000}
                 />
                 <div className="lg:ms-5">
                   <h1 className="text-start card-title opacity-0 text-sm sm:text-lg md:text-xl mb-3 font-bold">
@@ -68,7 +70,13 @@ const Experience = () => {
                           transform: `translateX(-${5 * 1 + 2}px)`,
                         }}
                       >
-                        <img src={tech} alt="icon5" className="p-2" />
+                        <Image
+                          src={tech}
+                          alt="icon5"
+                          className="p-2"
+                          width={1000}
+                          height={1000}
+                        />
                       </div>
                     ))}
                   </div>
