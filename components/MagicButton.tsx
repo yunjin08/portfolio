@@ -1,14 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 
-/**
- *  UI: border magic from tailwind css btns
- *  Link: https://ui.aceternity.com/components/tailwindcss-buttons
- *
- *  change border radius to rounded-lg
- *  add margin of md:mt-10
- *  remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50
- */
 const MagicButton = ({
   title,
   icon,
@@ -37,7 +29,6 @@ const MagicButton = ({
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00abf0_0%,#081b29_50%,#173e56_100%)]" />
 
-      {/* remove px-3 py-1, add px-5 gap-2 */}
       <span
         className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg
              bg-slate-950 px-3 sm:px-5 lg:px-7 responsive-text font-medium text-white backdrop-blur-3xl gap-2 ${otherClasses}`}
