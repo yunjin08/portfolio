@@ -23,7 +23,6 @@ export const FloatingNav = ({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Enable scrolling on mount
     document.body.style.overflow = "auto";
     document.body.style.height = "auto";
 
