@@ -20,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/jedicon.png" sizes="any" />
+        <link rel="icon" href="/jedicon.webp" sizes="any" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="preload" href="/jed2.webp" as="image" />
+        <link rel="preload" href="/bg.webp" as="image" />
+
         <meta name="msapplication-TileColor" content="#112e42" />
         <meta name="theme-color" content="#112e42"></meta>
 
