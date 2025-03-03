@@ -43,7 +43,7 @@ const Footer = () => {
               key={info.id}
               className="md:size-10 size-7 sm:size-9 cursor-pointer flex-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
+              <Image src={info.img} alt="icons" width={20} height={20} />
             </Link>
           ))}
         </div>

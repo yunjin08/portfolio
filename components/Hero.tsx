@@ -1,10 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
-import Image from "next/image";
 
 import MagicButton from "./MagicButton";
-import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import gsap from "gsap";
 import { useEffect } from "react";
 import PixelatedImage from "./ui/PixelatedImage";
 import WebGrid from "./ui/WebGrid";
