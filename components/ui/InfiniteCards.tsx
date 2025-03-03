@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-
+import Image from "next/image";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
@@ -116,8 +116,10 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 {/* add this div for the profile img */}
                 <div className="me-3 w-14 rounded-full">
-                  <img
-                    src="/jed2.png"
+                  <Image
+                    src="/jed2.webp"
+                    width={1000}
+                    height={1000}
                     className="size-10 sm:size-12 md:size-14 lg:size-16 rounded-full"
                     alt="profile"
                   />
