@@ -37,7 +37,7 @@ const Education = () => {
 
         <div className="flex-center relative flex-col">
           <Image
-            src="/hackathon.jpeg"
+            src="/hackathon.webp"
             alt="jed"
             width={1110}
             height={1110}
