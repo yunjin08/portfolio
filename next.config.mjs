@@ -7,6 +7,12 @@ const nextConfig = {
   output: "standalone",
   // This enables static optimization and reduces server-side execution
   poweredByHeader: false,
+  async redirects() {
+    return [];
+  },
+  async rewrites() {
+    return [];
+  },
 };
 
 export default nextConfig;
