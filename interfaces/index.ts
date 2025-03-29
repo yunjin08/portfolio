@@ -46,6 +46,8 @@ export interface Company {
 export interface WorkExperience {
   id: number;
   title: string;
+  company: string;
+  date: string;
   desc: string[];
   className: string;
   thumbnail: string;

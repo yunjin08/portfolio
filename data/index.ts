@@ -1,3 +1,5 @@
+import { damp } from "three/src/math/MathUtils.js";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -204,7 +206,9 @@ export const workExperience = [
   {
     id: 1,
     title:
-      "Fullstack Developer at Unravyl, Start-up Company (Sept 2022 - Jun 2023)",
+      "Fullstack Developer",
+    company: "Unravyl",
+    date: "(Sept 2022 - Jun 2023)",
     desc: [
       "Conducted the creation, planning, and development of the company.",
       "Pioneered in making the portfolio or the company website of the company.",
@@ -217,7 +221,9 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Fullstack Developer at BPOSeats (Dec 2023-Present)",
+    title: "Fullstack Developer",
+    company: "BPOSeats HQZen",
+    date: "(Dec 2023 - March 2025)",
     desc: [
       "Implemented custom framework  built upon Django REST framework",
       "Integrated Vue and Django unit tests into automated pipelines, reducing deployment failures by 80%.",
@@ -231,7 +237,9 @@ export const workExperience = [
   {
     id: 3,
     title:
-      "Software Developer at Bitworks Solutions (March 2024 - October 2024)",
+      "Software Developer",
+    company: "Bitworks Solutions",
+    date: "(March 2024 - October 2024)",
     desc: [
       "Conducted the initial planning and development phases in making an app based on client needs and wants.",
       "Integrated NextJs and and Animation Libraries to better enhance the frontend and satisfy client needs.",
@@ -252,10 +260,12 @@ export const workExperience = [
   },
   {
     id: 4,
-    title: "Lead Frontend Developer at Tranches (Sept 2024 - Present)",
+    title: "Lead Frontend Developer & Automations Engineer",
+    company: "Tranches",
+    date: "(Sept 2024 - Present)",
     desc: [
       "Served as the lead frontend developer for the company, overseeing the UI/UX of the application.",
-      "From the initial planning and development phases, I was able to create a seamless and user-friendly experience for the users.",
+      "From the initial planning, development phases, and automating workflow, I was able to create a seamless and user-friendly experience for the users and client itself.",
       "Directly communicated with the client to ensure that the app is meeting their needs and expectations.",
       "Fast development and deployment of the app, one month of development and deployment from the initial planning.",
     ],
@@ -267,6 +277,29 @@ export const workExperience = [
       "/djangorest.svg",
       "/tail.svg",
       "/django.svg",
+      "/aws.svg",
+      "/figma.svg",
+    ],
+  },
+    {
+    id: 5,
+    title: "Lead Software Engineer",
+    company: "Netlify",
+    date: "(March 2025 - Present)",
+    desc: [
+      "Served as the lead frontend engineer for Netlify support system tool, overseeing the UI/UX of the application and streamlining process and method addressing client concerns.",
+      "Mainly streamlining the support system of Netlify, by integrating inlined IRB commands and logs on the application.",
+      "Directly communicated with the Support and Software Engineers to ensure that the app is meeting their needs and expectations.",
+      "Fast development and fast learning of the frameworks used in a short amount of time, streamlining their process to 80% faster.",
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+    techStack: [
+      "/ruby.svg",
+      "/rails.svg",
+      "/go.svg",
+      "/re.svg",
+      "/humio.svg",
       "/aws.svg",
       "/figma.svg",
     ],

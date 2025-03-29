@@ -31,7 +31,7 @@ const WorkExperienceItem = memo(({ card }: { card: WorkExperience }) => {
         />
         <div className="lg:ms-5">
           <h1 className="text-start card-title opacity-0 text-sm sm:text-lg md:text-xl mb-3 font-bold">
-            {card.title}
+            {card.title} at <span className="text-bold text-primary">{' '}{card.company}{' '}</span>{card.date}
           </h1>
           <div className="flex pl-1 items-center">
             {card.techStack.map((tech: string, index: number) => (
