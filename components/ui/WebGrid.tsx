@@ -13,6 +13,8 @@ function WebGrid({ className }: WebGridProps) {
         alt="grid"
         width={1000}
         height={1000}
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="w-full h-full opacity-50 object-cover"
       />
     </div>
