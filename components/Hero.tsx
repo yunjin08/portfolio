@@ -8,9 +8,9 @@ import WebGrid from "./ui/WebGrid";
 import { animateHero } from "@/animations/layout";
 
 const Hero = () => {
-  useEffect(() => {
+  const timeout = setTimeout(() => {
     animateHero();
-  }, []);
+  }, 1000);
 
   return (
     <section id="hero" className="pb-20 overflow-hidden h-[100svh] md:h-auto">

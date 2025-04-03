@@ -50,13 +50,13 @@ const Home = () => {
           <>
             <FloatingNav navItems={navItems} />
             <Hero />
-            <About />
+            {/* <About />
             <RecentProjects />
             <Education />
             <Experience />
             <Approach />
             <Footer />
-            <ContentLoaded />
+            <ContentLoaded /> */}
           </>
         </Suspense>
       </div>
