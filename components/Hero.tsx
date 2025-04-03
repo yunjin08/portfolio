@@ -47,19 +47,6 @@ const Hero = () => {
             />
           </a>
         </div>
-        <div className="w-1/2 flex-center">
-          <div className="relative mt-36 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
-            <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-secondary rotate-infinite"></div>
-            <div className="relative w-full h-full flex-center">
-              <PixelatedImage
-                src="/jed2.webp"
-                width={1280}
-                height={1280}
-                className="rounded-full"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
