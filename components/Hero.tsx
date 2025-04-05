@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import Image from "next/image";
 import { useEffect } from "react";
 import PixelatedImage from "./ui/PixelatedImage";
 import WebGrid from "./ui/WebGrid";
@@ -16,8 +17,20 @@ const Hero = () => {
 
   return (
     <section id="hero" className="pb-20 overflow-hidden h-[100svh] md:h-auto">
-      {/* background grid */}
-      <WebGrid className="top-0 md:-bottom-32" />
+      {/* background grid, we didn't use the component to make this appear directly, avoiding LCP */}
+      <div className={`w-full absolute left-0  min-h-96 top-0 md:-bottom-32`}>
+        <Image
+          src="/footer-grid.svg"
+          alt="grid"
+          width={1000}
+          height={1000}
+          loading="eager"
+          quality={75}
+          priority={true}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="w-full h-full opacity-50 object-cover"
+        />
+      </div>
       <div
         className="w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex-center"
