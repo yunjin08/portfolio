@@ -1,12 +1,21 @@
 "use client";
 import { gridItems } from "@/data";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import gsap from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
-import WebGrid from "./ui/WebGrid";
 import { animateAbout } from "@/animations/layout";
+import dynamic from "next/dynamic";
+
+const BentoGrid = dynamic(() => import("./ui/BentoGrid").then(mod => mod.BentoGrid), { 
+  ssr: false,
+  loading: () => <div className="h-32 w-full">Loading BentoGrid...</div> 
+});
+
+const BentoGridItem = dynamic(() => import("./ui/BentoGrid").then(mod => mod.BentoGridItem), { 
+  ssr: false,
+  loading: () => <div className="h-32 w-full">Loading BentoGridItem...</div> 
+});
+const WebGrid = dynamic(() => import("./ui/WebGrid"), { ssr: false });
 
 // Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);

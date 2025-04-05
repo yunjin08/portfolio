@@ -1,11 +1,13 @@
 import React, { memo, useEffect } from "react";
 
 import { workExperience } from "@/data";
-import { Button } from "./ui/MovingBorders";
 import Image from "next/image";
-import WebGrid from "./ui/WebGrid";
 import { animateExperience } from "@/animations/layout";
 import type { WorkExperience } from "@/interfaces";
+
+import dynamic from "next/dynamic";
+const WebGrid = dynamic(() => import("./ui/WebGrid"), { ssr: false });
+const Button = dynamic(() => import("./ui/MovingBorders").then((mod) => mod.Button), { ssr: false });
 
 const WorkExperienceItem = memo(({ card }: { card: WorkExperience }) => {
   return (

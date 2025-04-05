@@ -2,11 +2,21 @@
 
 import React, { useEffect } from "react";
 
-import { companies, testimonials } from "@/data";
+import { testimonials } from "@/data";
 import Image from "next/image";
-import { InfiniteMovingCards } from "./ui/InfiniteCards";
 import WebGrid from "./ui/WebGrid";
 import { animateEducation } from "@/animations/layout";
+import dynamic from "next/dynamic";
+
+const InfiniteMovingCards = dynamic(
+  () => import("./ui/InfiniteCards").then((mod) => mod.InfiniteMovingCards),
+  {
+    ssr: false, // Optionally disable SSR if needed
+    loading: () => <div>Loading InfiniteMovingCards...</div>, // You can customize the loading state
+  }
+);
+
+
 
 const Education = () => {
   useEffect(() => {
