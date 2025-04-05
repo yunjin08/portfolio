@@ -1,8 +1,11 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 
-import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
+const CanvasRevealEffect = dynamic(() => import("./ui/CanvasRevealEffect"), {
+  ssr: false,
+});
+
 import WebGrid from "./ui/WebGrid";
 const Approach = () => {
   return (

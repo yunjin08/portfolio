@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "lottie-react";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
-import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -12,6 +10,10 @@ import { memo } from "react";
 const GridGlobe = dynamic(() => import("./GridGlobe"), {
   ssr: false,
   loading: () => <div className="h-96 w-96" />,
+});
+
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
 });
 
 export const BentoGrid = ({
@@ -59,20 +61,15 @@ export const BentoGridItem = memo(
     const rightLists = ["VueJS", "Django", "Postgresql"];
 
     const [copied, setCopied] = useState(false);
+    // const [animationData, setAnimationData] = useState<any | null>(null);
 
-    const defaultOptions = {
-      loop: copied,
-      autoplay: copied,
-      animationData: animationData,
-      rendererSettings: {
-        preserveAspectRatio: "xMidYMid slice",
-      },
-    };
-
-    const handleCopy = () => {
+    const handleCopy = async () => {
       const text = "jed.donaire08@gmail.com";
       navigator.clipboard.writeText(text);
       setCopied(true);
+      // Remove cofetti animation for now, too much js execution time
+      // const data = await import("@/data/confetti.json");
+      // setAnimationData(data.default);
     };
 
     return (
@@ -180,19 +177,6 @@ export const BentoGridItem = memo(
                 {/* add rounded-md h-8 md:h-8, remove rounded-full */}
                 {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
                 {/* add handleCopy() for the copy the text */}
-                <div
-                  className={`absolute -bottom-5 right-0 ${
-                    copied ? "block" : "block"
-                  }`}
-                >
-                  {/* <img src="/confetti.gif" alt="confetti" /> */}
-                  <Lottie
-                    animationData={animationData}
-                    height={200}
-                    width={400}
-                  />
-                </div>
-
                 <MagicButton
                   title={copied ? "Email is Copied!" : "Copy my email address"}
                   icon={<IoCopyOutline />}

@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 
-import { companies, testimonials } from "@/data";
+import { testimonials } from "@/data";
 import Image from "next/image";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 import WebGrid from "./ui/WebGrid";

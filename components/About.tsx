@@ -4,7 +4,6 @@ import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import gsap from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import WebGrid from "./ui/WebGrid";
 import { animateAbout } from "@/animations/layout";
 

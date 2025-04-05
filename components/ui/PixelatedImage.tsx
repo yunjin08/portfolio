@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
 import { cn } from "@/lib/utils";
 import { animatePixelatedImages } from "@/animations/features/pixelatedImages";
 

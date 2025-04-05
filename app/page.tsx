@@ -49,7 +49,7 @@ const Home = () => {
         <Suspense fallback={<Loader />}>
           <>
             <FloatingNav navItems={navItems} />
-            {/* <Hero /> */}
+            <Hero />
             <About />
             <RecentProjects />
             <Education />
