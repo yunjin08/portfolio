@@ -1,11 +1,26 @@
 import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBg";
-import MagicButton from "../MagicButton";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { memo } from "react";
+
+const IoCopyOutline = dynamic(
+  () => import("react-icons/io5").then(mod => mod.IoCopyOutline),
+  {
+    ssr: false,
+    loading: () => <span className="h-5 w-5 inline-block" />, // placeholder
+  }
+);
+
+const BackgroundGradientAnimation = dynamic(
+  () => import("./GradientBg").then(mod => mod.BackgroundGradientAnimation),
+  { ssr: false, loading: () => <div className="h-[100vh] w-full" /> }
+);
+
+const MagicButton = dynamic(() => import("../MagicButton"), {
+  ssr: false,
+  loading: () => <div className="h-96 w-96" />,
+});
 
 const GridGlobe = dynamic(() => import("./GridGlobe"), {
   ssr: false,
