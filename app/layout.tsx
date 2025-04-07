@@ -25,7 +25,7 @@ export default function RootLayout({
         <link rel="preload" href="/jed2.webp" as="image" />
         <link rel="preload" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="preload" href="/about-image.webp" />
+        <link rel="preload" href="/about-image.webp" as="image"/>
         <link rel="preload" href="/footer-grid.svg" as="image" />
         <link rel="preload" href="/hero-image.webp" as="image" />
 

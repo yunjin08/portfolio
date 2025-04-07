@@ -48,7 +48,7 @@ export const TextGenerateEffect = ({
   ), [scope, wordsArray]);
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn("font-bold inline-block w-full", className)}>
       <div className="my-4">
         <div className="text-white leading-snug tracking-wide">
           {renderWords}

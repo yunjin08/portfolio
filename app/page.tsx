@@ -13,45 +13,67 @@ const Approach = lazy(() => import("@/components/Approach"));
 const Experience = lazy(() => import("@/components/Experience"));
 const RecentProjects = lazy(() => import("@/components/RecentProjects"));
 
-// Use dynamic import for components that need SSR control
 const FloatingNav = dynamic(
   () => import("@/components/ui/FloatingNavbar").then((mod) => mod.FloatingNav),
   {
     ssr: false,
-    loading: () => <div className="h-96 w-96" />,
+    loading: () => <div className="h-16 w-full" />, // Smaller placeholder
   }
 );
 
 const StarBackground = dynamic(() => import("@/components/ui/StarBackground"), {
   ssr: false,
-      loading: () => <div className="fixed inset-0 bg-black-100 z-0" />, // Prevents layout shift
+  loading: () => <div className="fixed inset-0 bg-black-100 z-0" />,
 });
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [initialLoad, setInitialLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setInitialLoad(false);
+    }, 1000); // Minimum loader display time
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (initialLoad) {
+    return <Loader />;
+  }
 
   return (
-    <main
-      className={`bg-black-100 max-w-[1650px] flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5`}
-    >
+    <main className="bg-black-100 max-w-[1650px] flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <StarBackground />
-      <section  className="max-w-7xl w-full overflow-hidden">
+      <div className="max-w-7xl w-full overflow-hidden">
         <Suspense fallback={<Loader />}>
-          <>
-            <FloatingNav navItems={navItems} />
-            <Hero />
-          </>
+          <FloatingNav navItems={navItems} />
+          <Hero />
+          <ContentLoaded onLoaded={() => setIsLoading(false)} />
         </Suspense>
-        <Suspense fallback={<Loader />}>
-          <About />
-          <RecentProjects />
-          <Education />
-          <Experience />
-          <Approach />
-          <Footer />
-        </Suspense>
-      </section>
+        
+        {!isLoading && (
+          <Suspense fallback={null}>
+            <About />
+            <RecentProjects />
+            <Education />
+            <Experience />
+            <Approach />
+            <Footer />
+          </Suspense>
+        )}
+      </div>
     </main>
   );
+};
+
+// Separate component for content loaded tracking
+const ContentLoaded = ({ onLoaded }: { onLoaded: () => void }) => {
+  useEffect(() => {
+    onLoaded();
+  }, [onLoaded]);
+
+  return null;
 };
 
 export default Home;
