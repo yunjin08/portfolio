@@ -9,9 +9,7 @@ import { animateHero } from "@/animations/layout";
 
 const Hero = () => {
   useEffect(() => {
-    setTimeout(() => {
-      animateHero();
-    }, 1000);
+    animateHero();
   }, []);
 
   return (
