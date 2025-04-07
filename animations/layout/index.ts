@@ -39,7 +39,6 @@ export const animateHero = () => {
       opacity: 1,
       duration: 1.5,
       ease: "power2.inOut",
-      delay: 0.1,
     }
   );
 };

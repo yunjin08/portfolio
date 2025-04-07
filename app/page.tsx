@@ -22,52 +22,34 @@ const FloatingNav = dynamic(
   }
 );
 
-const StarBackground = dynamic(
-  () => import("@/components/ui/StarBackground"),
-  {
-    ssr: false,
-    loading: () => <div className="fixed inset-0 bg-black-100 z-0" />, // Prevents layout shift
-  }
-);
+const StarBackground = dynamic(() => import("@/components/ui/StarBackground"), {
+  ssr: false,
+      loading: () => <div className="fixed inset-0 bg-black-100 z-0" />, // Prevents layout shift
+});
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Create a component to track when Suspense is done loading
-  const ContentLoaded = () => {
-    useEffect(() => {
-      setIsLoading(false);
-    }, []);
-
-    return null;
-  };
 
   return (
     <main
-      className={`bg-black-100 max-w-[1650px] flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5 ${
-        isLoading ? "relative min-h-screen" : ""
-      }`}
+      className={`bg-black-100 max-w-[1650px] flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5`}
     >
       <StarBackground />
-      <div className="max-w-7xl w-full overflow-hidden">
+      <section  className="max-w-7xl w-full overflow-hidden">
         <Suspense fallback={<Loader />}>
           <>
             <FloatingNav navItems={navItems} />
             <Hero />
-            <Footer />
-            <ContentLoaded />
           </>
-          {!isLoading && (
-            <Suspense fallback={null}>
-              <About />
-              <RecentProjects />
-              <Education />
-              <Experience />
-              <Approach />
-            </Suspense>
-          )}
         </Suspense>
-      </div>
+        <Suspense fallback={<Loader />}>
+          <About />
+          <RecentProjects />
+          <Education />
+          <Experience />
+          <Approach />
+          <Footer />
+        </Suspense>
+      </section>
     </main>
   );
 };
