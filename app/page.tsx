@@ -27,20 +27,6 @@ const StarBackground = dynamic(() => import("@/components/ui/StarBackground"), {
 });
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [initialLoad, setInitialLoad] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setInitialLoad(false);
-    }, 1000); // Minimum loader display time
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (initialLoad) {
-    return <Loader />;
-  }
 
   return (
     <main className="bg-black-100 max-w-[1650px] flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
@@ -49,19 +35,15 @@ const Home = () => {
         <Suspense fallback={<Loader />}>
           <FloatingNav navItems={navItems} />
           <Hero />
-          <ContentLoaded onLoaded={() => setIsLoading(false)} />
         </Suspense>
-        
-        {!isLoading && (
-          <Suspense fallback={null}>
-            <About />
-            <RecentProjects />
-            <Education />
-            <Experience />
-            <Approach />
-            <Footer />
-          </Suspense>
-        )}
+        <Suspense fallback={<Loader />}>
+          <About />
+          <RecentProjects />
+          <Education />
+          <Experience />
+          <Approach />
+          <Footer />
+        </Suspense>
       </div>
     </main>
   );
