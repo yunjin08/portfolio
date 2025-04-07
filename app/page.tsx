@@ -1,7 +1,7 @@
 "use client";
 
 import { navItems } from "@/data";
-import { Suspense, lazy, useState, useEffect } from "react";
+import { Suspense, lazy } from "react";
 import Loader from "@/components/Loader";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
@@ -47,15 +47,6 @@ const Home = () => {
       </div>
     </main>
   );
-};
-
-// Separate component for content loaded tracking
-const ContentLoaded = ({ onLoaded }: { onLoaded: () => void }) => {
-  useEffect(() => {
-    onLoaded();
-  }, [onLoaded]);
-
-  return null;
 };
 
 export default Home;

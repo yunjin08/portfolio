@@ -1,39 +1,23 @@
 import { FaLocationArrow } from "react-icons/fa6";
+
 import MagicButton from "./MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import PixelatedImage from "./ui/PixelatedImage";
 import { animateHero } from "@/animations/layout";
 
 const Hero = () => {
-  const heroSectionRef = useRef<HTMLElement>(null);
-  const textContainerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    // Ensure initial layout is stable
-    if (textContainerRef.current) {
-      textContainerRef.current.style.visibility = 'hidden';
-    }
-
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       animateHero();
-      if (textContainerRef.current) {
-        textContainerRef.current.style.visibility = 'visible';
-      }
-    }, 100);
-
-    return () => clearTimeout(timer);
+    }, 1000);
   }, []);
 
   return (
-    <section 
-      id="hero" 
-      className="pb-20 overflow-hidden h-[100svh] md:h-auto"
-      ref={heroSectionRef}
-    >
-      {/* Background grid - unchanged */}
-      <div className={`w-full absolute left-0 min-h-96 top-0 md:-bottom-32`}>
+    <section id="hero" className="pb-20 overflow-hidden h-[100svh] md:h-auto">
+      {/* background grid, we didn't use the component to make this appear directly, avoiding LCP */}
+      <div className={`w-full absolute left-0  min-h-96 top-0 md:-bottom-32`}>
         <Image
           src="/footer-grid.svg"
           alt="grid"
@@ -46,23 +30,25 @@ const Hero = () => {
           className="w-full h-full opacity-50 object-cover"
         />
       </div>
-      
-      {/* Radial gradient - unchanged */}
-      <div className="w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex-center">
-        <div className="absolute pointer-events-none inset-0 flex-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div
+        className="w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+       absolute top-0 left-0 flex-center"
+      >
+        {/* Radial gradient for the container to give a faded look */}
+        <div
+          className="absolute pointer-events-none inset-0 flex-center dark:bg-black-100
+         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
+        />
       </div>
 
       <div className="flex-center flex-1 lg:pt-0 gap-12 md:gap-5 lg:flex-row flex-col-reverse relative h-full md:h-[100svh] z-10">
-        <div className="w-full lg:w-1/2 h-full flex-col flex-center" ref={textContainerRef}>
-          {/* TextGenerateEffect with stable layout */}
-          <div className="h-32 md:h-auto min-h-[8rem] flex items-center justify-center">
-            <TextGenerateEffect
-              words="Crafting Seamless User Experiences"
-              className="text-center text-xl sm:text-2xl lg:text-4xl xl:text-5xl"
-            />
-          </div>
+        <div className="w-full lg:w-1/2 h-full flex-col flex-center">
+          <TextGenerateEffect
+            words="Crafting Seamless User Experiences"
+            className="text-center h-32 md:h-auto text-xl sm:text-2xl lg:text-4xl xl:text-5xl"
+          />
 
-          <p className="text-center description mt-[-2rem] md:mt-0  md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
+          <p className="text-center description mt-[-2rem] md:mt-0 opacity-0 md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
             Hi! I&apos;m Jed, a Fullstack Developer specializing in Web and
             Mobile Applications with AI integration.
           </p>
@@ -75,8 +61,6 @@ const Hero = () => {
             />
           </a>
         </div>
-        
-        {/* Image section - unchanged */}
         <div className="w-1/2 flex-center">
           <div className="relative mt-36 sm:mt-20 xl:mt-32 lg:mt-0 w-[50vw] lg:w-[35vw] duration-700 hover:scale-[1.02]">
             <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-secondary rotate-infinite"></div>

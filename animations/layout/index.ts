@@ -22,10 +22,9 @@ const createScrollAnimation = (
 
 // Hero animations
 export const animateHero = () => {
-  gsap.set(".description", { opacity: 1 });
   gsap.to(".description", {
     opacity: 1,
-    delay: 0.2,
+    delay: 1,
     ...fadeInConfig,
     ease: "power2.inOut",
   });
@@ -40,6 +39,7 @@ export const animateHero = () => {
       opacity: 1,
       duration: 1.5,
       ease: "power2.inOut",
+      delay: 0.1,
     }
   );
 };
