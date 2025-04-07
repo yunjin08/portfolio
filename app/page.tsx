@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <main className="bg-black-100 max-w-[1650px] flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <StarBackground />
-      <div className="max-w-7xl w-full overflow-hidden">
+      <section  className="max-w-7xl w-full overflow-hidden">
         <Suspense fallback={<Loader />}>
           <FloatingNav navItems={navItems} />
           <Hero />
@@ -44,7 +44,7 @@ const Home = () => {
           <Approach />
           <Footer />
         </Suspense>
-      </div>
+      </section>
     </main>
   );
 };
