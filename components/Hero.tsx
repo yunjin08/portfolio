@@ -62,7 +62,7 @@ const Hero = () => {
             />
           </div>
 
-          <p className="text-center mt-[-2rem] md:mt-0 opacity-0 md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
+          <p className="text-center description mt-[-2rem] md:mt-0  md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
             Hi! I&apos;m Jed, a Fullstack Developer specializing in Web and
             Mobile Applications with AI integration.
           </p>
