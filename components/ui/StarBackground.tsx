@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 
 const StarBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number>();
+  const resizeTimeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -17,49 +19,59 @@ const StarBackground = () => {
       canvas.height = window.innerHeight;
     };
     setCanvasSize();
-    window.addEventListener("resize", setCanvasSize);
 
-    // Star properties
-    const stars: { x: number; y: number; size: number; speed: number }[] = [];
-    const numStars = 500;
-    const maxSize = 1;
+    // Throttled resize handler
+    const handleResize = () => {
+      if (resizeTimeoutRef.current) clearTimeout(resizeTimeoutRef.current);
+      resizeTimeoutRef.current = setTimeout(setCanvasSize, 100);
+    };
 
-    // Initialize stars
-    for (let i = 0; i < numStars; i++) {
-      stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * maxSize,
-        speed: Math.random() * 0.2 + 0.1,
-      });
-    }
+    window.addEventListener("resize", handleResize);
+
+    // Star initialization
+    const stars = Array.from({ length: Math.floor((window.innerWidth * window.innerHeight) / 2000) }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 1,
+      speed: Math.random() * 0.2 + 0.1,
+    }));
 
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
 
-      stars.forEach((star) => {
-        // Update position
+      stars.forEach(star => {
         star.y += star.speed;
         if (star.y > canvas.height) {
           star.y = 0;
           star.x = Math.random() * canvas.width;
         }
-
-        // Draw star
-        ctx.beginPath();
-        ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+        ctx.moveTo(star.x + star.size, star.y);
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fill();
       });
 
-      requestAnimationFrame(animate);
+      ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+      ctx.fill();
+      animationRef.current = requestAnimationFrame(animate);
     };
 
-    animate();
+    // Handle tab visibility changes
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationRef.current!);
+      } else {
+        animationRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    animationRef.current = requestAnimationFrame(animate);
 
     return () => {
-      window.removeEventListener("resize", setCanvasSize);
+      cancelAnimationFrame(animationRef.current!);
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
@@ -67,7 +79,11 @@ const StarBackground = () => {
     <canvas
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
-      style={{ background: "transparent" }}
+      style={{ 
+        background: "transparent",
+        transform: "translateZ(0)",
+        willChange: "transform"
+      }}
     />
   );
 };

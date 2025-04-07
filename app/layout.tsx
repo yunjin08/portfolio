@@ -27,6 +27,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preload" href="/about-image.webp" />
         <link rel="preload" href="/footer-grid.svg" as="image" />
+        <link rel="preload" href="/hero-image.webp" as="image" />
 
         <meta name="msapplication-TileColor" content="#112e42" />
         <meta name="theme-color" content="#112e42"></meta>
