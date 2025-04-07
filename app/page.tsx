@@ -50,14 +50,18 @@ const Home = () => {
           <>
             <FloatingNav navItems={navItems} />
             <Hero />
-            <About />
-            <RecentProjects />
-            <Education />
-            <Experience />
-            <Approach />
             <Footer />
             <ContentLoaded />
           </>
+          {!isLoading && (
+            <Suspense fallback={null}>
+              <About />
+              <RecentProjects />
+              <Education />
+              <Experience />
+              <Approach />
+            </Suspense>
+          )}
         </Suspense>
       </div>
     </main>
