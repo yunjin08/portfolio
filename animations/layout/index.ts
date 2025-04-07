@@ -22,12 +22,6 @@ const createScrollAnimation = (
 
 // Hero animations
 export const animateHero = () => {
-  gsap.to(".description", {
-    opacity: 1,
-    delay: 1,
-    ...fadeInConfig,
-    ease: "power2.inOut",
-  });
   gsap.fromTo(
     ".borderImg",
     {

@@ -23,12 +23,9 @@ export default function RootLayout({
         <link rel="icon" href="/jedicon.webp" sizes="any" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="preload" href="/jed2.webp" as="image" />
-        <link rel="preload" href="https://fonts.googleapis.com" />
+        <link rel="preload" href="https://fonts.googleapis.com"  as="font"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link rel="preload" href="/about-image.webp" as="image"/>
         <link rel="preload" href="/footer-grid.svg" as="image" />
-        <link rel="preload" href="/hero-image.webp" as="image" />
-        <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" />
 
         <meta name="msapplication-TileColor" content="#112e42" />
         <meta name="theme-color" content="#112e42"></meta>
