@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -11,9 +11,12 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  
+  // Memoize the words array to prevent unnecessary splits
+  const wordsArray = useMemo(() => words.split(" "), [words]);
+
   useEffect(() => {
-    animate(
+    const animation = animate(
       "span",
       {
         opacity: 1,
@@ -23,35 +26,32 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
 
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${
-                idx > 2 ? "text-primary" : "text-white"
-              } opacity-0`}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
-    );
-  };
+    return () => animation.stop(); // Cleanup animation on unmount
+  }, [animate, wordsArray]); // Only re-run if wordsArray changes
+
+  const renderWords = useMemo(() => (
+    <motion.div ref={scope}>
+      {wordsArray.map((word, idx) => (
+        <motion.span
+          key={`${word}-${idx}`}
+          className={cn(
+            "opacity-0",
+            idx > 2 ? "text-primary" : "text-white"
+          )}
+          style={{ willChange: "opacity" }} // Hint for smoother animations
+        >
+          {word}{" "}
+        </motion.span>
+      ))}
+    </motion.div>
+  ), [scope, wordsArray]);
 
   return (
     <div className={cn("font-bold", className)}>
-      {/* mt-4 to my-4 */}
       <div className="my-4">
-        {/* remove  text-2xl from the original */}
-        <div className=" text-white leading-snug tracking-wide">
-          {renderWords()}
+        <div className="text-white leading-snug tracking-wide">
+          {renderWords}
         </div>
       </div>
     </div>
