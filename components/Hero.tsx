@@ -41,19 +41,19 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex-center flex-1 lg:pt-0 gap-12 md:gap-5 lg:flex-row flex-col-reverse relative h-full md:h-[100vh] z-10">
+      <div className="flex-center flex-1 lg:pt-0 gap-12 md:gap-5 lg:flex-row flex-col-reverse relative h-full md:h-[100svh] z-10">
         <div className="w-full lg:w-1/2 h-full flex-col flex-center">
           <TextGenerateEffect
             words="Crafting Seamless User Experiences"
             className="text-center h-32 md:h-auto text-xl sm:text-2xl lg:text-4xl xl:text-5xl"
           />
 
-          <p className="animate-fadeIn [animation-delay:1000ms] opacity-0 translate-y-4 animate-fill-forwards text-center mt-[-2rem] md:mt-0 md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
+          <p className="text-center mt-[-2rem] md:mt-0 md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
             Hi! I&apos;m Jed, a Fullstack Developer specializing in Web and
             Mobile Applications with AI integration.
           </p>
 
-          <a href="#about" className="animate-fadeIn [animation-delay:1000ms] opacity-0 translate-y-4 animate-fill-forwards">
+          <a href="#about">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}

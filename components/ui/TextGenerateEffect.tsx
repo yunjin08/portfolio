@@ -11,24 +11,16 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  
-  // Memoize the words array to prevent unnecessary splits
   const wordsArray = useMemo(() => words.split(" "), [words]);
 
   useEffect(() => {
-    const animation = animate(
+    // Immediate visibility for LCP
+    animate(
       "span",
-      {
-        opacity: 1,
-      },
-      {
-        duration: 2,
-        delay: stagger(0.2),
-      }
+      { opacity: 1 },
+      { duration: 0.5, delay: stagger(0.05) } // Much faster animation
     );
-
-    return () => animation.stop(); // Cleanup animation on unmount
-  }, [animate, wordsArray]); // Only re-run if wordsArray changes
+  }, [animate, wordsArray]);
 
   const renderWords = useMemo(() => (
     <motion.div ref={scope}>
@@ -36,10 +28,12 @@ export const TextGenerateEffect = ({
         <motion.span
           key={`${word}-${idx}`}
           className={cn(
-            "opacity-30",
+            "opacity-70", // Start partially visible for LCP
             idx > 2 ? "text-primary" : "text-white"
           )}
-          style={{ willChange: "opacity" }} // Hint for smoother animations
+          animate={{ opacity: 1 }} // Animate to full visibility
+          transition={{ duration: 0.3, delay: idx * 0.05 }}
+          style={{ willChange: "opacity" }}
         >
           {word}{" "}
         </motion.span>
@@ -51,6 +45,8 @@ export const TextGenerateEffect = ({
     <div className={cn("font-bold inline-block w-full", className)}>
       <div className="my-4">
         <div className="text-white leading-snug tracking-wide">
+          {/* SSR fallback for better LCP */}
+          <div className="sr-only">{words}</div>
           {renderWords}
         </div>
       </div>
