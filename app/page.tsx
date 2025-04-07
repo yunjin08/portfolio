@@ -36,7 +36,7 @@ const Home = () => {
           <FloatingNav navItems={navItems} />
           <Hero />
         </Suspense>
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={null}>
           <About />
           <RecentProjects />
           <Education />
