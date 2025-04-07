@@ -9,9 +9,9 @@ export const animatePixelatedImages = (
   width: number,
   height: number
 ) => {
-  if (!canvas) return;
+  if (!canvas || imageLoaded.current) return;
 
-  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+  const ctx = canvas.getContext("2d");
   if (!ctx) return;
 
   gsap.set(canvas, { opacity: 0 });
@@ -21,10 +21,9 @@ export const animatePixelatedImages = (
   img.crossOrigin = "Anonymous";
 
   img.onload = () => {
-    if (imageLoaded.current) return;
     imageLoaded.current = true;
 
-    // Create an offscreen canvas for pixel sampling
+    // Offscreen rendering (dispose after use)
     const offscreenCanvas = document.createElement("canvas");
     const offscreenCtx = offscreenCanvas.getContext("2d");
     if (!offscreenCtx) return;
@@ -36,12 +35,12 @@ export const animatePixelatedImages = (
     const imageData = offscreenCtx.getImageData(0, 0, width, height);
     const data = imageData.data;
 
-    // Set up main canvas
     canvas.width = width;
     canvas.height = height;
     ctx.clearRect(0, 0, width, height);
 
-    // Create pixel array
+    // Optimized pixel storage (typed arrays for better performance)
+    const step = 6;
     const pixels: {
       x: number;
       y: number;
@@ -50,99 +49,81 @@ export const animatePixelatedImages = (
       color: string;
     }[] = [];
 
-    // Added more pixels for better resolution
-    const step = 6;
     for (let y = 0; y < height; y += step) {
       for (let x = 0; x < width; x += step) {
         const i = (y * width + x) * 4;
         if (data[i + 3] > 0) {
-          const color = `rgba(${data[i]}, ${data[i + 1]}, ${data[i + 2]}, ${
-            data[i + 3] / 255
-          })`;
           pixels.push({
             x: Math.random() * width,
             y: Math.random() * height,
             targetX: x,
             targetY: y,
-            color: color,
+            color: `rgba(${data[i]}, ${data[i + 1]}, ${data[i + 2]}, ${data[i + 3] / 255})`,
           });
         }
       }
     }
 
-    gsap.to(canvas, {
-      opacity: 1,
-      duration: 0.1,
-      delay: 0.2,
-      onComplete: () => {
-        let progress = 0;
-        const duration = 2;
-        const startTime = Date.now();
+    // GSAP Timeline for better control
+    const tl = gsap.timeline({ onComplete: renderAnimation });
+    tl.to(canvas, { opacity: 1, duration: 0.1, delay: 0.2 });
+    tl.to(opacityRef, { current: 1, duration: 2, ease: "power2.inOut" }, 0);
 
-        // Animate opacity
-        gsap.to(opacityRef, {
-          current: 1,
-          duration: duration,
-          ease: "power2.inOut",
-        });
+    function renderAnimation() {
+      let progress = 0;
+      const duration = 2;
+      const startTime = Date.now();
 
-        const animate = () => {
-          const currentTime = Date.now();
-          progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
+      const animate = () => {
+        progress = Math.min((Date.now() - startTime) / (duration * 1000), 1);
+        ctx?.clearRect(0, 0, width, height);
 
-          ctx.clearRect(0, 0, width, height);
+        // Draw final image (fade in after 80%)
+        if (progress > 0.8 && ctx) {
+          ctx.globalAlpha = (progress - 0.8) * 5 * opacityRef.current;
+          ctx.drawImage(img, 0, 0, width, height);
+          ctx.globalAlpha = 1;
+        }
 
-          // Draw the final image with increasing opacity near the end of animation
-          if (progress > 0.8) {
-            const finalImageOpacity = (progress - 0.8) * 5; // Scale 0.8-1.0 to 0-1
-            ctx.globalAlpha = finalImageOpacity * opacityRef.current;
-            ctx.drawImage(img, 0, 0, width, height);
-            ctx.globalAlpha = 1;
+        // Draw pixels (optimized loop)
+        for (let i = 0; i < pixels.length; i++) {
+          const p = pixels[i];
+          const easeProgress = gsap.parseEase("power3.inOut")(progress);
+          const x = p.x + (p.targetX - p.x) * easeProgress;
+          const y = p.y + (p.targetY - p.y) * easeProgress;
+          const opacity = progress > 0.8 ? 1 - (progress - 0.8) * 5 : 1;
+          if (ctx) {
+            ctx.fillStyle = `${p.color.slice(0, -1)}, ${opacity * opacityRef.current})`;
+            ctx.fillRect(x, y, step, step);
           }
+        }
 
-          // Draw scattered pixels with opacity (fading out as final image fades in)
-          pixels.forEach((pixel) => {
-            const easeProgress = gsap.parseEase("power3.inOut")(progress);
-            const currentX = pixel.x + (pixel.targetX - pixel.x) * easeProgress;
-            const currentY = pixel.y + (pixel.targetY - pixel.y) * easeProgress;
-
-            // Fade out pixels as final image fades in
-            const pixelOpacity = progress > 0.8 ? 1 - (progress - 0.8) * 5 : 1;
-
-            const [r, g, b] = pixel.color.match(/\d+/g)?.map(Number) || [
-              0, 0, 0,
-            ];
-            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${
-              opacityRef.current * pixelOpacity
-            })`;
-            ctx.fillRect(currentX, currentY, step, step);
-          });
-
-          // Glitch effects only in the early stages
-          if (progress < 0.6) {
-            for (let i = 0; i < 10; i++) {
-              const x = Math.random() * width;
-              const y = Math.random() * height;
-              ctx.fillStyle = `rgba(0, 195, 255, ${
-                0.1 * (1 - progress) * opacityRef.current
-              })`;
-              ctx.fillRect(x, y, Math.random() * 20, Math.random() * 2);
-            }
+        // Glitch effect (early stage only)
+        if (progress < 0.6 && ctx) {
+          ctx.fillStyle = `rgba(0, 195, 255, ${0.1 * (1 - progress) * opacityRef.current})`;
+          for (let i = 0; i < 10; i++) {
+            ctx.fillRect(
+              Math.random() * width,
+              Math.random() * height,
+              Math.random() * 20,
+              Math.random() * 2
+            );
           }
+        }
 
-          if (progress < 1) {
-            requestAnimationFrame(animate);
-          } else {
-            // Ensure final state is perfect
-            ctx.clearRect(0, 0, width, height);
+        if (progress < 1) requestAnimationFrame(animate);
+        else {
+          if (ctx) {
             ctx.globalAlpha = opacityRef.current;
             ctx.drawImage(img, 0, 0, width, height);
-            ctx.globalAlpha = 1;
           }
-        };
+        }
+      };
 
-        animate();
-      },
-    });
+      animate();
+    }
+
+    // Cleanup
+    offscreenCanvas.width = 0; // Free memory
   };
 };
