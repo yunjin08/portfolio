@@ -66,7 +66,7 @@ export const animatePixelatedImages = (
 
     // GSAP Timeline for better control
     const tl = gsap.timeline({ onComplete: renderAnimation });
-    tl.to(canvas, { opacity: 1, duration: 0.1, delay: 0.2 });
+    tl.to(canvas, { opacity: 1, duration: 0.1 });
     tl.to(opacityRef, { current: 1, duration: 2, ease: "power2.inOut" }, 0);
 
     function renderAnimation() {
