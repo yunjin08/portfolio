@@ -49,10 +49,8 @@ I'm also a strong believer in **partnering** with my clients — not just coding
 
 ## 🤝 Let's Connect
 
-- 📫 Email: [yourname@email.com]
-- 🌐 Website: [badgeguru.com](https://badgeguru.com)
+- 📫 Email: [jed.donaire08@gmail.com]=
 - 💼 LinkedIn: [linkedin.com/in/jededison](https://linkedin.com/in/jededison)
-- 💻 GitHub: [github.com/your-username](https://github.com/your-username)
 
 ---
 
