@@ -6,7 +6,7 @@ I'm a **Fullstack Developer** with a passion for clean, scalable code and a stro
 
 ## 🧠 What I Do
 
-- 🔧 **Fullstack Development**: TypeScript, React/Next.js, Tailwind, Python, Django, PostgreSQL, MongoDB
+- 🔧 **Fullstack Development**: TypeScript, React/Next.js, Svelte, Tailwind, Python, Django, PostgreSQL, MongoDB, Ruby on Rails
 - 🧰 **Dev Tools & Platforms**: Netlify, Vercel, GitHub, Make (Integromat), Zapier, Directus, Airtable, Frame.io, Softr
 - 🤖 **Automation & Integrations**: Building smart systems with Make, Zapier, Python scripts, and n8n
 - 🧠 **AI & ML R&D**: Currently researching how machine learning can evaluate code quality and structure (beyond just LLMs)
