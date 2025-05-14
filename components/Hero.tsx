@@ -46,8 +46,8 @@ const Hero = () => {
             className="text-center h-32 md:h-auto text-xl sm:text-2xl lg:text-4xl xl:text-5xl"
           />
 
-          <p className="text-center mt-[-2rem] md:mt-0 md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
-            Hi! I&apos;m Jed, a Fullstack Developer specializing in Web and
+          <p className="text-center mt-[-3rem] md:mt-0 md:tracking-wider mb-10 md:mb-4 responsive-text lg:text-lg xl:text-xl">
+            Hi! I&apos;m Jed, a Software Engineer specializing in Web and
             Mobile Applications with AI integration.
           </p>
 
