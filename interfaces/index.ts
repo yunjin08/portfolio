@@ -24,7 +24,8 @@ export interface Project {
   des: string;
   img: string;
   iconLists: string[];
-  link: string;
+  link?: string;
+  isMobile?: boolean;
 }
 
 // Testimonials Interface

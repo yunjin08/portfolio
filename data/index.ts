@@ -44,7 +44,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development and growth.",
+    title: "Tech enthusiast with a passion for scalable systems and growth.",
     description: "",
     className:
       "lg:col-span-2 md:col-span-3 md:row-span-1 border-2 border-primary",
@@ -56,7 +56,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently learning Cloud Architecture",
+    title: "Currently learning Cloud Architecture and Scalable Systems",
     description: "AWS Certification",
     className: "md:col-span-3 md:row-span-2 border-2 border-primary",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -145,6 +145,22 @@ export const projects = [
     img: "/p1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://mobile-preview-psi.vercel.app",
+  },
+  {
+    id: 9,
+    title: "Deductly",
+    des: "A web app that allows users to track their deductions and credits.",
+    img: "/deductly/deductly.webp",
+    iconLists: ["/expo.svg", "/django.svg", "/chatgpt.svg.png", "/cloudinary.svg"],
+    isMobile: true,
+  },
+  {
+    id: 10,
+    title: "UP Chatbot ",
+    des: "A chatbot that allows users to learn more about the University of the Philippines.",
+    img: "/upchatbot.webp",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/django.svg", "/chatgpt.svg.png"],
+    link: "https://upchat.jed-edison.com/",
   },
 ];
 
