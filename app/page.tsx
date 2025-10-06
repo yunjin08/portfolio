@@ -29,21 +29,20 @@ const StarBackground = dynamic(() => import("@/components/ui/StarBackground"), {
 const Home = () => {
 
   return (
-    <main className="bg-black-100 max-w-[1650px] flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="bg-black-100 max-w-[1650px] py-10 flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <StarBackground />
-      <section  className="max-w-7xl w-full overflow-hidden">
+      <section  className="max-w-4xl w-full overflow-hidden">
         <Suspense fallback={<Loader />}>
-          <FloatingNav navItems={navItems} />
           <Hero />
         </Suspense>
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}>
           <About />
           <RecentProjects />
           <Education />
           <Experience />
           <Approach />
           <Footer />
-        </Suspense>
+        </Suspense> */}
       </section>
     </main>
   );
