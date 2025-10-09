@@ -138,17 +138,17 @@ export const BentoGridItem = memo(
           <div
             className={cn(
               titleClassName,
-              "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-32 sm:min-h-36 md:min-h-40 flex flex-col px-5 p-5 lg:p-10"
+              "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-32 sm:min-h-36 md:min-h-40 flex flex-col p-4"
             )}
           >
             {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-            <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+            <div className="font-sans font-extralight md:max-w-32 md:text-md text-sm text-[#C1C2D3] z-10">
               {description}
             </div>
             {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
             {/* remove mb-2 mt-2 */}
             <div
-              className={`font-sans text-xs sm:text-sm lg:text-2xl max-w-96 font-bold z-10`}
+              className={`font-sans text-sm md:text-md max-w-96 font-bold z-10`}
             >
               {title}
             </div>
@@ -164,7 +164,7 @@ export const BentoGridItem = memo(
                   {leftLists.map((item, i) => (
                     <span
                       key={i}
-                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                      className="lg:py-4 lg:px-3 py-2 px-3 text-sm md:text-md opacity-50 
                     lg:opacity-100 rounded-lg text-center bg-secondary"
                     >
                       {item}
@@ -177,7 +177,7 @@ export const BentoGridItem = memo(
                   {rightLists.map((item, i) => (
                     <span
                       key={i}
-                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                      className="lg:py-4 lg:px-3 py-2 px-3 text-sm md:text-md opacity-50 
                     lg:opacity-100 rounded-lg text-center bg-secondary"
                     >
                       {item}

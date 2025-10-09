@@ -5,8 +5,8 @@ import { Suspense, lazy } from "react";
 import Loader from "@/components/Loader";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
-const About = lazy(() => import("@/components/About"));
 const Footer = lazy(() => import("@/components/Footer"));
 const Education = lazy(() => import("@/components/Education"));
 const Approach = lazy(() => import("@/components/Approach"));
@@ -34,15 +34,15 @@ const Home = () => {
       <section  className="max-w-4xl w-full overflow-hidden">
         <Suspense fallback={<Loader />}>
           <Hero />
-        </Suspense>
-        {/* <Suspense fallback={null}>
           <About />
+        </Suspense>
+        <Suspense fallback={null}>
           <RecentProjects />
-          <Education />
+          {/* <Education />
           <Experience />
           <Approach />
-          <Footer />
-        </Suspense> */}
+          <Footer /> */}
+        </Suspense>
       </section>
     </main>
   );

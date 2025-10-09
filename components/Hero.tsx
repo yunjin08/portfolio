@@ -1,6 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
-import MagicButton from "./MagicButton";
 import Image from "next/image";
 import { useEffect } from "react";
 import PixelatedImage from "./ui/PixelatedImage";
@@ -13,9 +12,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="overflow-hidden">
+    <section id="hero" className="overflow-hidden relative">
       {/* background grid, we didn't use the component to make this appear directly, avoiding LCP */}
-      <div className={`w-full absolute left-0  min-h-96 top-0 md:-bottom-32`}>
+      <div className={`w-full absolute left-0 top-0 md:-bottom-32`}>
         <Image
           src="/footer-grid.svg"
           alt="grid"
