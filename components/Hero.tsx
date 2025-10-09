@@ -38,7 +38,7 @@ const Hero = () => {
       </div>
 
       <div className="flex-center flex-1 lg:flex-row flex-col-reverse h-[15rem] relative z-10">
-        <div className="w-full lg:w-[74%] h-full flex flex-col items-start justify-center gap-1">
+        <div className="w-full lg:w-[74%] h-full flex flex-col items-start justify-end gap-2">
           {/* Name + verified style dot */}
           <h1 className="text-white text-xl sm:text-xl lg:text-3xl font-extrabold tracking-tight">
             Jed Edison Donaire
