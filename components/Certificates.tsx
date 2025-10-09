@@ -11,56 +11,44 @@ const MagicButton = dynamic(() => import("./MagicButton"), { ssr: false });
 
 const CertificateItem = memo(({ certificate }: { certificate: Certificate }) => {
   return (
-    <Button
-      key={certificate.id}
-      duration={Math.floor(Math.random() * 10000) + 10000}
-      borderRadius="1.75rem"
-      containerClassName="!col-span-1"
-      style={{
-        background: "#081b29",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-        borderRadius: `calc(1.75rem* 0.96)`,
-      }}
-      className="text-white cursor-default border-primary pointer-events-none"
-    >
-      <div className="flex lg:flex-row flex-col lg:items-center p-3 lg:p-7 gap-2">
-        <div className="md:w-24 sm:w-16 w-12 flex-center">
-          <div className="w-full h-full bg-primary/20 rounded-lg flex-center">
-            <span className="text-primary font-bold text-lg">IBM</span>
-          </div>
+    <div className="group relative p-4 rounded-lg border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 transition-all duration-300 hover:border-primary/40">
+      <div className="flex items-start gap-3">
+        <div className="flex-shrink-0 w-8 h-8 bg-primary/20 rounded-lg flex-center">
+          <span className="text-primary font-bold text-xs">IBM</span>
         </div>
-        <div className="lg:ms-5">
-          <h1 className="text-start card-title opacity-0 text-sm sm:text-md mb-3 font-bold">
+        <div className="flex-1 min-w-0">
+          <h3 className="text-xs font-semibold text-white mb-1 line-clamp-2 group-hover:text-primary transition-colors">
             {certificate.title}
-          </h1>
+          </h3>
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-primary font-semibold text-xs">
+            <span className="text-primary text-[10px] font-medium">
               {certificate.issuer}
             </span>
-            <span className="text-white-100 text-xs">
+            <span className="text-white-100 text-[10px]">
               {certificate.date}
             </span>
           </div>
-          <div className="flex flex-wrap gap-1 mb-3">
-            {certificate.skills.map((skill: string, index: number) => (
+          <div className="flex flex-wrap gap-1 mb-2">
+            {certificate.skills.slice(0, 3).map((skill: string, index: number) => (
               <span
                 key={index}
-                className="border border-primary/30 rounded-full bg-primary/10 px-2 py-1 text-xs text-primary card-skills opacity-0"
-                style={{
-                  transform: `translateY(${10 * (index + 1)}px)`,
-                }}
+                className="border border-primary/30 rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] text-primary"
               >
                 {skill}
               </span>
             ))}
+            {certificate.skills.length > 3 && (
+              <span className="text-[9px] text-white-100">
+                +{certificate.skills.length - 3} more
+              </span>
+            )}
           </div>
-          <p className="text-start card-desc text-[0.62rem] sm:text-xs text-white-100 font-semibold">
-            Credential ID: {certificate.credentialId}
+          <p className="text-[9px] text-white-100/70">
+            ID: {certificate.credentialId}
           </p>
         </div>
       </div>
-    </Button>
+    </div>
   );
 });
 
@@ -83,7 +71,7 @@ const Certificates = () => {
           My <span className="text-primary">certifications</span>
         </h1>
 
-        <div className="w-full mt-4 md:mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 sm:gap-8 md:gap-10">
+        <div className="w-full mt-4 md:mt-12 grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-3">
           {certificates.map((certificate) => (
             <CertificateItem key={certificate.id} certificate={certificate} />
           ))}

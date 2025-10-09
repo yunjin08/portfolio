@@ -58,10 +58,15 @@ const Hero = () => {
 
             {/* Callouts / badge */}
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs shadow-[0_0_40px_rgba(245,158,11,0.35)]">
+              <a 
+                href="https://www.facebook.com/share/19vPHMbmg8/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs shadow-[0_0_40px_rgba(245,158,11,0.35)] hover:shadow-[0_0_50px_rgba(245,158,11,0.5)] transition-all duration-300 cursor-pointer"
+              >
                 <span className="text-sm">🏆</span>
                 <span>UP Cebu Hackathon Champion</span>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -73,13 +78,13 @@ const Hero = () => {
                 <FaLocationArrow className="w-3 h-3 opacity-70 group-hover:translate-x-0.5 transition" />
               </div>
             </a>
-            <a href="mailto:hello@jed-edison.com">
+            <a href="mailto:jed.donaire08@gmail.com">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-700/60 bg-slate-800/50 text-slate-200 hover:bg-slate-700/60 transition">
                 <Mail className="w-4 h-4" />
                 <span>Send Email</span>
               </div>
             </a>
-            <a href="mailto:hello@jed-edison.com">
+            <a href="mailto:jed.donaire08@gmail.com">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-700/60 bg-slate-800/50 text-slate-200 hover:bg-slate-700/60 transition">
                 <Mail className="w-4 h-4" />
                 <span>Visit Community and Engage</span>
