@@ -3,6 +3,7 @@ export const navItems = [
   { name: "Projects", link: "#projects" },
   { name: "Education", link: "#education" },
   { name: "Experience", link: "#experience" },
+  { name: "Certificates", link: "#certificates" },
   { name: "Resume", link: "/cv.pdf" },
 ];
 
@@ -332,5 +333,72 @@ export const socialMedia = [
     id: 2,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/donaire-jed-edison-291a76282/",
+  },
+];
+
+export const certificates = [
+  {
+    id: 1,
+    title: "Application Development using Microservices and Serverless",
+    issuer: "IBM",
+    date: "Oct 2025",
+    credentialId: "1VNL3ST49SKY",
+    skills: ["Microservices", "Serverless", "Application Development"],
+  },
+  {
+    id: 2,
+    title: "Introduction to Containers w/ Docker, Kubernetes & OpenShift",
+    issuer: "IBM",
+    date: "Sep 2025",
+    credentialId: "ISE2DUXHDWWZ",
+    skills: ["DevOps", "Docker", "Kubernetes", "OpenShift"],
+  },
+  {
+    id: 3,
+    title: "Test and Behavior Driven Development",
+    issuer: "IBM",
+    date: "Sep 2024",
+    credentialId: "FCL0I5AB5REF",
+    skills: ["Testing", "TDD", "BDD"],
+  },
+  {
+    id: 4,
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM",
+    date: "Dec 2023",
+    credentialId: "2S93U5RQTFDJ",
+    skills: ["Python", "Data Science", "AI", "Machine Learning"],
+  },
+  {
+    id: 5,
+    title: "Linux Commands and Shell Scripting",
+    issuer: "IBM",
+    date: "Nov 2023",
+    credentialId: "KTEDM0CMAL52",
+    skills: ["Linux", "Shell Scripting", "Command Line"],
+  },
+  {
+    id: 6,
+    title: "Cloud Computing",
+    issuer: "IBM",
+    date: "Sep 2023",
+    credentialId: "60HWMQSNA8H3",
+    skills: ["Cloud Computing", "IaaS", "Cloud Infrastructure"],
+  },
+  {
+    id: 7,
+    title: "Introduction to DevOps",
+    issuer: "IBM",
+    date: "Sep 2023",
+    credentialId: "TEXYWS35PCU0",
+    skills: ["DevOps", "CI/CD", "Automation"],
+  },
+  {
+    id: 8,
+    title: "Introduction to Software Engineering",
+    issuer: "IBM",
+    date: "Aug 2022",
+    credentialId: "3ADR6GMEJOX8",
+    skills: ["Software Engineering", "Development Lifecycle", "Best Practices"],
   },
 ];

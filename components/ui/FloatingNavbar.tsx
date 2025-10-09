@@ -103,7 +103,7 @@ export const FloatingNav = ({
         }}
         animate={{
           y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
+          opacity: visible ? 0.7 : 0,
         }}
         transition={{
           duration: 0.4,
@@ -132,7 +132,7 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="responsive-text !cursor-pointer">
+            <span className="responsive-text text-xs !cursor-pointer">
               {navItem.name}
             </span>
           </Link>

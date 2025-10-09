@@ -12,6 +12,7 @@ const Education = lazy(() => import("@/components/Education"));
 const Approach = lazy(() => import("@/components/Approach"));
 const Experience = lazy(() => import("@/components/Experience"));
 const RecentProjects = lazy(() => import("@/components/RecentProjects"));
+const Certificates = lazy(() => import("@/components/Certificates"));
 
 const FloatingNav = dynamic(
   () => import("@/components/ui/FloatingNavbar").then((mod) => mod.FloatingNav),
@@ -33,6 +34,7 @@ const Home = () => {
       <StarBackground />
       <section  className="max-w-[52rem] w-full overflow-hidden">
         <Suspense fallback={<Loader />}>
+          <FloatingNav navItems={navItems} />
           <Hero />
           <About />
         </Suspense>
@@ -40,6 +42,7 @@ const Home = () => {
           <RecentProjects />
           <Education />
           <Experience />
+          <Certificates />
           <Footer />
         </Suspense>
       </section>

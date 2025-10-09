@@ -67,3 +67,14 @@ export interface Education {
   title: string;
   desc: string[];
 }
+
+// Certificate Interface
+export interface Certificate {
+  id: number;
+  title: string;
+  issuer: string;
+  date: string;
+  credentialId: string;
+  skills: string[];
+  link?: string;
+}
