@@ -51,7 +51,7 @@ const ProjectItem = memo(({ project, onClick }: { project: Project; onClick?: ()
 
   return (
     <div
-      className="portfolio-items group lg:min-h-[32.5rem] sm:h-[25rem] h-[23rem] flex-center w-full"
+      className="portfolio-items group lg:min-h-[27rem] sm:h-[25rem] h-[23rem] flex-center w-full"
       key={project.id}
     >
       <div
@@ -75,12 +75,12 @@ const ProjectItem = memo(({ project, onClick }: { project: Project; onClick?: ()
             />
           </div>
 
-          <h1 className="font-bold text-sm lg:text-lg md:text-md sm:text-base line-clamp-1">
+          <h1 className="font-bold text-sm md:text-md sm:text-base line-clamp-1">
             {project.title}
           </h1>
 
           <p
-            className="lg:text-sm lg:font-normal font-light text-xs sm:text-sm line-clamp-2"
+            className="lg:font-normal font-light text-xs line-clamp-2"
             style={{
               color: "#BEC1DD",
               margin: "1vh 0",
@@ -89,12 +89,12 @@ const ProjectItem = memo(({ project, onClick }: { project: Project; onClick?: ()
             {project.des}
           </p>
 
-          <div className="flex items-center justify-between mt-3 sm:mt-5 md:mt-7 mb-3">
+          <div className="flex items-center justify-between mt-3 sm:mt-5 mb-3">
             <div className="flex items-center">
               {project.iconLists.map((icon: string, index: number) => (
                 <div
                   key={index}
-                  className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:w-8 w-7 flex-center"
+                  className="border border-white/[.2] rounded-full bg-black lg:size-8 sm:w-8 w-7 flex-center"
                   style={{
                     transform: `translateX(-${5 * index + 2}px)`,
                   }}
@@ -111,8 +111,8 @@ const ProjectItem = memo(({ project, onClick }: { project: Project; onClick?: ()
             </div>
 
             <div className="flex-center">
-              <p className="flex responsive-text text-purple">
-                {project.isMobile || !project.link ? "View Details" : "Check Live Site"}
+              <p className="flex text-xs text-purple">
+                View
               </p>
               <FaLocationArrow
                 className="ms-2 sm:ms-3 size-3 sm:size-auto"
@@ -159,7 +159,7 @@ const RecentProjects = () => {
         </span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 gap-y-2 sm:gap-y-0 mt-2 sm:mt-10 md:mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 mt-2 sm:mt-10 md:mt-14">
         {projects.map((item) => (
           <ProjectItem
             key={item.id}

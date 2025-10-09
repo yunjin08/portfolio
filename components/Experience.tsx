@@ -23,23 +23,23 @@ const WorkExperienceItem = memo(({ card }: { card: WorkExperience }) => {
       }}
       className="flex-1 text-white cursor-default border-primary pointer-events-none"
     >
-      <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-7 gap-2">
+      <div className="flex lg:flex-row flex-col lg:items-center p-3 lg:p-7 gap-2">
         <Image
           src={card.thumbnail}
           alt={card.thumbnail}
-          className="lg:w-32 md:w-20 sm:w-16 w-12"
+          className="md:w-24 sm:w-16 w-12"
           width={1000}
           height={1000}
         />
         <div className="lg:ms-5">
-          <h1 className="text-start card-title opacity-0 text-sm sm:text-lg md:text-xl mb-3 font-bold">
+          <h1 className="text-start card-title opacity-0 text-sm sm:text-md mb-3 font-bold">
             {card.title} at <span className="text-bold text-primary">{' '}{card.company}{' '}</span>{card.date}
           </h1>
           <div className="flex pl-1 items-center">
             {card.techStack.map((tech: string, index: number) => (
               <div
                 key={index}
-                className="border border-white/[.2] rounded-full bg-black lg:size-10 sm:size-8 size-7 flex-center card-images opacity-0"
+                className="border border-white/[.2] rounded-full bg-black sm:size-8 size-7 flex-center card-images opacity-0"
                 style={{
                   transform: `translateX(-${5 * 1 + 2}px)`,
                 }}
@@ -57,7 +57,7 @@ const WorkExperienceItem = memo(({ card }: { card: WorkExperience }) => {
           {card.desc.map((data: string, index: number) => (
             <p
               key={index}
-              className="text-start card-desc text-[0.62rem] sm:text-sm  text-white-100 my-2 font-semibold"
+              className="text-start card-desc text-[0.62rem] sm:text-xs  text-white-100 my-2 font-semibold"
             >
               &#8226; {data}
             </p>
@@ -76,9 +76,8 @@ const Experience = () => {
   }, []);
   return (
     <section id="experience">
-      <div className="py-4 sm:py-14 md:py-16 w-full relative">
-        {/* background grid */}
-        <WebGrid className="-bottom-0 md:-bottom-32" />
+      <div className="py-4 w-full relative">
+      {/* background grid */}
 
         {/* background grid */}
         <div className="w-full absolute left-0 -top-64 min-h-96">

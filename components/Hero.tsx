@@ -38,7 +38,7 @@ const Hero = () => {
       </div>
 
       <div className="flex-center flex-1 lg:flex-row flex-col-reverse h-[15rem] relative z-10">
-        <div className="w-full lg:w-[60%] h-full flex flex-col items-start justify-center gap-1">
+        <div className="w-full lg:w-[74%] h-full flex flex-col items-start justify-center gap-1">
           {/* Name + verified style dot */}
           <h1 className="text-white text-xl sm:text-xl lg:text-3xl font-extrabold tracking-tight">
             Jed Edison Donaire
@@ -51,7 +51,7 @@ const Hero = () => {
             <span className="text-sm md:text-md">Cebu City, Philippines</span>
           </div>
 
-          <div className="flex w-full items-center justify-between">
+          <div className="flex w-full items-center justify-between pr-[3.75rem]">
             <p className="text-slate-200/90 text-sm sm:text-md lg:text-lg">
               Software Engineer
             </p>
@@ -89,7 +89,7 @@ const Hero = () => {
         </div>
 
         {/* Right: Image */}
-        <div className="w-full lg:w-[40%] flex-center h-full">
+        <div className="w-full lg:w-[30%] flex-center h-full flex items-end">
           <div className="relative h-full duration-700 hover:scale-[1.02]">
             <div className="absolute borderImg opacity-0 inset-0 rounded-full border-x-4 border-secondary rotate-infinite" />
             <div className="relative w-full h-full flex-center">
