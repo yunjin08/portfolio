@@ -1,7 +1,7 @@
 "use client";
 
 import { navItems } from "@/data";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
@@ -28,11 +28,25 @@ const StarBackground = dynamic(() => import("@/components/ui/StarBackground"), {
 });
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simple loading timeout - adjust as needed
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 2 seconds loading
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <main className="bg-black-100 max-w-[1650px] py-10 flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <StarBackground />
-      <section  className="max-w-[52rem] w-full overflow-hidden">
+      <section className="max-w-[52rem] w-full overflow-hidden">
         <Suspense fallback={<Loader />}>
           <FloatingNav navItems={navItems} />
           <Hero />
