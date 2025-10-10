@@ -59,13 +59,13 @@ export const animateRecentProjects = () => {
     opacity: 1,
     stagger: 0.2,
     ...fadeInConfig,
-  }, ".textAnimProjects", { start: "top 150%", toggleActions: "play none none none" });
+  });
 
   createScrollAnimation(".textAnimProjects", initialStates.fadeIn, {
     opacity: 1,
     stagger: 0.2,
     ...fadeInConfig,
-  }, ".textAnimProjects", { start: "top 150%", toggleActions: "play none none none" });
+  });
 };
 
 export const animateEducation = () => {
