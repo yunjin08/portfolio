@@ -16,7 +16,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="mt-[-6rem] relative lg:mt-[2rem]">
+    <section id="about" className="relative mt-[2rem]">
       {/* background grid */}
       <WebGrid className="block md:hidden -bottom-0 md:-bottom-32" />
       <BentoGrid className="w-full pb-10 sm:pb-20">

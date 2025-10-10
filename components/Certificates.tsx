@@ -10,8 +10,17 @@ const Button = dynamic(() => import("./ui/MovingBorders").then((mod) => mod.Butt
 const MagicButton = dynamic(() => import("./MagicButton"), { ssr: false });
 
 const CertificateItem = memo(({ certificate }: { certificate: Certificate }) => {
+  const handleClick = () => {
+    if (certificate.url) {
+      window.open(certificate.url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <div className="group relative p-4 rounded-lg border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 transition-all duration-300 hover:border-primary/40">
+    <div 
+      className="group relative p-4 rounded-lg border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent hover:from-primary/10 transition-all duration-300 hover:border-primary/40 cursor-pointer active:scale-[0.98]"
+      onClick={handleClick}
+    >
       <div className="flex items-start gap-3">
         <div className="flex-shrink-0 w-8 h-8 bg-primary/20 rounded-lg flex-center">
           <span className="text-primary font-bold text-xs">IBM</span>
