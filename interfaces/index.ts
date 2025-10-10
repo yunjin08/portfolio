@@ -76,5 +76,5 @@ export interface Certificate {
   date: string;
   credentialId: string;
   skills: string[];
-  link?: string;
+  url?: string;
 }

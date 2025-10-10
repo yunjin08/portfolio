@@ -261,7 +261,7 @@ export const workExperience = [
     id: 4,
     title: "Lead Frontend Developer & Automations Engineer",
     company: "Tranches",
-    date: "(Sept 2024 - Present)",
+    date: "(Sept 2024 - Jan 2025)",
     desc: [
       "Led frontend development team, delivering production-ready application in 30 days.",
       "Automated workflows reducing manual processes by 70% and improving team efficiency.",
@@ -303,11 +303,11 @@ export const workExperience = [
   },
   {
     id: 6,
-    title: "Full Software Engineer",
+    title: "Software Engineer",
     company: "Tranches",
-    date: "(January 2025 - Present)",
+    date: "(July 2025 - Present)",
     desc: [
-      "Rehired by Tranches after 6 months due to exceptional performance, leading to immediate leadership role in new application development.",
+      "Rehired by Tranches after 6 months due to exceptional performance, with immediate leadership role in new application development.",
       "Leading development of next-generation data visualization platform powered by LLM.",
       "Mentoring a junior developer, improving team productivity by 45% through code reviews and technical guidance.",
     ],
@@ -344,6 +344,7 @@ export const certificates = [
     date: "Oct 2025",
     credentialId: "1VNL3ST49SKY",
     skills: ["Microservices", "Serverless", "Application Development"],
+    url: "https://coursera.org/share/85f579801bdc7b565ad45ab09df35b66"
   },
   {
     id: 2,
@@ -352,6 +353,7 @@ export const certificates = [
     date: "Sep 2025",
     credentialId: "ISE2DUXHDWWZ",
     skills: ["DevOps", "Docker", "Kubernetes", "OpenShift"],
+    url: "https://coursera.org/share/bb6774d14fe46f8f6a3200f323f6d862"
   },
   {
     id: 3,
@@ -360,6 +362,7 @@ export const certificates = [
     date: "Sep 2024",
     credentialId: "FCL0I5AB5REF",
     skills: ["Testing", "TDD", "BDD"],
+    url: "https://coursera.org/share/498f4eb182e760a3f808a9ff247e6373"
   },
   {
     id: 4,
@@ -368,6 +371,7 @@ export const certificates = [
     date: "Dec 2023",
     credentialId: "2S93U5RQTFDJ",
     skills: ["Python", "Data Science", "AI", "Machine Learning"],
+    url: "https://coursera.org/share/c418981a44001aec16877fc48ebfe05f"
   },
   {
     id: 5,
@@ -376,6 +380,7 @@ export const certificates = [
     date: "Nov 2023",
     credentialId: "KTEDM0CMAL52",
     skills: ["Linux", "Shell Scripting", "Command Line"],
+    url: "https://coursera.org/share/3c815804965d6fdb3b139b00e5be879a"
   },
   {
     id: 6,
@@ -384,6 +389,7 @@ export const certificates = [
     date: "Sep 2023",
     credentialId: "60HWMQSNA8H3",
     skills: ["Cloud Computing", "IaaS", "Cloud Infrastructure"],
+    url: "https://coursera.org/share/ab516b019c8260ddbb6007747b694485"
   },
   {
     id: 7,
@@ -392,6 +398,7 @@ export const certificates = [
     date: "Sep 2023",
     credentialId: "TEXYWS35PCU0",
     skills: ["DevOps", "CI/CD", "Automation"],
+    url: "https://coursera.org/share/17b9e74d1f6faa9a174e5838ac483509"
   },
   {
     id: 8,
@@ -400,5 +407,6 @@ export const certificates = [
     date: "Aug 2022",
     credentialId: "3ADR6GMEJOX8",
     skills: ["Software Engineering", "Development Lifecycle", "Best Practices"],
+    url: "https://coursera.org/share/d48a81d62531f488015e1e3283714b14"
   },
 ];

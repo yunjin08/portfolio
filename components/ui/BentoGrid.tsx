@@ -42,7 +42,7 @@ export const BentoGrid = ({
     <div
       className={cn(
         // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
-        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
+        "grid grid-cols-1 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
         className
       )}
     >
@@ -159,11 +159,11 @@ export const BentoGridItem = memo(
             {/* Tech stack list div */}
             {id === 3 && (
               <div className="absolute inset-4 top-12 bottom-4">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3 h-full content-start">
+                <div className="grid grid-cols-4 gap-3 h-full content-start">
                   {[...leftLists, ...rightLists].map((item, i) => (
                     <span
                       key={i}
-                      className="px-3 py-2 text-xs bg-secondary/20 text-white/70 rounded-md border border-white/10 flex items-center justify-center text-center whitespace-nowrap overflow-hidden"
+                      className="px-3 py-2 text-[0.6rem] sm:text-xs bg-secondary/20 text-white/70 rounded-md border border-white/10 flex items-center justify-center text-center whitespace-nowrap overflow-hidden"
                     >
                       {item}
                     </span>
