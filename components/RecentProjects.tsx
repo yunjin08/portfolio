@@ -159,7 +159,7 @@ const RecentProjects = () => {
         </span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 mt-2 sm:mt-10 md:mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center py-4 px-1 gap-x-4 mt-2 sm:mt-10 md:mt-14 sm:gap-y-0 gap-y-10">
         {projects.map((item) => (
           <ProjectItem
             key={item.id}
