@@ -1,30 +1,23 @@
 # 👋 Hey, I'm Jed Edison
 
-I'm a **Fullstack Developer** with a passion for clean, scalable code and a strong background in building end-to-end applications. Currently making waves as a **Customer Support Fullstack Dev at Netlify**, I thrive on solving real-world problems, automating workflows, and crafting elegant digital experiences.
+I'm a **Software Engineer** with a passion for clean, scalable code and a strong background in building end-to-end applications. Currently making waves as a **Software Engineer at Netlify**, I thrive on solving real-world problems, automating workflows, and crafting elegant digital experiences.
 
 ---
 
 ## 🧠 What I Do
 
 - 🔧 **Fullstack Development**: TypeScript, React/Next.js, Svelte, Tailwind, Python, Django, PostgreSQL, MongoDB, Ruby on Rails
-- 🧰 **Dev Tools & Platforms**: Netlify, Vercel, GitHub, Make (Integromat), Zapier, Directus, Airtable, Frame.io, Softr
+- 🧰 **Dev Tools & Platforms**: Netlify, Vercel, GitHub, Docker, Terraform, Ansible, IBM, AWS, Github Actions, Jenkins, Jest
 - 🤖 **Automation & Integrations**: Building smart systems with Make, Zapier, Python scripts, and n8n
 - 🧠 **AI & ML R&D**: Currently researching how machine learning can evaluate code quality and structure (beyond just LLMs)
 - 📱 **Mobile Development**: React Native apps with clean UX and robust backend logic
-- 📦 **eCommerce**: Shopify customization and automation
 
 ---
 
 ## 🛠 Recent Projects
 
-- **🎥 Video Project Manager**  
-  Client dashboard using Airtable + Frame.io + Softr for seamless project tracking and feedback.
-
-- **📚 Book Recommender System** *(WIP)*  
-  Hybrid stack with Next.js, MongoDB, and FastAPI for user-tailored book suggestions powered by Google Books API.
-
-- **🤖 TaxBot PH** *(R&D)*  
-  An AI chatbot using LangChain + DeepSeek + Django to guide freelancers through Philippine tax laws and deductions.
+- **🤖 AI TaxDecuction PH** *(R&D)*  
+  An AI scanning receipt app that decides if your transaction is deductible with AI chatbot using LangChain + DeepSeek + Django to guide freelancers through Philippine tax laws and deductions.
 
 - **📁 Code Quality ML Model** *(Research)*  
   Building a neural network to evaluate codebases for structure, security, and best practices based on real project datasets.
