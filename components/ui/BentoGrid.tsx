@@ -42,7 +42,7 @@ export const BentoGrid = ({
     <div
       className={cn(
         // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
-        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
+        "grid grid-cols-1 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
         className
       )}
     >
@@ -72,8 +72,8 @@ export const BentoGridItem = memo(
     titleClassName?: string;
     spareImg?: string;
   }) => {
-    const leftLists = ["NextJS", "Express", "React"];
-    const rightLists = ["VueJS", "Django", "Postgresql"];
+    const leftLists = ["NextJS", "Typescript", "React", "Svelte", "Redis", "MongoDB", "Directus", "Airtable", "Make", "N8n", "Apache", "Terraform", "Ansible", "Supabase", "Python"];
+    const rightLists = ["Kubernetes", "Golang", "Django", "Ruby", "Kafka", "GCP", "AWS", "Docker", "Posgresl"];
 
     const [copied, setCopied] = useState(false);
     // const [animationData, setAnimationData] = useState<any | null>(null);
@@ -138,17 +138,17 @@ export const BentoGridItem = memo(
           <div
             className={cn(
               titleClassName,
-              "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-32 sm:min-h-36 md:min-h-40 flex flex-col px-5 p-5 lg:p-10"
+              "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-32 sm:min-h-36 md:min-h-40 flex flex-col p-4"
             )}
           >
             {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-            <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+            <div className="font-sans font-extralight md:max-w-32 md:text-md text-sm text-[#C1C2D3] z-10">
               {description}
             </div>
             {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
             {/* remove mb-2 mt-2 */}
             <div
-              className={`font-sans text-xs sm:text-sm lg:text-2xl max-w-96 font-bold z-10`}
+              className={`font-sans text-sm md:text-md max-w-96 font-bold z-10`}
             >
               {title}
             </div>
@@ -158,27 +158,12 @@ export const BentoGridItem = memo(
 
             {/* Tech stack list div */}
             {id === 3 && (
-              <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-                {/* tech stack lists */}
-                <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                  {leftLists.map((item, i) => (
+              <div className="absolute inset-4 top-12 bottom-4">
+                <div className="grid grid-cols-4 gap-3 h-full content-start">
+                  {[...leftLists, ...rightLists].map((item, i) => (
                     <span
                       key={i}
-                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-secondary"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                  <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-secondary"></span>
-                </div>
-                <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                  <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-secondary"></span>
-                  {rightLists.map((item, i) => (
-                    <span
-                      key={i}
-                      className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-secondary"
+                      className="px-3 py-2 text-[0.6rem] sm:text-xs bg-secondary/20 text-white/70 rounded-md border border-white/10 flex items-center justify-center text-center whitespace-nowrap overflow-hidden"
                     >
                       {item}
                     </span>

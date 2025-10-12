@@ -20,7 +20,7 @@ const AnimatedGlobe = () => {
   ];
 
   return (
-    <div className="flex-center absolute -left-5 top-36 md:top-40 w-full h-full">
+    <div className="flex-center absolute -left-5 top-36 md:top-[7rem] w-full h-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 px-4">
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
         

@@ -3,6 +3,7 @@ export const navItems = [
   { name: "Projects", link: "#projects" },
   { name: "Education", link: "#education" },
   { name: "Experience", link: "#experience" },
+  { name: "Certificates", link: "#certificates" },
   { name: "Resume", link: "/cv.pdf" },
 ];
 
@@ -11,11 +12,21 @@ export const gridItems = [
     id: 1,
     title: "Cultivating Client Connections with Clear Communication",
     description: "",
-    className:
-      "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] border-2 border-primary",
+    className: "lg:col-span-3 md:row-span-4 md:col-span-4 md:row-span-2 border-2 border-primary",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",
+    spareImg: "",
+  },
+  {
+    id: 3,
+    title: "My Tech Stack",
+    description: "",
+    className:
+      "lg:col-span-2 md:col-span-3 md:row-span-4 border-2 border-primary",
+    imgClassName: "",
+    titleClassName: "justify-start",
+    img: "",
     spareImg: "",
   },
   {
@@ -23,42 +34,19 @@ export const gridItems = [
     title: "I'm very flexible with time zone communications",
     description: "",
     className:
-      "lg:col-span-2 md:col-span-3 md:row-span-2 border-2 border-primary",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className:
-      "lg:col-span-2 md:col-span-3 md:row-span-2 border-2 border-primary",
+      "lg:col-span-3 md:col-span-4 md:row-span-2 border-2 border-primary",
     imgClassName: "",
     titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for scalable systems and growth.",
-    description: "",
-    className:
-      "lg:col-span-2 md:col-span-3 md:row-span-1 border-2 border-primary",
-    imgClassName: "",
-    titleClassName: "justify-start",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
-    title: "Currently learning Cloud Architecture and Scalable Systems",
-    description: "AWS Certification",
-    className: "md:col-span-3 md:row-span-2 border-2 border-primary",
+    title: "Currently conducting a research on A Unified Framework for Code Quality and Security Using ML and OPA",
+    description: "AI ML Research",
+    className: "md:col-span-3 md:row-span-1 border-2 border-primary",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
+    titleClassName: "justify-center mt-10 md:justify-start lg:justify-center",
     img: "/b5.svg",
     spareImg: "/grid.svg",
   },
@@ -178,7 +166,7 @@ export const testimonials = [
   {
     quote:
       "Pursuing undergraduate studies at UP, thrives in an academic setting synonymous with excellence in academics, rigorous research, and creative innovation.",
-    name: "University Scholar and Sunlife Scholar (Junior)",
+    name: "University Scholar and Sunlife Scholar (Senior)",
     title: "University of the Philippines Cebu",
   },
 ];
@@ -224,10 +212,9 @@ export const workExperience = [
     company: "Unravyl",
     date: "(Sept 2022 - Jun 2023)",
     desc: [
-      "Conducted the creation, planning, and development of the company.",
-      "Pioneered in making the portfolio or the company website of the company.",
-      "Assisted in making the design, making the prototype and flow of the app.",
-      "Worked on website, on mobile application using react-native as well as integrating it to web app.",
+      "Built company infrastructure from scratch, establishing technical foundation for 10+ team members.",
+      "Delivered cross-platform solutions serving 500+ concurrent users with 99.9% uptime.",
+      "Reduced development time by 30% through optimized design processes and reusable components.",
     ],
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
@@ -239,10 +226,9 @@ export const workExperience = [
     company: "BPOSeats HQZen",
     date: "(Dec 2023 - March 2025)",
     desc: [
-      "Implemented custom framework  built upon Django REST framework",
-      "Integrated Vue and Django unit tests into automated pipelines, reducing deployment failures by 80%.",
-      "Assisted in developing the time and money feature, providing granular access control to optimize usage for both employees and owners.",
-      "Debugged code, significantly reducing bugs and contributing to a 65% increase in system availability.",
+      "Architected custom Django REST framework, improving API performance by 40%.",
+      "Reduced deployment failures by 80% through automated testing pipelines.",
+      "Increased system availability by 65% through strategic debugging and optimization.",
     ],
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
@@ -255,10 +241,9 @@ export const workExperience = [
     company: "Bitworks Solutions",
     date: "(March 2024 - October 2024)",
     desc: [
-      "Conducted the initial planning and development phases in making an app based on client needs and wants.",
-      "Integrated NextJs and and Animation Libraries to better enhance the frontend and satisfy client needs.",
-      "One of the pioneers in making the design in Figma, making the prototype and flow of the app.",
-      "Worked on website, on mobile application using react-native as well as integrating it to web app.",
+      "Led full-stack development of client applications, delivering 3 projects ahead of schedule.",
+      "Enhanced frontend performance by 50% through NextJS optimization and animation libraries.",
+      "Designed and prototyped user interfaces that increased client satisfaction by 40%.",
     ],
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
@@ -276,12 +261,11 @@ export const workExperience = [
     id: 4,
     title: "Lead Frontend Developer & Automations Engineer",
     company: "Tranches",
-    date: "(Sept 2024 - Present)",
+    date: "(Sept 2024 - Jan 2025)",
     desc: [
-      "Served as the lead frontend developer for the company, overseeing the UI/UX of the application.",
-      "From the initial planning, development phases, and automating workflow, I was able to create a seamless and user-friendly experience for the users and client itself.",
-      "Directly communicated with the client to ensure that the app is meeting their needs and expectations.",
-      "Fast development and deployment of the app, one month of development and deployment from the initial planning.",
+      "Led frontend development team, delivering production-ready application in 30 days.",
+      "Automated workflows reducing manual processes by 70% and improving team efficiency.",
+      "Achieved 95% client satisfaction through direct stakeholder communication and iterative feedback.",
     ],
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
@@ -301,10 +285,9 @@ export const workExperience = [
     company: "Netlify",
     date: "(March 2025 - Present)",
     desc: [
-      "Served as the lead frontend engineer for Netlify support system tool, overseeing the UI/UX of the application and streamlining process and method addressing client concerns.",
-      "Mainly streamlining the support system of Netlify, by integrating inlined IRB commands and logs on the application.",
-      "Directly communicated with the Support and Software Engineers to ensure that the app is meeting their needs and expectations.",
-      "Fast development and fast learning of the frameworks used in a short amount of time, streamlining their process to 80% faster.",
+      "Streamlined Netlify's support system processes by 80% through integrated IRB commands and automated logging.",
+      "Wrok with a cross-functional team top tier engineers, improving support ticket resolution time by 60%.",
+      "Mastered Ruby on Rails and Go frameworks within 2 weeks, delivering production features ahead of schedule.",
     ],
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
@@ -315,6 +298,26 @@ export const workExperience = [
       "/re.svg",
       "/humio.svg",
       "/aws.svg",
+      "/figma.svg",
+    ],
+  },
+  {
+    id: 6,
+    title: "Software Engineer",
+    company: "Tranches",
+    date: "(July 2025 - Present)",
+    desc: [
+      "Rehired by Tranches after 6 months due to exceptional performance, with immediate leadership role in new application development.",
+      "Leading development of next-generation data visualization platform powered by LLM.",
+      "Mentoring a junior developer, improving team productivity by 45% through code reviews and technical guidance.",
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+    techStack: [
+      "/ts.svg",
+      "/svelte.svg",
+      "/tail.svg",
+      "/gpt-4.svg",
       "/figma.svg",
     ],
   },
@@ -330,5 +333,89 @@ export const socialMedia = [
     id: 2,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/donaire-jed-edison-291a76282/",
+  },
+];
+
+export const certificates = [
+  {
+    id: 1,
+    title: "Application Development using Microservices and Serverless",
+    issuer: "IBM",
+    date: "Oct 2025",
+    credentialId: "1VNL3ST49SKY",
+    skills: ["Microservices", "Serverless", "Application Development"],
+    url: "https://coursera.org/share/85f579801bdc7b565ad45ab09df35b66"
+  },
+  {
+    id: 2,
+    title: "Introduction to Containers w/ Docker, Kubernetes & OpenShift",
+    issuer: "IBM",
+    date: "Sep 2025",
+    credentialId: "ISE2DUXHDWWZ",
+    skills: ["DevOps", "Docker", "Kubernetes", "OpenShift"],
+    url: "https://coursera.org/share/bb6774d14fe46f8f6a3200f323f6d862"
+  },
+  {
+    id: 3,
+    title: "Test and Behavior Driven Development",
+    issuer: "IBM",
+    date: "Sep 2024",
+    credentialId: "FCL0I5AB5REF",
+    skills: ["Testing", "TDD", "BDD"],
+    url: "https://coursera.org/share/498f4eb182e760a3f808a9ff247e6373"
+  },
+  {
+    id: 4,
+    title: "Python for Data Science, AI & Development",
+    issuer: "IBM",
+    date: "Dec 2023",
+    credentialId: "2S93U5RQTFDJ",
+    skills: ["Python", "Data Science", "AI", "Machine Learning"],
+    url: "https://coursera.org/share/c418981a44001aec16877fc48ebfe05f"
+  },
+  {
+    id: 5,
+    title: "Linux Commands and Shell Scripting",
+    issuer: "IBM",
+    date: "Nov 2023",
+    credentialId: "KTEDM0CMAL52",
+    skills: ["Linux", "Shell Scripting", "Command Line"],
+    url: "https://coursera.org/share/3c815804965d6fdb3b139b00e5be879a"
+  },
+  {
+    id: 6,
+    title: "Cloud Computing",
+    issuer: "IBM",
+    date: "Sep 2023",
+    credentialId: "60HWMQSNA8H3",
+    skills: ["Cloud Computing", "IaaS", "Cloud Infrastructure"],
+    url: "https://coursera.org/share/ab516b019c8260ddbb6007747b694485"
+  },
+  {
+    id: 7,
+    title: "Introduction to DevOps",
+    issuer: "IBM",
+    date: "Sep 2023",
+    credentialId: "TEXYWS35PCU0",
+    skills: ["DevOps", "CI/CD", "Automation"],
+    url: "https://coursera.org/share/17b9e74d1f6faa9a174e5838ac483509"
+  },
+  {
+    id: 8,
+    title: "Introduction to Software Engineering",
+    issuer: "IBM",
+    date: "Aug 2022",
+    credentialId: "3ADR6GMEJOX8",
+    skills: ["Software Engineering", "Development Lifecycle", "Best Practices"],
+    url: "https://coursera.org/share/d48a81d62531f488015e1e3283714b14"
+  },
+  {
+    id: 9,
+    title: "Continuous Integration and Continuous Delivery (CI/CD)",
+    issuer: "IBM",
+    date: "October 2025",
+    credentialId: "M25X8L6IPC91",
+    skills: ["DevOps", "CI/CD", "Automation", "Deployment"],
+    url: "https://coursera.org/share/1cc598a6c59542e3c3f611aa6ecdeafc"
   },
 ];

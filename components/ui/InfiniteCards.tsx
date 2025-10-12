@@ -96,8 +96,8 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             //   change md:w-[450px] to md:w-[60vw] , px-8 py-6 to p-16, border-slate-700 to border-slate-800
-            className="w-[90vw] cardsAnim max-w-full relative rounded-2xl border 
-             flex-shrink-0 border-primary p-4 sm:p-6 md:p-8 md:w-[60vw]"
+            className="cardsAnim w-[30rem] h-[13rem] relative rounded-2xl border 
+             flex-shrink-0 border-primary p-4 sm:p-6 md:p-8"
             style={{
               //   background:
               //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)", //remove this one
@@ -126,13 +126,13 @@ export const InfiniteMovingCards = ({
                     src="/jed2.webp"
                     width={1000}
                     height={1000}
-                    className="size-10 sm:size-12 md:size-14 lg:size-16 rounded-full"
+                    className="size-10 sm:size-12 md:size-14 rounded-full"
                     alt="profile"
                   />
                 </div>
                 <span className="flex flex-col gap-1">
                   {/* change text color, font-normal to font-bold, text-xl */}
-                  <span className="text-xs sm:text-sm lg:text-xl font-bold leading-[1.6] text-white">
+                  <span className="text-xs sm:text-sm lg:text-md font-bold leading-[1.6] text-white">
                     {item.name}
                   </span>
                   {/* change text color */}

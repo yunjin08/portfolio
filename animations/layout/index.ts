@@ -144,3 +144,62 @@ export const animateExperience = () => {
     { start: "top 85%" }
   );
 };
+
+// Certificates animations
+export const animateCertificates = () => {
+  createScrollAnimation(
+    ".card-images",
+    initialStates.slideLeft,
+    {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      delay: 1,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 2,
+      stagger: {
+        amount: 1,
+        from: "start",
+      },
+    },
+    ".hackathon-img"
+  );
+  createScrollAnimation(
+    ".card-title",
+    initialStates.fadeIn,
+    {
+      opacity: 1,
+      duration: 2,
+      delay: 0.2,
+    },
+    undefined,
+    { start: "top 95%" }
+  );
+
+  createScrollAnimation(
+    ".card-desc",
+    initialStates.fadeIn,
+    {
+      opacity: 1,
+      duration: 5,
+      stagger: 0.2,
+      delay: 0.4,
+    },
+    undefined,
+    { start: "top 85%" }
+  );
+
+  createScrollAnimation(
+    ".card-skills",
+    initialStates.slideUp,
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      stagger: 0.1,
+      delay: 0.6,
+    },
+    undefined,
+    { start: "top 90%" }
+  );
+};
