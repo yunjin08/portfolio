@@ -409,4 +409,13 @@ export const certificates = [
     skills: ["Software Engineering", "Development Lifecycle", "Best Practices"],
     url: "https://coursera.org/share/d48a81d62531f488015e1e3283714b14"
   },
+  {
+    id: 9,
+    title: "Continuous Integration and Continuous Delivery (CI/CD)",
+    issuer: "IBM",
+    date: "October 2025",
+    credentialId: "M25X8L6IPC91",
+    skills: ["DevOps", "CI/CD", "Automation", "Deployment"],
+    url: "https://coursera.org/share/1cc598a6c59542e3c3f611aa6ecdeafc"
+  },
 ];
