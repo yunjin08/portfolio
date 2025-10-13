@@ -418,4 +418,13 @@ export const certificates = [
     skills: ["DevOps", "CI/CD", "Automation", "Deployment"],
     url: "https://coursera.org/share/1cc598a6c59542e3c3f611aa6ecdeafc"
   },
+  {
+    id: 10,
+    title: "Application Security for Developers and DevOps Professionals",
+    issuer: "IBM",
+    date: "Sep 2024",
+    credentialId: "UK8NZJ9SOCIJ",
+    skills: ["Application Security", "DevOps", "Cybersecurity"],
+    url: "https://coursera.org/share/184151fa3df5f41648f1b9072bf3b937"
+  },
 ];
