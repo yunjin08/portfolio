@@ -73,7 +73,7 @@ export const BentoGridItem = memo(
     spareImg?: string;
   }) => {
     const leftLists = ["NextJS", "Typescript", "React", "Svelte", "Redis", "MongoDB", "Directus", "Airtable", "Make", "N8n", "Apache", "Terraform", "Ansible", "Supabase", "Python"];
-    const rightLists = ["Kubernetes", "Golang", "Django", "Ruby", "Kafka", "GCP", "AWS", "Docker", "Posgresl"];
+    const rightLists = ["Kubernetes", "Golang", "Django", "Ruby", "Kafka", "GCP", "AWS", "Docker", "PostgreSQL"];
 
     const [copied, setCopied] = useState(false);
     // const [animationData, setAnimationData] = useState<any | null>(null);
