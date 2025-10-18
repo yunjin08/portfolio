@@ -427,4 +427,13 @@ export const certificates = [
     skills: ["Application Security", "DevOps", "Cybersecurity"],
     url: "https://coursera.org/share/184151fa3df5f41648f1b9072bf3b937"
   },
+  {
+    id: 11,
+    title: "Monitoring and Observability for Development and DevOps",
+    issuer: "IBM",
+    date: "Oct 2025",
+    credentialId: "ZSYTU357FWUD",
+    skills: ["System Monitoring", "Observability", "DevOps"],
+    url: "https://coursera.org/share/8d09aa6d4eee6769983070b2006b9bd3"
+  }
 ];
