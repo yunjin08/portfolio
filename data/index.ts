@@ -135,7 +135,7 @@ export const projects = [
   {
     id: 9,
     title: "Deductly",
-    des: "A web app that allows users to track their deductions and credits.",
+    des: "A mobile app that allows users to track their tax deductions and questions about tax deductions.",
     img: "/deductly/deductly.webp",
     iconLists: ["/expo.svg", "/django.svg", "/chatgpt.svg.png", "/cloudinary.svg"],
     isMobile: true,
