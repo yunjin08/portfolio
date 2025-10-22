@@ -339,6 +339,15 @@ export const socialMedia = [
 export const certificates = [
   {
     id: 1,
+    title: "DevOps and Software Engineering",
+    issuer: "IBM",
+    date: "Oct 2025",
+    credentialId: "YKF2LZ8FUA62",
+    skills: ["Software Engineering", "Development Lifecycle", "DevOps"],
+    url: "https://coursera.org/share/1e4899b905795718fc3a539cc50bc2f4"
+  },
+  {
+    id: 2,
     title: "Application Development using Microservices and Serverless",
     issuer: "IBM",
     date: "Oct 2025",
@@ -347,7 +356,7 @@ export const certificates = [
     url: "https://coursera.org/share/85f579801bdc7b565ad45ab09df35b66"
   },
   {
-    id: 2,
+    id: 3,
     title: "Introduction to Containers w/ Docker, Kubernetes & OpenShift",
     issuer: "IBM",
     date: "Sep 2025",
@@ -356,7 +365,7 @@ export const certificates = [
     url: "https://coursera.org/share/bb6774d14fe46f8f6a3200f323f6d862"
   },
   {
-    id: 3,
+    id: 4,
     title: "Test and Behavior Driven Development",
     issuer: "IBM",
     date: "Sep 2024",
@@ -365,7 +374,7 @@ export const certificates = [
     url: "https://coursera.org/share/498f4eb182e760a3f808a9ff247e6373"
   },
   {
-    id: 4,
+    id: 5,
     title: "Python for Data Science, AI & Development",
     issuer: "IBM",
     date: "Dec 2023",
@@ -374,7 +383,7 @@ export const certificates = [
     url: "https://coursera.org/share/c418981a44001aec16877fc48ebfe05f"
   },
   {
-    id: 5,
+    id: 6,
     title: "Linux Commands and Shell Scripting",
     issuer: "IBM",
     date: "Nov 2023",
@@ -383,7 +392,7 @@ export const certificates = [
     url: "https://coursera.org/share/3c815804965d6fdb3b139b00e5be879a"
   },
   {
-    id: 6,
+    id: 7,
     title: "Cloud Computing",
     issuer: "IBM",
     date: "Sep 2023",
@@ -392,7 +401,7 @@ export const certificates = [
     url: "https://coursera.org/share/ab516b019c8260ddbb6007747b694485"
   },
   {
-    id: 7,
+    id: 8,
     title: "Introduction to DevOps",
     issuer: "IBM",
     date: "Sep 2023",
@@ -401,16 +410,7 @@ export const certificates = [
     url: "https://coursera.org/share/17b9e74d1f6faa9a174e5838ac483509"
   },
   {
-    id: 8,
-    title: "Introduction to Software Engineering",
-    issuer: "IBM",
-    date: "Aug 2022",
-    credentialId: "3ADR6GMEJOX8",
-    skills: ["Software Engineering", "Development Lifecycle", "Best Practices"],
-    url: "https://coursera.org/share/d48a81d62531f488015e1e3283714b14"
-  },
-  {
-    id: 9,
+    id: 10,
     title: "Continuous Integration and Continuous Delivery (CI/CD)",
     issuer: "IBM",
     date: "October 2025",
@@ -419,7 +419,7 @@ export const certificates = [
     url: "https://coursera.org/share/1cc598a6c59542e3c3f611aa6ecdeafc"
   },
   {
-    id: 10,
+    id: 11,
     title: "Application Security for Developers and DevOps Professionals",
     issuer: "IBM",
     date: "Sep 2024",
@@ -428,7 +428,7 @@ export const certificates = [
     url: "https://coursera.org/share/184151fa3df5f41648f1b9072bf3b937"
   },
   {
-    id: 11,
+    id: 12,
     title: "Monitoring and Observability for Development and DevOps",
     issuer: "IBM",
     date: "Oct 2025",
