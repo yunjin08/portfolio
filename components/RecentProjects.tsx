@@ -20,7 +20,7 @@ const DEDUCTLY_SLIDES: Slide[] = [
   {
     type: "video",
     src: DEDUCTLY_VIDEO,
-    description: "The Deductly chatbot leverages a specialized knowledge base focused on Philippine tax deduction rules. Users can interact with the chatbot to get instant, context-aware answers about what receipts and expenses are deductible, making tax management easier and more accurate.",
+    description: "The Deductly chatbot leverages a specialized knowledge base focused on Philippine tax deduction rules. Users can interact with the chatbot to get instant, context-aware answers about what receipts and expenses are deductible.",
   },
   {
     type: "image",
