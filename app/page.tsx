@@ -44,7 +44,7 @@ const Home = () => {
   }
 
   return (
-    <main className="bg-black-100 max-w-[1650px] py-10 flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="bg-black-100 py-10 flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <StarBackground />
       <section className="max-w-[52rem] w-full overflow-hidden">
         <Suspense fallback={<Loader />}>

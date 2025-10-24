@@ -59,7 +59,7 @@ const ProjectItem = memo(({ project, onClick }: { project: Project; onClick?: ()
         className="w-full h-full cursor-pointer"
       >
         <PinContainer title={project.title} href={project.link}>
-          <div className="relative flex-center w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl h-[25vh] lg:h-[30vh] mb-5 sm:mb-7 md:mb-10">
+          <div className="relative flex-center w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl h-[12rem] mb-5 sm:mb-7 md:mb-10">
             <div
               className="relative w-full h-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl"
               style={{ backgroundColor: "#13162D" }}
