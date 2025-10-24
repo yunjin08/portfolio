@@ -4,7 +4,7 @@ export const navItems = [
   { name: "Education", link: "#education" },
   { name: "Experience", link: "#experience" },
   { name: "Certificates", link: "#certificates" },
-  { name: "Resume", link: "/cv.pdf" },
+  { name: "Resume", link: "/Donaire_Resume.pdf" },
 ];
 
 export const gridItems = [
