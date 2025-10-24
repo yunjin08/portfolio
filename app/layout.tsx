@@ -8,8 +8,49 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jed Edison Donaire",
-  description: "Philippine Based Experienced Programmer",
+  title: "Jed Edison Donaire - Philippine Based Experienced Programmer",
+  description: "Philippine Based Experienced Programmer - Full Stack Developer specializing in modern web technologies and innovative solutions",
+  metadataBase: new URL("https://jed-edison.com"),
+  keywords: ["Jed Edison Donaire", "Philippine Programmer", "Full Stack Developer", "Web Developer", "React", "Next.js", "TypeScript", "Portfolio"],
+  authors: [{ name: "Jed Edison Donaire" }],
+  creator: "Jed Edison Donaire",
+  publisher: "Jed Edison Donaire",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://jed-edison.com",
+    siteName: "Jed Edison Portfolio",
+    title: "Jed Edison Donaire - Philippine Based Experienced Programmer",
+    description: "Philippine Based Experienced Programmer - Full Stack Developer specializing in modern web technologies and innovative solutions",
+    images: [
+      {
+        url: "https://i.imgur.com/s9jjfVs.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Jed Edison Donaire - Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jed Edison Donaire - Philippine Based Experienced Programmer",
+    description: "Philippine Based Experienced Programmer - Full Stack Developer specializing in modern web technologies and innovative solutions",
+    images: ["https://i.imgur.com/s9jjfVs.jpeg"],
+  },
+  alternates: {
+    canonical: "https://jed-edison.com",
+  }
 };
 
 export default function RootLayout({
@@ -29,15 +70,38 @@ export default function RootLayout({
 
         <meta name="msapplication-TileColor" content="#112e42" />
         <meta name="theme-color" content="#112e42"></meta>
-
-        <meta property="og:title" content="Jed Edison Portfolio" />
-        <meta
-          property="og:description"
-          content="Philippine Based Experienced Programmer"
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Jed Edison Donaire",
+              "jobTitle": "Full Stack Developer",
+              "description": "Philippine Based Experienced Programmer - Full Stack Developer specializing in modern web technologies and innovative solutions",
+              "url": "https://jed-edison.com",
+              "image": "https://i.imgur.com/s9jjfVs.jpeg",
+              "sameAs": [
+                "https://github.com/jededisondonaire",
+                "https://linkedin.com/in/jed-edison-donaire"
+              ],
+              "knowsAbout": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "Node.js",
+                "Full Stack Development",
+                "Web Development"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Philippines"
+              }
+            })
+          }}
         />
-        <meta property="og:image" content="https://i.imgur.com/s9jjfVs.jpeg" />
-        <meta property="og:url" content="https://jed-edison.com/" />
-        <meta property="og:type" content="website" />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider
