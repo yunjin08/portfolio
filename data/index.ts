@@ -307,7 +307,7 @@ export const workExperience = [
     company: "Tranches",
     date: "(July 2025 - Present)",
     desc: [
-      "Rehired by Tranches after 6 months due to exceptional performance, with immediate leadership role in new application development.",
+      "Rehired by Tranches after two months due to exceptional performance, with immediate leadership role in new application development.",
       "Leading development of next-generation data visualization platform powered by LLM.",
       "Mentoring a junior developer, improving team productivity by 45% through code reviews and technical guidance.",
     ],
